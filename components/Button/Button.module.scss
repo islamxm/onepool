@@ -1,0 +1,118 @@
+.button {
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+
+    .text {
+        position: relative;
+        z-index: 4;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+.button.bordered {
+    border: 1px solid var(--gold);
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 0;
+        height: 100%;
+        -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+        background: var(--gold_gradient);
+        content: '';
+        transition: all .3s ease;
+
+    }
+
+    &:before {
+        background-color: #fff;
+        width: 0;
+        content: '';
+        top: 0;
+        left: -10px;
+        height: 100%;
+        transition: all .3s ease;
+        position: absolute;
+        z-index: 3;
+        -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+    }
+
+    .text {
+        color: var(--gold);
+        transition: all .3s ease;
+    }
+
+    &:hover {
+
+        &:after {
+            width: calc(100% + 20px);
+        }
+
+        
+
+        .text {
+            color: #fff;
+        }
+    }
+
+    &:active {
+        border-color: #fff;
+
+        &:before {
+            width: calc(100% + 20px);
+        }
+
+        .text {
+            color: var(--gold);
+        }
+    }
+}
+
+.button.fill {
+    background: var(--gold_gradient);
+
+    .text {
+        color: #fff;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+         width: 2px;
+         height: 100%;
+         left: -10px;
+         background-color: #fff;
+         transition: all .3s ease;
+    }
+
+    &:hover {
+        filter: drop-shadow(0 0 10px rgba(#E7BE89, .8));
+
+        &:after {
+            left: calc(100% + 20px);
+        }
+    }
+}
+
+.button.upper {
+    .text {
+        text-transform: uppercase;
+    }
+}
