@@ -1,5 +1,5 @@
 .button {
-    transition: all .3s ease;
+    transition: all .8s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +26,12 @@
         left: -10px;
         width: 0;
         height: 100%;
-        -webkit-transform: skew(-20deg);
-	   -moz-transform: skew(-20deg);
-	     -o-transform: skew(-20deg);
+        -webkit-transform: skew(-30deg);
+	   -moz-transform: skew(-30deg);
+	     -o-transform: skew(-30deg);
         background: var(--gold_gradient);
         content: '';
-        transition: all .3s ease;
+        transition: all .8s ease;
 
     }
 
@@ -42,17 +42,17 @@
         top: 0;
         left: -10px;
         height: 100%;
-        transition: all .3s ease;
+        transition: all .8s ease;
         position: absolute;
         z-index: 3;
-        -webkit-transform: skew(-20deg);
-	   -moz-transform: skew(-20deg);
-	     -o-transform: skew(-20deg);
+        -webkit-transform: skew(-30deg);
+	   -moz-transform: skew(-30deg);
+	     -o-transform: skew(-30deg);
     }
 
     .text {
         color: var(--gold);
-        transition: all .3s ease;
+        transition: all .8s ease;
     }
 
     &:hover {
@@ -68,17 +68,17 @@
         }
     }
 
-    &:active {
-        border-color: #fff;
+    // &:active {
+    //     border-color: #fff;
 
-        &:before {
-            width: calc(100% + 20px);
-        }
+    //     &:before {
+    //         width: calc(100% + 20px);
+    //     }
 
-        .text {
-            color: var(--gold);
-        }
-    }
+    //     .text {
+    //         color: var(--gold);
+    //     }
+    // }
 }
 
 .button.fill {
@@ -92,9 +92,9 @@
         content: '';
         position: absolute;
         top: 0;
-        -webkit-transform: skew(-20deg);
-	   -moz-transform: skew(-20deg);
-	     -o-transform: skew(-20deg);
+        -webkit-transform: skew(-30deg);
+	   -moz-transform: skew(-30deg);
+	     -o-transform: skew(-30deg);
          width: 2px;
          height: 100%;
          left: -10px;
@@ -103,7 +103,7 @@
     }
 
     &:hover {
-        filter: drop-shadow(0 0 10px rgba(#E7BE89, .8));
+        // filter: drop-shadow(0 0 10px rgba(#E7BE89, .8));
 
         &:after {
             left: calc(100% + 20px);
