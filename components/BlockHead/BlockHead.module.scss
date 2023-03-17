@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+    font-size: 33px;
+    line-height: 46px;
+    font-weight: 100;
+    position: relative;
+    padding-bottom: 20px;
+    color:#fff;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 45px);
+        width: 90px;
+        content: '';
+        height: 2px;
+        background-color: #fff;
+    }
+}
+
+.title.dark {
+    color: #161D2A;
+
+    &:after {
+        background-color: #161D2A;
+    }
+}
