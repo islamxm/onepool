@@ -1,0 +1,120 @@
+.wrapper {
+    background-color: #F8ECDE;
+    padding-bottom: 80px;
+    background-image: url('../../public/assets/feedback-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    color: var(--black);
+
+    .in {
+        background-color: #fff;
+        border-radius: 22px;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .part {
+            width: 48%;
+        }
+
+        .descr {
+
+            .title {
+                font-size: 29px;
+                line-height: 40px;
+                margin-bottom: 12px;
+                font-weight: 500;
+
+
+                span {
+                    color: var(--gold);
+                    display: block;
+                }
+            }
+            .text {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 25px;
+            }
+
+            .ex {
+                padding-left: 90px;
+                max-width: calc(260px + 90px);
+                width: 100%;
+                position: relative;
+                font-size: 14px;
+                line-height: 140%;
+
+                &:after {
+                    position: absolute;
+                    top: calc(50% - 25px);
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    background-image: url('../../public/assets/check.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    content: '';
+                }
+
+                .head {
+                    margin-bottom: 5px;
+                    color: var(--gold);
+                    text-transform: uppercase;
+
+                }
+                .body {
+                    color:#788090;
+                }
+            }
+        }
+
+        .form {
+
+            .body {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -5px;
+                margin-right: -5px;
+                margin-bottom: 10px;
+
+                .field {
+                    margin: 5px;
+
+                    &:nth-child(1) {
+                        width: calc((100% / 2) - 10px);
+                    }
+                    &:nth-child(2) {
+                        width: calc((100% / 2) - 10px);
+                    }
+                    &:nth-child(3) {
+                        width: calc(100% - 10px);
+                    }
+                }
+            }
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+
+            }
+            .link {
+                text-align: center;
+                opacity: .6;
+                a {
+                    text-decoration: underline;
+                    display: block;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

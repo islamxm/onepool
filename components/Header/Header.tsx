@@ -5,11 +5,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {HiOutlineLocationMarker} from 'react-icons/hi';
 import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+
 
 const Header = () => {
+    const [scrolled, setScrolled] = useState<boolean>(false);
+
+
+    const checkScroll = () => {
+        if(document.documentElement.scrollTop > 10) {
+            setScrolled(true)
+        } else {
+            setScrolled(false)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('scroll', checkScroll)
+
+        return () => {
+            document.removeEventListener('scroll', checkScroll)
+        }
+    }, [])
 
     return (
-        <header className={styles.wrapper}> 
+        <header className={`${styles.wrapper} ${scrolled ? styles.active : ''}`}> 
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.top}>

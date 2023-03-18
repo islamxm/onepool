@@ -4,9 +4,22 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+    transition: all .3s ease;
 
+    &:after {
+        height: 0;
+        transition: all .3s ease;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: absolute;
+        background-color: #1F2430;
+    }
     
     .inner {
+        position: relative;
+        z-index: 3;
         .top {
             display: flex;
             align-items: center;
@@ -76,5 +89,12 @@
                 }
             }
         }
+    }
+}
+
+.wrapper.active {
+    
+    &:after {
+        height: 100%;
     }
 }

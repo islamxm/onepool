@@ -5,6 +5,7 @@ import Servs from "@/pageModules/home/Servs/Servs";
 import Why from "@/pageModules/home/Why/Why";
 import Steps from "@/pageModules/home/Steps/Steps";
 import Footer from "@/components/Footer/Footer";
+import Feedback from "@/components/Feedback/Feedback";
 
 
 const HomePage = () => {
@@ -17,7 +18,9 @@ const HomePage = () => {
            <Servs/>
            <Why/>
            <Steps/>
+           <Feedback/>
            <Footer/>
+           
         </>
     )
 }

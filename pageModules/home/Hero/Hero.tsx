@@ -7,11 +7,22 @@ import img1 from '@/public/assets/hero-1.png';
 import img2 from '@/public/assets/hero-2.png';
 import img3 from '@/public/assets/hero-3.png';
 import Image from 'next/image';
+import { useRef } from 'react';
+
+
 
 const Hero = () => {
+    const bodyRef = useRef<HTMLDivElement>(null)
+
+    const scrollDown = () => {
+        if(bodyRef?.current) {
+            
+            window.scrollTo(0, bodyRef?.current?.scrollHeight - 200)
+        }
+    }
 
     return (
-        <div className={styles.wrapper}>
+        <div ref={bodyRef} className={styles.wrapper}>
             <div className={styles.slider}>
                 <Swiper
                     className={styles.list}
@@ -77,7 +88,7 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
-                    <button className={styles.godown}></button>
+                    <button onClick={scrollDown} className={styles.godown}></button>
                 </Container>
             </div>
         </div>
