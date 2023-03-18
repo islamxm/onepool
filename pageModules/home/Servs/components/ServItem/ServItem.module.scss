@@ -1,0 +1,91 @@
+.wrapper {
+
+    .in {
+        padding: 70px 0;
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 15px 30px;
+                border-radius: 30px;
+                text-transform: uppercase;
+                color: var(--gold);
+                border: 2px solid var(--gold);
+                font-size: 18px;
+                line-height: 100%;
+                font-weight: 700;
+            }
+        }
+
+        .body {
+            display: flex;
+            align-items: flex-start;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            .slider {
+                width: 48%;
+                margin: 0 15px;
+                
+                .swiper {
+
+                    .slide {
+                        border-radius: 8px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: flex;
+                        }
+
+                    }
+                }
+            }
+
+            .descr {
+                margin: 0 15px;
+                width: 52%;
+                padding: 30px;
+                background: rgba(26, 34, 49, 0.8);
+                border-radius: 15px;
+                color: #fff;
+                border: 1px solid #32415E;
+
+                ul {
+
+                    li {
+                        padding-left: 70px;
+                        position: relative;
+                        margin-bottom: 12px;
+
+                        &:after {
+                            position: absolute;
+                            left: 50px;
+                            top: calc(50% - 6px);
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 100%;
+                            background-color: var(--gold);
+                            content: '';
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+.wrapper.left {
+    
+}

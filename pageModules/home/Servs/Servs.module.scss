@@ -1,0 +1,43 @@
+.wrapper {
+
+    .item {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            height: 150px;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(27, 32, 44, 0) 0%, #1B202C 100%);
+            transform: rotate(-180deg);
+        }
+
+        &:after {
+            position: absolute;
+            height: 150px;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(27, 32, 44, 0) 0%, #1B202C 100%);
+        }   
+
+
+        &:nth-child(1) {
+            background-image: url('../../../public/assets/serv-1-bg.png');
+        }
+
+        &:nth-child(2) {
+            background-image: url('../../../public/assets/serv-2-bg.png');
+        }
+
+        &:nth-child(3) {
+            background-image: url('../../../public/assets/serv-3-bg.png');
+        }
+    }
+}

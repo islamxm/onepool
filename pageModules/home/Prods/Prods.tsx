@@ -5,6 +5,7 @@ import Tabs from '@/components/Tabs/Tabs';
 import { useState } from 'react';
 import Image from 'next/image';
 import img from '@/public/assets/prods-1.png';
+import MoreLink from '@/components/MoreLink/MoreLink';
 
 const tabsList = [
     {id: '1', label: 'бассейны'},
@@ -27,6 +28,7 @@ const Prods = () => {
                     </div>
                     <div className={styles.tabs}>
                         <Tabs
+                            onSelect={setActiveTab}
                             activeTab={activeTab}
                             list={tabsList}
                             />
@@ -42,6 +44,13 @@ const Prods = () => {
                         <div className={styles.item}><Image src={img} alt=""/></div>
                         <div className={styles.item}><Image src={img} alt=""/></div>
                         <div className={styles.item}><Image src={img} alt=""/></div>
+                    </div>
+                    <div className={styles.action}>
+                        <MoreLink
+                            link={'/'}
+                            align={'center'}
+                            isDark
+                            />
                     </div>
                 </div>
             </Container>

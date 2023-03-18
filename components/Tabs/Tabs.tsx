@@ -3,7 +3,8 @@ import { tabsPropsTypes } from './types';
 
 const Tabs = ({
     list,
-    activeTab
+    activeTab,
+    onSelect
 }: tabsPropsTypes) => {
 
     return (
@@ -11,7 +12,9 @@ const Tabs = ({
             <div className={styles.list}>
                 {
                     list?.map((item, index) => (
-                        <button key={index} className={`${styles.item} ${activeTab === item.id ? styles.active : ''}`}>
+                        <button 
+                            onClick={() => onSelect(item.id)}
+                            key={index} className={`${styles.item} ${activeTab === item.id ? styles.active : ''}`}>
                             {item.label}
                         </button>
                     )) 
