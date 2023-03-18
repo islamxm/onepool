@@ -3,6 +3,9 @@ import About from "@/pageModules/home/About/About";
 import Prods from "@/pageModules/home/Prods/Prods";
 import Servs from "@/pageModules/home/Servs/Servs";
 import Why from "@/pageModules/home/Why/Why";
+import Steps from "@/pageModules/home/Steps/Steps";
+import Footer from "@/components/Footer/Footer";
+
 
 const HomePage = () => {
 
@@ -13,6 +16,8 @@ const HomePage = () => {
            <Prods/>
            <Servs/>
            <Why/>
+           <Steps/>
+           <Footer/>
         </>
     )
 }

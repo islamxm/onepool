@@ -14,7 +14,30 @@ const Steps = () => {
                             />
                     </div>
                     <div className={styles.body}>
-                        
+                        <div className={styles.item}>
+                            <div className={styles.num}>01</div>
+                            <div className={styles.label}>Консультация</div>
+                        </div>
+                        <div className={styles.item}>
+                            <div className={styles.num}>02</div>
+                            <div className={styles.label}>Предварительная смета</div>
+                        </div>
+                        <div className={styles.item}>
+                            <div className={styles.num}>03</div>
+                            <div className={styles.label}>Договор</div>
+                        </div>
+                        <div className={styles.item}>
+                            <div className={styles.num}>04</div>
+                            <div className={styles.label}>Дизайн-проект</div>
+                        </div>
+                        <div className={styles.item}>
+                            <div className={styles.num}>05</div>
+                            <div className={styles.label}>Строительство</div>
+                        </div>
+                        <div className={styles.item}>
+                            <div className={styles.num}>06</div>
+                            <div className={styles.label}>Гарантийное сервисное обслуживание</div>
+                        </div>
                     </div>
                 </div>
             </Container>

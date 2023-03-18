@@ -1,0 +1,94 @@
+.wrapper {
+    background-color: #F8ECDE;
+    color: var(--black);
+    
+    .in {
+        padding: 70px 0;
+
+        .head {
+            margin-bottom: 80px;    
+        }
+
+        .body {
+            
+            display: flex;
+            align-items: center;
+            margin-left: -4px;
+            margin-right: -4px;
+
+            .item {
+               
+                margin: 170px 4px;
+                height: 60px;
+                width: calc((100% / 6) - 8px);
+                background: var(--gold_gradient);
+                border-radius: 30px;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    border-radius: 100%;
+                    background-color: 
+                    #A88455;
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    left: calc(50% - 12.5px);
+                }
+
+                &:before {
+                    content: '';
+                    width: 3px;
+                    background-color: #A88455;
+                    height: 170px;
+                    position: absolute;
+                    left: calc(50% - 1.5px);
+                }
+
+
+                &:nth-child(odd) {
+                    &:after {
+                        top: -12.5px;
+                    }
+                    &:before {
+                        top: -170px;
+                    }
+                    .label {
+                        top: -190px;
+                    }
+                }
+
+                &:nth-child(even) {
+                    &:after {
+                        bottom: -12.5px;
+                    }
+                    &:before {
+                        bottom: -170px;
+                    }
+                    .label {
+                        bottom: -190px;
+                    }
+                }
+
+                .num {
+                    font-size: 55px;
+                    line-height: 60px;
+                    transform: translateY(-30px);
+                }
+
+                .label {
+                    position: absolute;
+                    text-align: center;
+                    max-width: 220px;
+                    width: 100%;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 140%;
+                    padding: 0 5px;
+                    background-color: #F8ECDE;
+                }
+            }   
+
+        }
+    }
+}
