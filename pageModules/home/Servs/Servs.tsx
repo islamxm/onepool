@@ -3,6 +3,8 @@ import Container from '@/components/Container/Container';
 import { servItemTypes } from './types';
 import serv1 from '@/public/assets/serv-1.png';
 import ServItem from './components/ServItem/ServItem';
+
+import BlockHead from '@/components/BlockHead/BlockHead';
 const list: servItemTypes[] = [
     {
         title:'Реконструкция и модернизация',
@@ -88,13 +90,29 @@ const Servs = () => {
 
     return (
         <div className={styles.wrapper}>
-            {
-                list?.map((item,index) => (
-                    <div className={styles.item} key={index}>
-                        <ServItem {...item}/>
+            <div className={styles.in}>
+                <div className={styles.head}>
+                    <Container>
+                        <div className={styles.title}>
+                        <BlockHead
+                            title='Наши услуги'
+                            />
                     </div>
-                ))
-            }
+                    <div className={styles.text}>
+                    Мы используем современные, эстетичные и инновационные решения, обеспечивая максимальное целебное воздействие и удовольствие от посещения.
+                    </div>
+                    </Container>
+                </div>
+                {
+                    list?.map((item,index) => (
+                        <div className={styles.item} key={index}>
+                            <ServItem {...item}/>
+                        </div>
+                    ))
+                }
+            </div>
+           
+            
         </div>
     )
 }
