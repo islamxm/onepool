@@ -29,12 +29,13 @@
     }
 
 
-    .item {
+    .item.homePage {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         position: relative;
         z-index: 10;
+
         &:before {
             position: absolute;
             height: 150px;
@@ -57,16 +58,18 @@
         }   
 
 
-        &:nth-child(1) {
+        &:nth-child(2) {
             background-image: url('../../../public/assets/serv-1-bg.png');
         }
 
-        &:nth-child(2) {
+        &:nth-child(3) {
             background-image: url('../../../public/assets/serv-2-bg.png');
         }
 
-        &:nth-child(3) {
+        &:nth-child(4) {
             background-image: url('../../../public/assets/serv-3-bg.png');
         }
+
+       
     }
 }

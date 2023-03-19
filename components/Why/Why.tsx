@@ -15,7 +15,8 @@ import { whyPropsTypes } from './types';
 const Why:FC<whyPropsTypes> = ({
     haveLink,
     title,
-    list
+    list,
+    sub
 }) => {
 
     return (
@@ -27,6 +28,14 @@ const Why:FC<whyPropsTypes> = ({
                             title={title}
                             />
                     </div>
+                    {
+                        sub ? (
+                            <div className={styles.sub}>
+                                {sub}
+                            </div>
+                        )  : null
+                    }
+                    
                     <div className={styles.body}>
                         {
                             list?.map((item,index) => (

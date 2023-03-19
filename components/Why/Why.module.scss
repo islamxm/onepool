@@ -2,17 +2,17 @@
     position: relative;
     z-index: 10;
 
-    &:after {
-        position: absolute;
-        bottom: -80px;
-        left: 0;
-        height: 160px;
-        content: '';
-        width: 100%;
-        border-radius: 100%;
-        background-color: #1B202C;
+    // &:after {
+    //     position: absolute;
+    //     bottom: -80px;
+    //     left: 0;
+    //     height: 160px;
+    //     content: '';
+    //     width: 100%;
+    //     border-radius: 100%;
+    //     background-color: #1B202C;
 
-    }
+    // }
 
     .in {
         padding: 70px 0 10px 0;
@@ -20,6 +20,17 @@
         z-index: 10;
         .head {
             margin-bottom: 100px;
+        }
+
+        .sub {
+            margin-bottom: 100px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 33px;
+
+            span {
+                font-weight: 700;
+            }
         }
 
         .body {

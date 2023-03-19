@@ -4,7 +4,7 @@ export type whyPropsTypes = {
     title?: string,
     haveLink?: boolean,
     list: whyItemPropsTypes[],
-
+    sub?: React.ReactNode
 }
 
 export type whyItemPropsTypes = {
