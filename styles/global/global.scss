@@ -39,3 +39,26 @@ body {
 .wrapper {
     position: relative;
 }
+
+.page-title {
+    color: var(--gold);
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 64px;
+}
+
+.page-title.light {
+    color: #fff;
+}
+
+.page-title.dark {
+    color: var(--black);
+}
+
+.page-title.center {
+    text-align: center;
+}
+
+.page-title.right {
+    text-align: right;
+}

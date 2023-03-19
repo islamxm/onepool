@@ -1,0 +1,51 @@
+.wrapper {
+    background-color: #1A2231;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    color: #fff;
+    max-width: 332px;
+    width: 100%;
+
+    .head {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 21px;
+        line-height: 27px;
+        font-weight: 300;
+    }
+    .subtitle {
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .body {
+        .fields {
+            margin-bottom: 35px;
+            .item {
+                margin-bottom: 12px;
+            }
+        }
+
+        .action {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ex {
+            text-align: center;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 17px;
+
+            a {
+                display: block;
+                
+            }
+        }
+    }
+}

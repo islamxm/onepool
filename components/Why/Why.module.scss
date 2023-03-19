@@ -27,10 +27,14 @@
             align-items: flex-start;
             justify-content: space-between;
             margin-bottom: 50px;
-            
+            margin-left: -10px;
+            margin-right: -10px;
+
             .item {
-                width: calc(100% / 3.2);
+                width: 100%;
+                // width: calc(100% / 3.2);
                 padding: 65px 30px 15px 30px;
+                margin: 0 10px;
                 min-height: 260px;
                 background: #1A2231;
                 border: 1px solid #32415E;
