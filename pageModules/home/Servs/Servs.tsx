@@ -5,7 +5,11 @@ import { servsPropsTypes } from './types';
 import ServItem from './components/ServItem/ServItem';
 import {FC} from 'react';
 import BlockHead from '@/components/BlockHead/BlockHead';
-
+import {motion} from 'framer-motion';
+import { parentAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import { childAnim } from '@/helpers/animObjects';
 
 
 const Servs:FC<servsPropsTypes> = ({
@@ -17,24 +21,27 @@ const Servs:FC<servsPropsTypes> = ({
 
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             <div className={styles.in}>
-                <div className={styles.head}>
-                    <Container>
-                        <div className={styles.title}>
-                        <BlockHead
-                            title={title}
-                            />
-                    </div>
-                    {
-                        sub ? (
-                            <div className={styles.text}>
-                            {sub}
-                            </div>
-                        ) : null
-                    }
-                    </Container>
-                </div>
+                <AnimWrap className={styles.head}>
+                    <motion.div variants={childAnim('bottom')}>
+                        <Container>
+                            <div className={styles.title}>
+                            <BlockHead
+                                title={title}
+                                />
+                        </div>
+                        {
+                            sub ? (
+                                <div className={styles.text}>
+                                {sub}
+                                </div>
+                            ) : null
+                        }
+                        </Container>
+                    </motion.div>
+                </AnimWrap>
+                
                 {
                     list?.map((item,index) => (
                         <div className={`${styles.item} ${isHomePage ? styles.homePage : ''}`} key={index}>
@@ -45,7 +52,7 @@ const Servs:FC<servsPropsTypes> = ({
             </div>
            
             
-        </div>
+        </motion.div>
     )
 }
 

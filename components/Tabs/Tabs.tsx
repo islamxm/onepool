@@ -15,7 +15,7 @@ const Tabs = ({
                         <button 
                             onClick={() => onSelect(item.id)}
                             key={index} className={`${styles.item} ${activeTab === item.id ? styles.active : ''}`}>
-                            {item.label}
+                            <span>{item.label}</span>
                         </button>
                     )) 
                 }

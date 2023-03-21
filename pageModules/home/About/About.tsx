@@ -69,42 +69,50 @@ const About = () => {
                         </AnimWrap>
                     </div>
                     <div className={styles.ex}>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                                <div className={styles.value}>
+                                22
+                                </div>
+                                <div className={styles.label}>
+                                года 
+                                на рынке
+                                </div>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                                <div className={styles.value}>
+                                730+
+                                </div>
+                                <div className={styles.label}>
+                                уникальных 
+                                проектов
+                                </div>
+                            </motion.div>
+                        </AnimWrap>
                         
-                        <div className={styles.item}>
-                            <div className={styles.value}>
-                            22
-                            </div>
-                            <div className={styles.label}>
-                            года 
-                            на рынке
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.value}>
-                            730+
-                            </div>
-                            <div className={styles.label}>
-                            уникальных 
-                            проектов
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.value}>
-                            120+
-                            </div>
-                            <div className={styles.label}>
-                            объектов 
-                            на обслуживании
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.value}>
-                            30
-                            </div>
-                            <div className={styles.label}>
-                            брендов оборудования
-                            </div>
-                        </div>
+                        <AnimWrap>
+                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                                <div className={styles.value}>
+                                120+
+                                </div>
+                                <div className={styles.label}>
+                                объектов 
+                                на обслуживании
+                                </div>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap>
+                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                                <div className={styles.value}>
+                                30
+                                </div>
+                                <div className={styles.label}>
+                                брендов оборудования
+                                </div>
+                            </motion.div>
+                        </AnimWrap>
                     </div>
                 </div>
             </Container>

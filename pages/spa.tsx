@@ -223,7 +223,6 @@ const SpaPage = () => {
                 list={servList}
                 title="Решения для вашего банного спа-комплекса"
                 />
-            <Servs/>
         </>
     )
 }
