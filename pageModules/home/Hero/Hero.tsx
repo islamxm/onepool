@@ -8,8 +8,9 @@ import img2 from '@/public/assets/hero-2.png';
 import img3 from '@/public/assets/hero-3.png';
 import Image from 'next/image';
 import { useRef } from 'react';
-
-
+import { animWhileInView, parentAnim } from '@/helpers/animObjects';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import {motion} from 'framer-motion';
 
 const Hero = () => {
     const bodyRef = useRef<HTMLDivElement>(null)
@@ -57,37 +58,51 @@ const Hero = () => {
             </div>
             <div className={styles.main}>
                 <Container>
-                    <div className={styles.body}>
-                        <h1 className={styles.title}>
-                            Бассейны любой сложности и формы, СПА-комплексы, хаммамы, бани 
-                            и сауны, все по индивидуальному проекту.
-                        </h1>
-                        <div className={styles.text}>
-                            Собственное производство. Строим бассейны с 2001 года по всей России!
-                        </div>
-                        <div className={styles.action}>
-                            <div className={styles.item}>
-                                <Button 
-                                    text='Рассчитать стоимость'
-                                    uppercase
-                                    variant='fill'
-                                    style={{
-                                        padding: '20px 50px'
-                                    }}
-                                    />
+                    <motion.div 
+                        variants={parentAnim}
+                        {...animWhileInView}
+                        className={styles.body}>
+                        <AnimWrap
+                            className={styles.title}
+                            >
+                            <h1>
+                                Бассейны любой сложности и формы, СПА-комплексы, хаммамы, бани 
+                                и сауны, все по индивидуальному проекту.
+                            </h1>
+                        </AnimWrap>
+                        <AnimWrap
+                            className={styles.text}
+                            >
+                            <div>
+                                Собственное производство. Строим бассейны с 2001 года по всей России!
                             </div>
-                            <div className={styles.item}>
-                                <Button
-                                    text='Посмотреть проекты'
-                                    variant='bordered'
-                                    uppercase
-                                    style={{
-                                        padding: '20px 50px'
-                                    }}
-                                    />
+                        </AnimWrap>
+                        <AnimWrap>
+                            <div className={styles.action}>
+                                <div className={styles.item}>
+                                    <Button 
+                                        text='Рассчитать стоимость'
+                                        uppercase
+                                        variant='fill'
+                                        style={{
+                                            padding: '20px 50px'
+                                        }}
+                                        />
+                                </div>
+                                <div className={styles.item}>
+                                    <Button
+                                        text='Посмотреть проекты'
+                                        variant='bordered'
+                                        uppercase
+                                        style={{
+                                            padding: '20px 50px'
+                                        }}
+                                        />
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </AnimWrap>
+                        
+                    </motion.div>
                     <button onClick={scrollDown} className={styles.godown}></button>
                 </Container>
             </div>

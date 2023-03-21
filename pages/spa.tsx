@@ -218,12 +218,12 @@ const SpaPage = () => {
                     </>
                 }
                 />
-                
             <Prods/>
             <Servs
                 list={servList}
                 title="Решения для вашего банного спа-комплекса"
                 />
+            <Servs/>
         </>
     )
 }
