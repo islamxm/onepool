@@ -3,31 +3,58 @@ import Container from '@/components/Container/Container';
 import BlockHead from '@/components/BlockHead/BlockHead';
 import Image from 'next/image';
 import aboutimg from '@/public/assets/about.png';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import {motion} from 'framer-motion';
+import { parentAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import { childAnim } from '@/helpers/animObjects';
 
 const About = () => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+            <motion.div
+                className={styles.bg}
+                variants={childAnim('top')}
+                />
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.title}>
-                        <BlockHead
+                    <AnimWrap className={styles.title}>
+                        <motion.div
+                            variants={childAnim('bottom')}
+                            >
+                            <BlockHead
                             title='Строим под ключ'
                             />
-                    </div>
-                    <div className={styles.subtitle}>
-                    Компания  предлагает профессиональное строительство бассейнов по уникальной  технологии. Мы оказываем комплексную услугу «под ключ». Помогаем выбрать проект из каталога, адаптируем его под конкретный участок с разработкой дизайна, производим монтаж нового бассейна или реконструкцию существующего сооружения, осуществляем последующее обслуживание. На всех этапах бесплатно консультируем по особенностям монтажа и эксплуатации бассейна.
-                    </div>
+                        </motion.div>
+                        
+                    </AnimWrap>
+                    <AnimWrap className={styles.subtitle}>
+                        <motion.div
+                            variants={childAnim('bottom')}
+                            >
+                            Компания  предлагает профессиональное строительство бассейнов по уникальной  технологии. Мы оказываем комплексную услугу «под ключ». Помогаем выбрать проект из каталога, адаптируем его под конкретный участок с разработкой дизайна, производим монтаж нового бассейна или реконструкцию существующего сооружения, осуществляем последующее обслуживание. На всех этапах бесплатно консультируем по особенностям монтажа и эксплуатации бассейна.
+                        </motion.div>
+                    </AnimWrap>
+                    
                     <div className={styles.main}>
-                        <div className={styles.img}>
+                        <AnimWrap className={styles.img}>
+                            <motion.div variants={childAnim('left')}>
                             <Image
                                 src={aboutimg}
                                 width={577}
                                 height={454}
                                 alt={""}
                                 />
-                        </div>
-                        <div className={styles.descr}>
+                            </motion.div>
+                        </AnimWrap>
+                        {/* <div className={styles.img}>
+                            
+                        </div> */}
+                       
+                        
+                        <AnimWrap className={styles.descr}>
+                            <motion.div variants={childAnim('right')}>
                             <p>
                             Строительство бассейна под ключ - сложный и трудоемкий процесс, но в то же время позволяет воплотить в реальность даже самый смелый проект: любая форма чаши, возможность сделать переменную глубину - от мелководья детской зоны до ныряния с трамплина.
                             <br/>
@@ -38,9 +65,11 @@ const About = () => {
                             <br/>
                             Построим бассейн любой формы и любого размера для частного и общественного пользования. Реализуем ваш проект на всех этапах - от создания технического задания и индивидуального дизайн-проекта до запуска бассейна.
                             </p>
-                        </div>
+                            </motion.div>
+                        </AnimWrap>
                     </div>
                     <div className={styles.ex}>
+                        
                         <div className={styles.item}>
                             <div className={styles.value}>
                             22
@@ -79,7 +108,8 @@ const About = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+            
+        </motion.div>
     )
 }
 

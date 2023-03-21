@@ -8,7 +8,7 @@ import img2 from '@/public/assets/hero-2.png';
 import img3 from '@/public/assets/hero-3.png';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { animWhileInView, parentAnim } from '@/helpers/animObjects';
+import { animWhileInView, childAnim, parentAnim } from '@/helpers/animObjects';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import {motion} from 'framer-motion';
 
@@ -65,20 +65,20 @@ const Hero = () => {
                         <AnimWrap
                             className={styles.title}
                             >
-                            <h1>
+                            <motion.h1 variants={childAnim('bottom')}>
                                 Бассейны любой сложности и формы, СПА-комплексы, хаммамы, бани 
                                 и сауны, все по индивидуальному проекту.
-                            </h1>
+                            </motion.h1>
                         </AnimWrap>
                         <AnimWrap
                             className={styles.text}
                             >
-                            <div>
+                            <motion.div variants={childAnim('bottom')}>
                                 Собственное производство. Строим бассейны с 2001 года по всей России!
-                            </div>
+                            </motion.div>
                         </AnimWrap>
                         <AnimWrap>
-                            <div className={styles.action}>
+                            <motion.div variants={childAnim('bottom')} className={styles.action}>
                                 <div className={styles.item}>
                                     <Button 
                                         text='Рассчитать стоимость'
@@ -99,7 +99,7 @@ const Hero = () => {
                                         }}
                                         />
                                 </div>
-                            </div>
+                            </motion.div>
                         </AnimWrap>
                         
                     </motion.div>

@@ -5,17 +5,15 @@ import { childAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion'; 
 const AnimWrap:FC<animWrapPropsTypes> = ({
     children,
-    className
+    className,
+    direction = 'bottom',
+    
 }) => {
 
     return (
         <div className={`${styles.wrapper} ${className}`}>
-            <motion.div 
-                variants={childAnim}
-                className={styles.main}>
-                {children}
-            </motion.div>
-            <div className={styles.wall}></div>
+            {children}
+            {/* <div className={styles.wall}></div> */}
         </div>
     )
 }

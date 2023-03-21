@@ -1,5 +1,5 @@
 .wrapper {
-    height: 100vh;
+    height: 105vh;
     overflow: hidden;
 
     .slider {
@@ -84,7 +84,7 @@
 
         .godown {
             position: absolute;
-            bottom: 10px;
+            bottom: 6vh;
             right: calc(50% - 40px);
             width: 80px;
             height: 80px;
