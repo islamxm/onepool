@@ -130,7 +130,9 @@ const HomePage = () => {
             haveLink
             />
            <Steps/>
-           <Feedback/>
+           <Feedback
+            isLight
+            />
            <Footer/>
            
         </>
