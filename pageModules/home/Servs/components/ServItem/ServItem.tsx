@@ -47,7 +47,7 @@ const ServItem:FC<servItemTypes> = ({
                                 </motion.div>
                             </AnimWrap>
                             <AnimWrap className={styles.descr}>
-                                <motion.div variants={childAnim('right')}>
+                                <motion.div className={styles.in} variants={childAnim('right')}>
                                     {descr}
                                 </motion.div>
                             </AnimWrap>
@@ -69,7 +69,7 @@ const ServItem:FC<servItemTypes> = ({
                         </AnimWrap>
                         <div className={styles.body}>
                             <AnimWrap className={styles.descr}>
-                                <motion.div variants={childAnim('left')}>
+                                <motion.div className={styles.in} variants={childAnim('left')}>
                                     {descr}
                                 </motion.div>
                             </AnimWrap>

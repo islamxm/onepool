@@ -56,11 +56,17 @@
             .descr {
                 margin: 0 15px;
                 width: 52%;
-                padding: 30px;
-                background: rgba(26, 34, 49, 0.8);
-                border-radius: 15px;
-                color: #fff;
-                border: 1px solid #32415E;
+                
+                
+
+                .in {
+                    background: rgba(26, 34, 49, 0.8);
+                    border-radius: 15px;
+                    color: #fff;
+                    border: 1px solid #32415E;
+                    width: 100%;
+                    padding: 30px;
+                }
 
                 ul {
 
