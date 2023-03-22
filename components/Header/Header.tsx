@@ -1,9 +1,7 @@
 import Button from '../Button/Button';
 import styles from './Header.module.scss';
 import Container from '../Container/Container';
-import Image from 'next/image';
 import Link from 'next/link';
-import {HiOutlineLocationMarker} from 'react-icons/hi';
 import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 
@@ -60,7 +58,6 @@ const Header = () => {
                         </div>
                         <div className={styles.action}>
                             <Button
-                                
                                 text='Обратный звонок'
                                 />
                         </div>
@@ -80,13 +77,13 @@ const Header = () => {
                                 <Link href={'/bath'} className={styles.nav_link}>бани и сауны</Link>
                             </li>
                             <li className={styles.nav_item}>
-                                <Link href={'/'} className={styles.nav_link}>наши работы</Link>
+                                <Link href={'/works'} className={styles.nav_link}>наши работы</Link>
                             </li>
                             <li className={styles.nav_item}>
                                 <Link href={'/'} className={styles.nav_link}>услуги</Link>
                             </li>
                             <li className={styles.nav_item}>
-                                <Link href={'/'} className={styles.nav_link}>Контакты</Link>
+                                <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
                             </li>
                         </ul>
                     </div>

@@ -1,0 +1,83 @@
+.wrapper {
+
+    .head {
+        margin-bottom: 50px;
+    }
+
+    .body {
+        display: flex;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: 50px;
+        
+        .part {
+            width: calc((100% / 2) - 16px);
+            margin: 0 8px;
+            background: #1A2231;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+
+            
+        }
+
+        .main {
+            .top {
+                margin-bottom: 25px;
+                padding-left: 55px;
+
+                .phone {
+                    margin-bottom: 25px;
+
+                    a {
+                        font-size: 35px;
+                        line-height: 45px;
+                        margin-right: 15px;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-size: 24px;
+                        line-height: 140%;
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+                }
+
+                .tm {
+                    font-size: 18px;
+                    line-height: 140%;
+                    /* or 25px */
+
+
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+            .bottom {
+                padding-left: 55px;
+                .mail {
+                    font-size: 24px;
+                    line-height: 140%;
+                }
+            }
+        }
+
+        .ex {
+            font-size: 24px;
+            line-height: 140%;
+            
+            span {
+                padding-left: 55px;
+                display: block;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .map {
+        height: 461px;
+        iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
