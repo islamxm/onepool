@@ -12,10 +12,14 @@ import AnimWrap from '../AnimWrap/AnimWrap';
 
 
 
-const Feedback = () => {
+const Feedback = ({
+    isLight = true
+}: {
+    isLight: boolean
+}) => {
 
     return (
-        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${!isLight ? styles.dark : '' }`}>
             <AnimWrap>
             <Container>
                 <motion.div variants={childAnim('bottom')} className={styles.in}>
@@ -43,16 +47,19 @@ const Feedback = () => {
                         <div className={styles.field}>
                             <Input
                                 placeholder='Имя'
+                                variant={!isLight ? 'dark' : 'light'}
                                 />
                         </div>
                         <div className={styles.field}>
                             <Input
                                 placeholder='Телефон'
+                                variant={!isLight ? 'dark' : 'light'}
                                 />
                         </div>
                         <div className={styles.field}>
                             <Text
                                 height={90}
+                                variant={!isLight ? "dark" : 'light'}
                                 />
                         </div>
                         </div>

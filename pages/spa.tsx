@@ -8,6 +8,7 @@ import why3 from '@/public/assets/why-spa-3.svg';
 import why4 from '@/public/assets/why-spa-4.svg';
 import Prods from "@/pageModules/home/Prods/Prods";
 import { servItemTypes } from "@/pageModules/home/Servs/types";
+import Portfolio from "@/components/Portfolio/Portfolio";
 import Servs from "@/pageModules/home/Servs/Servs";
 import serv1 from '@/public/assets/spa-serv-1.png';
 import serv2 from '@/public/assets/spa-serv-2.png';
@@ -18,6 +19,10 @@ import serv6 from '@/public/assets/spa-serv-6.png';
 import serv7 from '@/public/assets/spa-serv-7.png';
 import serv8 from '@/public/assets/spa-serv-8.png';
 import serv9 from '@/public/assets/spa-serv-9.png';
+import { portItemPropsTypes } from "@/components/Portfolio/types";
+import Feedback from "@/components/Feedback/Feedback";
+import Footer from "@/components/Footer/Footer";
+import heroBg from '@/public/assets/spa-hero-bg.png';
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -198,11 +203,42 @@ const servList:servItemTypes[] = [
     }
 ]
 
+const portList:portItemPropsTypes[] = [
+    {
+        side: 'left',
+        head: 'Коттеджный поселок "Royal Hills"',
+        images: [serv1, serv1, serv1],
+        descr: <>
+            <h4>Бассейн с джакузи для дома премиум-класса</h4>
+            <p>
+            <span>Материал:</span> бетон<br/>
+            </p>
+        </>
+    },
+    {
+        side: 'right',
+        head: 'Коттеджный поселок "Royal Hills""',
+        images: [serv1, serv1, serv1],
+        descr: <>
+            <h4>Бассейн с джакузи для дома премиум-класса</h4>
+            <p>
+            <span>Материал:</span> бетон<br/>
+            </p>
+        </>
+    },
+]
+
 const SpaPage = () => {
     return (
         <>
             <Header/>
-            <Hero/>
+            <Hero
+                title="Строительство современных
+                банных спа-комплексов 
+                и Wellness зон под ключ"
+                subtitle="Строим спа с 2001 года по всей России!"
+                bg={heroBg}
+                />
             <Why
                 title="Банные спа-комплексы"
                 list={whList}
@@ -223,6 +259,14 @@ const SpaPage = () => {
                 list={servList}
                 title="Решения для вашего банного спа-комплекса"
                 />
+            <Portfolio
+                head="ПОРТФОЛИО РЕАЛИЗОВАННЫХ ПРОЕКТОВ"
+                list={portList}
+                />
+            <Feedback
+                isLight={false}
+                />
+            <Footer/>
         </>
     )
 }

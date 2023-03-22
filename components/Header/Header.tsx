@@ -77,7 +77,7 @@ const Header = () => {
                                 <Link href={'/spa'} className={styles.nav_link}>спа</Link>
                             </li>
                             <li className={styles.nav_item}>
-                                <Link href={'/'} className={styles.nav_link}>бани и сауны</Link>
+                                <Link href={'/bath'} className={styles.nav_link}>бани и сауны</Link>
                             </li>
                             <li className={styles.nav_item}>
                                 <Link href={'/'} className={styles.nav_link}>наши работы</Link>

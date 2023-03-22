@@ -1,0 +1,29 @@
+.wrapper {
+    padding: 40px;
+    background: #1A2231;
+    border: 1px solid #32415E;
+    border-radius: 15px;
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        img {
+            max-width: 280px;
+            max-height: 280px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: flex;
+        }
+    }
+
+    .name {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}

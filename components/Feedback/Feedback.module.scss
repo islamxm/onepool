@@ -119,3 +119,20 @@
         }
     }
 }
+.wrapper.dark {
+    background-color: #1B202C;
+    color: 
+    #788090;
+    
+    .in {
+        background: #1F2430;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 22px;
+
+        .descr {
+            .title {
+                color: #fff;
+            }
+        }
+    }
+}
