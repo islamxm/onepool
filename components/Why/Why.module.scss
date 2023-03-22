@@ -44,14 +44,19 @@
             .item {
                 width: 100%;
                 // width: calc(100% / 3.2);
-                padding: 65px 30px 15px 30px;
+                padding-top: 55px;
                 margin: 0 10px;
-                min-height: 260px;
-                background: #1A2231;
-                border: 1px solid #32415E;
-                border-radius: 15px;
-                position: relative;
-                color: #fff;
+                
+
+                .item_in {
+                    padding: 65px 30px 15px 30px;
+                    min-height: 260px;
+                    background: #1A2231;
+                    border: 1px solid #32415E;
+                    border-radius: 15px;
+                    position: relative;
+                    color: #fff;
+                }
 
 
                 .icon {

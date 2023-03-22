@@ -8,7 +8,11 @@ import img3 from '@/public/assets/why-3.svg'
 import Button from '@/components/Button/Button';
 import {FC} from 'react';
 import { whyPropsTypes } from './types';
-
+import {motion} from 'framer-motion';
+import AnimWrap from '../AnimWrap/AnimWrap';
+import { childAnim } from '@/helpers/animObjects';
+import { parentAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
 
 
 
@@ -20,14 +24,17 @@ const Why:FC<whyPropsTypes> = ({
 }) => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.head}>
-                        <BlockHead
-                            title={title}
-                            />
-                    </div>
+                    <AnimWrap className={styles.head}>
+                        <motion.div variants={childAnim('bottom')}>
+                            <BlockHead
+                                title={title}
+                                />
+                        </motion.div>
+                    </AnimWrap>
+                    
                     {
                         sub ? (
                             <div className={styles.sub}>
@@ -39,49 +46,54 @@ const Why:FC<whyPropsTypes> = ({
                     <div className={styles.body}>
                         {
                             list?.map((item,index) => (
-                                <div className={styles.item} key={index}>
-                                    {
-                                        item.icon ? (
-                                            <div className={styles.icon}>
-                                                <Image
-                                                    src={item.icon}
-                                                    width={50}
-                                                    height={50}
-                                                    alt=""
-                                                    />
-                                            </div>
-                                        ) : null
-                                    }
-                                    <h3 className={styles.title}>
-                                    {item.head}
-                                    </h3>
-                                    <div className={styles.text}>
-                                        <p>
-                                        {item.text}
-                                        </p>
-                                    </div>
-                                </div>
+                                <AnimWrap className={styles.item} key={index}>
+                                        <motion.div variants={childAnim('bottom')} className={styles.item_in} >
+                                        {
+                                            item.icon ? (
+                                                <div className={styles.icon}>
+                                                    <Image
+                                                        src={item.icon}
+                                                        width={50}
+                                                        height={50}
+                                                        alt=""
+                                                        />
+                                                </div>
+                                            ) : null
+                                        }
+                                        <h3 className={styles.title}>
+                                        {item.head}
+                                        </h3>
+                                        <div className={styles.text}>
+                                            <p>
+                                            {item.text}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                </AnimWrap>
+                                
                             ))  
                         }
                         
                     </div>
                     {
                         haveLink ? (
-                            <div className={styles.action}>
-                                <Button
-                                    style={{
-                                        padding: '22px 72px'
-                                    }}
-                                    uppercase
-                                    text='Задать вопрос'
-                                    variant={'fill'}
-                                    />
-                            </div>
+                            <AnimWrap className={styles.action}>
+                                <motion.div variants={childAnim('bottom')}>
+                                    <Button
+                                        style={{
+                                            padding: '22px 72px'
+                                        }}
+                                        uppercase
+                                        text='Задать вопрос'
+                                        variant={'fill'}
+                                        />
+                                </motion.div>
+                            </AnimWrap>
                         ) : null
                     }
                 </div>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 

@@ -4,13 +4,21 @@ import Input from '../Input/Input';
 import Text from '../Text/Text';
 import Button from '../Button/Button';
 import {BsCheck2} from 'react-icons/bs';
+import { parentAnim } from '@/helpers/animObjects';
+import {motion} from 'framer-motion';
+import { childAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '../AnimWrap/AnimWrap';
+
+
 
 const Feedback = () => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+            <AnimWrap>
             <Container>
-                <div className={styles.in}>
+                <motion.div variants={childAnim('bottom')} className={styles.in}>
                     <div className={`${styles.part} ${styles.descr}`}>
                         <h2 className={styles.title}>
                             <span>Остались вопросы?</span>
@@ -63,9 +71,11 @@ const Feedback = () => {
                         <a href="">обработку персональных данных</a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </Container>
-        </div>
+            </AnimWrap>
+         
+        </motion.div>
     )
 }
 
