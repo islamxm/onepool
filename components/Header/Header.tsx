@@ -80,7 +80,7 @@ const Header = () => {
                                 <Link href={'/works'} className={styles.nav_link}>наши работы</Link>
                             </li>
                             <li className={styles.nav_item}>
-                                <Link href={'/'} className={styles.nav_link}>услуги</Link>
+                                <Link href={'/servs'} className={styles.nav_link}>услуги</Link>
                             </li>
                             <li className={styles.nav_item}>
                                 <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
