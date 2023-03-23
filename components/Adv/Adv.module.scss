@@ -1,0 +1,124 @@
+.wrapper {
+    position: relative;
+
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: flex;
+        }
+
+        // &:after {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     content: '';
+        //     background: linear-gradient(0deg, rgba(27, 32, 44, 0.9), rgba(27, 32, 44, 0.9));
+        // }
+    }
+    .in {
+        padding: 60px 0;
+        position: relative;
+        z-index: 3;
+
+        .head {
+            margin-bottom: 50px;
+        }
+    
+        .body {
+            margin-bottom: 50px;
+            .part.right {
+
+                .descr {
+                    padding-left: 35px;
+                    padding-right: 0;
+                }
+
+                // .img {
+
+                //     .icon {
+                //         right: unset;
+                //         left: -15px;
+                //     }
+                // }
+            }
+            
+            .part {
+                padding: 40px 0;
+                display: flex;
+
+                .descr {
+                    padding-right: 35px;
+                    .title {
+                        margin-bottom: 20px;
+                        font-size: 24px;
+                        font-weight: 300;
+                        line-height: 140%;
+                    }
+                    .text {
+                        opacity: .8;
+                        
+                        
+                    }
+                }
+    
+                .img {
+                    position: relative;
+                    width: 50%;
+                    flex: 0 0 auto;
+
+                    .img_el {
+                        height: 277px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: flex;
+                        }
+                    }
+    
+                    .icon {
+                        position: absolute;
+                        background: #1A2231;
+                        border: 1px solid #32415E;
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px;
+                        height: 100px;
+                        bottom: -50px;
+                        right: -15px;
+
+                        img {
+                            max-width: 50px;
+                            max-height: 50px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
