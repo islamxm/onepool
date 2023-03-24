@@ -7,8 +7,8 @@ import Image from 'next/image';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import { childAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
-
-
+import { parentAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
 
 const ServItem:FC<servItemTypes> = ({
     images,
@@ -19,7 +19,7 @@ const ServItem:FC<servItemTypes> = ({
 
     if(side === 'left') {
         return (
-            <div className={`${styles.wrapper} ${styles.left}`}>
+            <motion.div variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${styles.left}`}>
                 <Container>
                     <div className={styles.in}>
                         <AnimWrap className={styles.head}>
@@ -54,12 +54,12 @@ const ServItem:FC<servItemTypes> = ({
                         </div>
                     </div>
                 </Container>
-            </div>
+            </motion.div>
         )
     }
     if(side === 'right') {
         return (
-            <div className={`${styles.wrapper} ${styles.right}`}>
+            <motion.div variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${styles.right}`}>
                 <Container>
                     <div className={styles.in}>
                         <AnimWrap className={styles.head}>
@@ -94,7 +94,7 @@ const ServItem:FC<servItemTypes> = ({
                         </div>
                     </div>
                 </Container>
-            </div>
+            </motion.div>
         )
     }
 

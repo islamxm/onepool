@@ -21,16 +21,12 @@ const Servs:FC<servsPropsTypes> = ({
 
 
     return (
-        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+        <div className={styles.wrapper}>
             <div className={styles.in}>
-                <AnimWrap className={styles.head}>
+                {/* <AnimWrap className={styles.head}>
                     <motion.div variants={childAnim('bottom')}>
                         <Container>
-                            <div className={styles.title}>
-                            <BlockHead
-                                title={title}
-                                />
-                        </div>
+                           
                         {
                             sub ? (
                                 <div className={styles.text}>
@@ -40,8 +36,25 @@ const Servs:FC<servsPropsTypes> = ({
                         }
                         </Container>
                     </motion.div>
-                </AnimWrap>
-                
+                </AnimWrap> */}
+                <motion.div {...animWhileInView} variants={parentAnim} className={styles.head}>
+                    <Container>
+                        <div className={styles.title}>
+                            <BlockHead
+                                title={title}
+                                />
+                        </div>
+                        {
+                            sub ? (
+                                <div className={styles.text}>
+                                    {sub}
+                                </div>
+                            ) : null
+                        }
+                    </Container>
+                    
+
+                </motion.div>
                 {
                     list?.map((item,index) => (
                         <div className={`${styles.item} ${isHomePage ? styles.homePage : ''}`} key={index}>
@@ -52,7 +65,7 @@ const Servs:FC<servsPropsTypes> = ({
             </div>
            
             
-        </motion.div>
+        </div>
     )
 }
 
