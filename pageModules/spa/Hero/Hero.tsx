@@ -4,6 +4,10 @@ import FeedbackSm from '@/components/FeedbackSm/FeedbackSm';
 import { heroPropsTypes } from './types';
 import {FC} from 'react';
 import Image from 'next/image';
+import { parentAnim, childAnim, animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import {motion} from 'framer-motion';
+
 
 const Hero:FC<heroPropsTypes> = ({
     title,
@@ -12,7 +16,7 @@ const Hero:FC<heroPropsTypes> = ({
 }) => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             {
                 bg ? (
                     <div className={styles.bg}>
@@ -28,19 +32,25 @@ const Hero:FC<heroPropsTypes> = ({
             <Container>
                 <div className={styles.in}>
                     <div className={styles.main}>
-                        <h1 className={`${styles.title} page-title `}>
-                        {title}
-                        </h1>
-                        <div className={styles.ex}>
-                        {subtitle}
-                        </div>
+                        <AnimWrap className={styles.title}>
+                            <motion.h1 variants={childAnim('bottom')} className={`page-title `}>
+                                {title}
+                            </motion.h1>
+                        </AnimWrap>
+                        <AnimWrap className={styles.ex}>
+                            <motion.div variants={childAnim('bottom')}>
+                                {subtitle}
+                            </motion.div>
+                        </AnimWrap> 
                     </div>
-                    <div className={styles.form}>
+                    <AnimWrap className={styles.form}>
+                        <motion.div variants={childAnim('right')}>
                         <FeedbackSm/>
-                    </div>
+                        </motion.div>
+                    </AnimWrap>
                 </div>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 

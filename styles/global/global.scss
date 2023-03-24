@@ -35,6 +35,16 @@ body {
     background-color: 
     #1B202C;
     overscroll-behavior-y: none;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: var(--black);
+        // border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--gold); 
+        border-radius: 10px;
+    }
 }
 
 .scroll-container {
