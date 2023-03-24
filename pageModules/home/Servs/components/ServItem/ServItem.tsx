@@ -3,7 +3,7 @@ import { servItemTypes } from '../../types';
 import {FC} from 'react';
 import Container from '@/components/Container/Container';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import Image from 'next/image';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import { childAnim } from '@/helpers/animObjects';
@@ -42,7 +42,8 @@ const ServItem:FC<servItemTypes> = ({
                                             bulletActiveClass: styles.active,
                                             clickable: true
                                         }}
-                                        modules={[Pagination]}
+                                        modules={[Pagination, Autoplay]}
+                                        autoplay={{delay: 2000}}
                                         className={styles.swiper}
                                         >
                                         {
@@ -96,7 +97,8 @@ const ServItem:FC<servItemTypes> = ({
                                             bulletActiveClass: styles.active,
                                             clickable: true
                                         }}
-                                        modules={[Pagination]}
+                                        modules={[Pagination, Autoplay]}
+                                        autoplay={{delay: 2000}}
                                         className={styles.swiper}
                                         >
                                         {
