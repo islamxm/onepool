@@ -4,8 +4,10 @@ import { portItemPropsTypes } from '../../types';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from 'next/image';
 import { Pagination } from 'swiper';
-
-
+import {motion} from 'framer-motion';
+import { parentAnim,childAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
 
 const Part:FC<portItemPropsTypes> = ({
     head,
@@ -17,10 +19,10 @@ const Part:FC<portItemPropsTypes> = ({
 
     if(side === 'left') {
         return (
-            <div className={styles.part}>
+            <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
-                    <div className={styles.side}>
-                        <div className={styles.slider}>
+                    <AnimWrap className={styles.side}>
+                        <motion.div variants={childAnim('left')} className={styles.slider}>
                             <div className={styles.head}>
                                 {head}
                             </div>
@@ -49,23 +51,26 @@ const Part:FC<portItemPropsTypes> = ({
                                  <div className={styles.pag}></div>
                                 
                             </Swiper>
-                        </div>
-                    </div>
-                    <div className={styles.side}>
-                        <div className={styles.descr}>
-                            <div className={styles.descr_in}>
-                                {descr}
+                        </motion.div>
+                    </AnimWrap>
+                    <AnimWrap className={styles.side}>
+                        <motion.div variants={childAnim('right')}>
+                            <div className={styles.descr}>
+                                <div className={styles.descr_in}>
+                                    {descr}
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </AnimWrap>
+                    
                     
                 </div>          
-            </div>
+            </motion.div>
         )
     }
     if(side === 'right') {
         return (
-            <div className={styles.part}>
+            <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
                     
                     <div className={styles.side}>
@@ -108,7 +113,7 @@ const Part:FC<portItemPropsTypes> = ({
                         </div>
                     </div>
                 </div>          
-            </div>
+            </motion.div>
         )
     }
 

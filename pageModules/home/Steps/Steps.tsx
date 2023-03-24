@@ -8,9 +8,13 @@ import { animWhileInView } from '@/helpers/animObjects';
 import { stepLineAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import {FC} from 'react';
+import { stepPropsTypes } from './types';
 
-
-const Steps = () => {
+const Steps:FC<stepPropsTypes> = ({
+    list,
+    title
+}) => {
 
     const bodyRef = useRef<HTMLDivElement>(null);
     const inView = useInView(bodyRef);
@@ -26,12 +30,25 @@ const Steps = () => {
                 <div className={styles.in}>
                     <div className={styles.head}>
                         <BlockHead
-                            title='Простые шаги реализации Вашего проекта'
+                            title={title}
                             isDark
                             />
                     </div>
                     <motion.div variants={parentAnim} {...animWhileInView} ref={bodyRef} className={`${styles.body} ${inView ? styles.active : ''}`}>
-                        <div className={styles.item}>
+                        {
+                            list?.map((item, index) => (
+                                <div className={styles.item} key={index}>
+                                    <AnimWrap className={styles.num}>
+                                    <motion.div variants={childAnim('bottom')}>{index + 1}</motion.div>
+                                    </AnimWrap>
+                                    <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                                    <AnimWrap className={styles.label}>
+                                        <motion.div variants={childAnim((index + 1) % 2 ? 'bottom' : 'top')}>{item.label}</motion.div>
+                                    </AnimWrap>
+                                </div>
+                            ))
+                        }
+                        {/* <div className={styles.item}>
                             <AnimWrap className={styles.num}>
                             <motion.div variants={childAnim('bottom')}>01</motion.div>
                             </AnimWrap>
@@ -85,7 +102,7 @@ const Steps = () => {
                             <AnimWrap className={styles.label}>
                                 <motion.div variants={childAnim('top')}>Гарантийное сервисное обслуживание</motion.div>
                             </AnimWrap>
-                        </div>
+                        </div> */}
                     </motion.div>
                 </div>
             </Container>

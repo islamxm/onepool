@@ -4,7 +4,10 @@ import {FC} from 'react';
 import Container from '@/components/Container/Container';
 import BlockHead from '@/components/BlockHead/BlockHead';
 import Part from './components/Part/Part';
-
+import {motion} from 'framer-motion';
+import { parentAnim,childAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '../AnimWrap/AnimWrap';
 
 
 
@@ -17,11 +20,16 @@ const Portfolio:FC<portPropsTypes> = ({
         <div className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.head}>
-                        <BlockHead
-                            title={head}
-                            />
-                    </div>
+                    <motion.div variants={parentAnim} {...animWhileInView} className={styles.top}>
+
+                        <AnimWrap className={styles.head}>
+                            <motion.div variants={childAnim('bottom')}>
+                                <BlockHead
+                                title={head}
+                                />
+                            </motion.div>
+                        </AnimWrap>
+                    </motion.div>
                     <div className={styles.body}>
                         {
                             list?.map((item, index) => (

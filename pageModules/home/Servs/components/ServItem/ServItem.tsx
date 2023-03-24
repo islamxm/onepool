@@ -57,7 +57,11 @@ const ServItem:FC<servItemTypes> = ({
                                                 </SwiperSlide>
                                             ))
                                         }
-                                        <div ref={pagRef} className={styles.pag}></div>
+                                        {
+                                            images && images?.length > 1 ? (
+                                                <div ref={pagRef} className={styles.pag}></div>
+                                            ) : null
+                                        }
                                     </Swiper>
                                 </motion.div>
                             </AnimWrap>
@@ -112,7 +116,11 @@ const ServItem:FC<servItemTypes> = ({
                                                 </SwiperSlide>
                                             ))
                                         }
-                                        <div ref={pagRef} className={styles.pag}></div>
+                                        {
+                                            images && images?.length > 1 ? (
+                                                <div ref={pagRef} className={styles.pag}></div>
+                                            ) : null
+                                        }
                                     </Swiper>
                                 </motion.div>
                             </AnimWrap>

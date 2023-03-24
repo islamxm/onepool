@@ -37,9 +37,11 @@ const Why:FC<whyPropsTypes> = ({
                     
                     {
                         sub ? (
-                            <div className={styles.sub}>
+                            <AnimWrap className={styles.sub}>
+                                <motion.div variants={childAnim('bottom')}>
                                 {sub}
-                            </div>
+                                </motion.div>
+                            </AnimWrap>
                         )  : null
                     }
                     

@@ -24,6 +24,49 @@ import Feedback from "@/components/Feedback/Feedback";
 import Footer from "@/components/Footer/Footer";
 import heroBg from '@/public/assets/spa-hero-bg.png';
 import SmoothScroll from "@/helpers/SmoothScroll";
+import port1 from '@/public/assets/spa-port-1-1.jpg';
+import port2 from '@/public/assets/spa-port-1-2.jpg';
+import port3 from '@/public/assets/spa-port-1-3.jpg';
+import port4 from '@/public/assets/spa-port-1-4.jpg';
+import port5 from '@/public/assets/spa-port-1-5.jpg';
+import port6 from '@/public/assets/spa-port-2-1.jpg';
+import port7 from '@/public/assets/spa-port-2-2.jpg';
+import port8 from '@/public/assets/spa-port-2-3.jpg';
+import port9 from '@/public/assets/spa-port-2-4.jpg';
+import port10 from '@/public/assets/spa-port-2-5.jpg';
+import port11 from '@/public/assets/spa-port-2-6.jpg';
+import port12 from '@/public/assets/spa-port-2-7.jpg';
+
+import port13 from '@/public/assets/spa-port-3-1.jpg';
+import port14 from '@/public/assets/spa-port-3-2.jpg';
+import port15 from '@/public/assets/spa-port-3-3.jpg';
+import port16 from '@/public/assets/spa-port-3-4.jpg';
+import port17 from '@/public/assets/spa-port-3-5.jpg';
+import port18 from '@/public/assets/spa-port-3-6.jpg';
+import port19 from '@/public/assets/spa-port-3-7.jpg';
+import port20 from '@/public/assets/spa-port-3-8.jpg';
+
+import port21 from '@/public/assets/spa-port-4-1.jpg';
+import port22 from '@/public/assets/spa-port-4-2.jpg';
+import port23 from '@/public/assets/spa-port-4-3.jpg';
+import port24 from '@/public/assets/spa-port-4-4.jpg';
+import port25 from '@/public/assets/spa-port-4-5.jpg';
+import port26 from '@/public/assets/spa-port-4-6.jpg';
+import port27 from '@/public/assets/spa-port-4-7.jpg';
+import port28 from '@/public/assets/spa-port-4-8.jpg';
+
+
+import port29 from '@/public/assets/spa-port-5-1.jpg';
+import port30 from '@/public/assets/spa-port-5-2.jpg';
+import port31 from '@/public/assets/spa-port-5-3.jpg';
+import port32 from '@/public/assets/spa-port-5-4.jpg';
+import port33 from '@/public/assets/spa-port-5-5.jpg';
+import port34 from '@/public/assets/spa-port-5-6.jpg';
+import port35 from '@/public/assets/spa-port-5-7.jpg';
+
+
+import Steps from "@/pageModules/home/Steps/Steps";
+import { stepItemTypes } from "@/pageModules/home/Steps/types";
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -207,8 +250,8 @@ const servList:servItemTypes[] = [
 const portList:portItemPropsTypes[] = [
     {
         side: 'left',
-        head: 'Коттеджный поселок "Royal Hills"',
-        images: [serv1, serv1, serv1],
+        head: 'Банный спа-комплекс в апарт-отеле"',
+        images: [port1, port2, port3, port4, port5],
         descr: <>
             <h4>Бассейн с джакузи для дома премиум-класса</h4>
             <p>
@@ -218,8 +261,41 @@ const portList:portItemPropsTypes[] = [
     },
     {
         side: 'right',
-        head: 'Коттеджный поселок "Royal Hills""',
-        images: [serv1, serv1, serv1],
+        head: 'Домашний банный спа-комплекс""',
+        images: [port6, port7, port8, port9, port10, port11, port12],
+        descr: <>
+            <h4>Бассейн с джакузи для дома премиум-класса</h4>
+            <p>
+            <span>Материал:</span> бетон<br/>
+            </p>
+        </>
+    },
+    {
+        side: 'left',
+        head: 'Частный банный спа-комплекс в коттеджном поселке',
+        images: [port13, port14, port15, port16, port17, port18, port19, port20],
+        descr: <>
+            <h4>Бассейн с джакузи для дома премиум-класса</h4>
+            <p>
+            <span>Материал:</span> бетон<br/>
+            </p>
+        </>
+    },
+    {
+        side: 'right',
+        head: 'Банный спа-комплекс в горном отеле',
+        images: [port21, port22, port22, port23, port24, port25, port26, port27, port28],
+        descr: <>
+            <h4>Бассейн с джакузи для дома премиум-класса</h4>
+            <p>
+            <span>Материал:</span> бетон<br/>
+            </p>
+        </>
+    },
+    {
+        side: 'left',
+        head: 'Банный спа-комплекс в отеле',
+        images: [port29, port30, port31, port32, port33, port34, port35],
         descr: <>
             <h4>Бассейн с джакузи для дома премиум-класса</h4>
             <p>
@@ -229,10 +305,32 @@ const portList:portItemPropsTypes[] = [
     },
 ]
 
+const stepsList: stepItemTypes[] = [
+    {
+        label: <>
+            Проектирование и дизайн
+            <span>Мы разработаем для вас проект уникальной зоны отдыха, обеспечивающей максимальное удобство, комфорт и безопасность.</span>
+        </>
+    },
+    {
+        label: <>
+            Строительство
+            <span>Реализуем весь комплекс строительных и отделочных работ. Производим подбор и монтаж необходимого оборудования, отделочных и строительных материалов. Сдаем объекты в эксплуатацию точно в срок.</span>
+        </>
+    },
+    {
+        label: <>
+            Обслуживание
+            <span>В сервисное обслуживание входит: выезд специалиста, проверка качества воды, проверка работоспособности оборудования, замена необходимых компонентов.</span>
+        </>
+    }
+]
+
+
 const SpaPage = () => {
     return (
         <SmoothScroll>
-            <Header/>
+            {/* <Header/> */}
             <Hero
                 title="Строительство современных
                 банных спа-комплексов 
@@ -259,6 +357,10 @@ const SpaPage = () => {
             <Servs
                 list={servList}
                 title="Решения для вашего банного спа-комплекса"
+                />
+            <Steps
+                list={stepsList}
+                title="Этапы строительства"
                 />
             <Portfolio
                 head="ПОРТФОЛИО РЕАЛИЗОВАННЫХ ПРОЕКТОВ"

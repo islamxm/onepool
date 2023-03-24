@@ -25,6 +25,8 @@ import serv9 from '@/public/assets/home-serv-2-3.jpg';
 import serv10 from '@/public/assets/home-serv-3-1.jpg';
 import serv11 from '@/public/assets/home-serv-3-2.jpg';
 import SmoothScroll from "@/helpers/SmoothScroll";
+import { stepItemTypes } from "@/pageModules/home/Steps/types";
+
 
 const whList: whyItemPropsTypes[] = [
     {
@@ -124,6 +126,27 @@ const servList: servItemTypes[] = [
     },
 ]
 
+const stepsList: stepItemTypes[] = [
+    {
+        label: <>Консультация</>
+    },
+    {
+        label: <>Предварительная смета</>
+    },
+    {
+        label: <>Договор</>
+    },
+    {
+        label: <>Дизайн-проект</>
+    },
+    {
+        label: <>Строительство</>
+    },
+    {
+        label: <>Гарантийное сервисное обслуживание</>
+    }
+]
+
 const HomePage = () => {
 
     return (
@@ -142,7 +165,7 @@ const HomePage = () => {
             list={whList}
             haveLink
             />
-           <Steps/>
+           <Steps list={stepsList} title="Простые шаги реализации Вашего проекта"/>
            <Feedback
             isLight
             />
