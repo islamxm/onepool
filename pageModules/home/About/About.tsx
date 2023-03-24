@@ -8,6 +8,10 @@ import {motion} from 'framer-motion';
 import { parentAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import { childAnim } from '@/helpers/animObjects';
+import dynamic from "next/dynamic";
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false,
+});
 
 const About = () => {
 
@@ -72,7 +76,13 @@ const About = () => {
                         <AnimWrap className={styles.item}>
                             <motion.div variants={childAnim('bottom')} className={styles.item}>
                                 <div className={styles.value}>
-                                22
+                                {/* 22 */}
+                                <AnimatedNumbers
+                                    animateToNumber={22}
+                                    configs={(number, index) => {
+                                    return { mass: 1, tension: 400 * (index + 1), friction: 140 };
+                                    }}
+                                ></AnimatedNumbers>
                                 </div>
                                 <div className={styles.label}>
                                 года 
@@ -83,7 +93,14 @@ const About = () => {
                         <AnimWrap className={styles.item}>
                             <motion.div variants={childAnim('bottom')} className={styles.item}>
                                 <div className={styles.value}>
-                                730+
+                                    +
+                                <AnimatedNumbers
+                                    animateToNumber={730}
+                                    // fontStyle={{ fontSize: 32 }}
+                                    configs={(number, index) => {
+                                    return { mass: 1, tension: 400 * (index + 1), friction: 140 };
+                                    }}
+                                ></AnimatedNumbers>
                                 </div>
                                 <div className={styles.label}>
                                 уникальных 
@@ -95,7 +112,14 @@ const About = () => {
                         <AnimWrap>
                             <motion.div variants={childAnim('bottom')} className={styles.item}>
                                 <div className={styles.value}>
-                                120+
+                                    +
+                                <AnimatedNumbers
+                                    animateToNumber={120}
+                                    // fontStyle={{ fontSize: 32 }}
+                                    configs={(number, index) => {
+                                    return { mass: 1, tension: 400 * (index + 1), friction: 140 };
+                                    }}
+                                ></AnimatedNumbers>
                                 </div>
                                 <div className={styles.label}>
                                 объектов 
@@ -106,7 +130,13 @@ const About = () => {
                         <AnimWrap>
                             <motion.div variants={childAnim('bottom')} className={styles.item}>
                                 <div className={styles.value}>
-                                30
+                                <AnimatedNumbers
+                                    animateToNumber={30}
+                                    // fontStyle={{ fontSize: 32 }}
+                                    configs={(number, index) => {
+                                    return { mass: 1, tension: 400 * (index + 1), friction: 140 };
+                                    }}
+                                ></AnimatedNumbers>
                                 </div>
                                 <div className={styles.label}>
                                 брендов оборудования
