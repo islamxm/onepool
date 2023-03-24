@@ -5,8 +5,8 @@ export const parentAnim: Variants = {
     visible: {
         opacity: 1,
         transition: {
-            delayChildren: .5,
-            staggerChildren: .4,
+            delayChildren: .1,
+            staggerChildren: .1,
         }
     },
 }
@@ -81,6 +81,35 @@ export const childAnim = (type: directionTypes) => {
             }
     }
     
+}
+
+// export const stepLineAnim = (type: directionTypes) => {
+//     switch(type) {
+//         case 'bottom':
+//             return {
+//                 hidden: { height: 0},
+//                 visible: {
+//                     height: 170,
+//                     transition: {
+//                         //cubic-bezier(.26,.12,.25,.99)
+//                         ease: [.26,.12,.25,.99],
+//                         duration: 1,
+//                     }
+//                 }
+//             }
+//     }
+// }
+
+export const stepLineAnim = {
+    hidden: { height: 0},
+    visible: {
+        height: 170,
+        transition: {
+            //cubic-bezier(.26,.12,.25,.99)
+            ease: [.26,.12,.25,.99],
+            duration: 1,
+        }
+    }
 }
 
 

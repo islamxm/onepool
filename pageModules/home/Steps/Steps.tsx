@@ -1,7 +1,24 @@
 import styles from './Steps.module.scss';
 import Container from '@/components/Container/Container';
 import BlockHead from '@/components/BlockHead/BlockHead';
+import { useInView } from 'framer-motion';
+import {useRef, useEffect} from 'react';
+import { childAnim, parentAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import { stepLineAnim } from '@/helpers/animObjects';
+import {motion} from 'framer-motion';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+
+
 const Steps = () => {
+
+    const bodyRef = useRef<HTMLDivElement>(null);
+    const inView = useInView(bodyRef);
+
+    
+
+   
+    
 
     return (
         <div className={styles.wrapper}>
@@ -13,32 +30,63 @@ const Steps = () => {
                             isDark
                             />
                     </div>
-                    <div className={styles.body}>
+                    <motion.div variants={parentAnim} {...animWhileInView} ref={bodyRef} className={`${styles.body} ${inView ? styles.active : ''}`}>
                         <div className={styles.item}>
-                            <div className={styles.num}>01</div>
-                            <div className={styles.label}>Консультация</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>01</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('bottom')}>Консультация</motion.div>
+                            </AnimWrap>
                         </div>
                         <div className={styles.item}>
-                            <div className={styles.num}>02</div>
-                            <div className={styles.label}>Предварительная смета</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>02</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('top')}>Предварительная смета</motion.div>
+                            </AnimWrap>
                         </div>
                         <div className={styles.item}>
-                            <div className={styles.num}>03</div>
-                            <div className={styles.label}>Договор</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>03</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('bottom')}>Договор</motion.div>
+                            </AnimWrap>
+                 
                         </div>
                         <div className={styles.item}>
-                            <div className={styles.num}>04</div>
-                            <div className={styles.label}>Дизайн-проект</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>04</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('top')}>Дизайн-проект</motion.div>
+                            </AnimWrap>
                         </div>
                         <div className={styles.item}>
-                            <div className={styles.num}>05</div>
-                            <div className={styles.label}>Строительство</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>05</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('bottom')}>Строительство</motion.div>
+                            </AnimWrap>
                         </div>
                         <div className={styles.item}>
-                            <div className={styles.num}>06</div>
-                            <div className={styles.label}>Гарантийное сервисное обслуживание</div>
+                            <AnimWrap className={styles.num}>
+                            <motion.div variants={childAnim('bottom')}>06</motion.div>
+                            </AnimWrap>
+                            <motion.div variants={stepLineAnim} className={styles.line}></motion.div>
+                            <AnimWrap className={styles.label}>
+                                <motion.div variants={childAnim('top')}>Гарантийное сервисное обслуживание</motion.div>
+                            </AnimWrap>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </Container>
         </div>

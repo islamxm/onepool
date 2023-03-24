@@ -9,6 +9,7 @@
             margin-bottom: 80px;    
         }
 
+
         .body {
             
             display: flex;
@@ -36,13 +37,25 @@
                     left: calc(50% - 12.5px);
                 }
 
-                &:before {
-                    content: '';
-                    width: 3px;
-                    background-color: #A88455;
-                    height: 170px;
+                // &:before {
+                //     content: '';
+                //     width: 3px;
+                //     background-color: #A88455;
+                //     height: 0;
+                //     transition: all 1s ease;
+                //     position: absolute;
+                //     left: calc(50% - 1.5px);
+                // }
+
+                .line {
                     position: absolute;
+                    width: 3px;
+                    // height: 0;
+                    height: 170px;
                     left: calc(50% - 1.5px);
+                    background-color: #A88455;
+                    // transition: all 1s ease;
+
                 }
 
 
@@ -50,9 +63,15 @@
                     &:after {
                         top: -12.5px;
                     }
-                    &:before {
-                        top: -170px;
+
+                    .line {
+                        bottom: 60px;
                     }
+                    // &:before {
+                    //     // top: -170px;
+                    //     bottom: 60px;
+                    //     // background-color: red;
+                    // }
                     .label {
                         top: -190px;
                     }
@@ -62,9 +81,15 @@
                     &:after {
                         bottom: -12.5px;
                     }
-                    &:before {
-                        bottom: -170px;
+                    // &:before {
+                    //     // bottom: -170px;
+                    //     top: 60px;
+                    //     // background-color: green;
+                    // }
+                    .line {
+                        top: 60px;
                     }
+
                     .label {
                         bottom: -190px;
                     }
