@@ -40,18 +40,21 @@ const Hero = () => {
                         <Image
                             src={img1}
                             alt=""
+                            placeholder={'blur'}
                             />
                     </SwiperSlide>
                     <SwiperSlide className={styles.item}>
                         <Image
                             src={img2}
                             alt=""
+                            placeholder={'blur'}
                             />
                     </SwiperSlide>
                     <SwiperSlide className={styles.item}>
                         <Image
                             src={img3}
                             alt=""
+                            placeholder={'blur'}
                             />
                     </SwiperSlide>
                 </Swiper>

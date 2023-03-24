@@ -49,6 +49,7 @@ const About = () => {
                                 width={577}
                                 height={454}
                                 alt={""}
+                                placeholder={'blur'}
                                 />
                             </motion.div>
                         </AnimWrap>

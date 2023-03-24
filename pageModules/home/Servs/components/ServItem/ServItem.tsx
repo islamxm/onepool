@@ -51,6 +51,7 @@ const ServItem:FC<servItemTypes> = ({
                                                     <Image
                                                         src={item}
                                                         alt=""
+                                                        placeholder={'blur'}
                                                         />
                                                 </SwiperSlide>
                                             ))
@@ -104,6 +105,7 @@ const ServItem:FC<servItemTypes> = ({
                                                     <Image
                                                         src={item}
                                                         alt=""
+                                                        placeholder={'blur'}
                                                         />
                                                 </SwiperSlide>
                                             ))
