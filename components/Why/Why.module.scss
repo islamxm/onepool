@@ -31,7 +31,8 @@
             margin-left: -10px;
             margin-right: -10px;
             flex-wrap: wrap;
-
+            justify-content: center;
+            
             .item { 
                 width: 100%;
                 width: calc((100% / 3) - 20px);

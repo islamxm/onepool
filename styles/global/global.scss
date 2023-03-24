@@ -34,7 +34,17 @@ body {
     color: #fff;
     background-color: 
     #1B202C;
+    overscroll-behavior-y: none;
 }
+
+.scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
+  }
 
 .wrapper {
     position: relative;

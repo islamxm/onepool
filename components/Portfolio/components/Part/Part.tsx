@@ -3,6 +3,7 @@ import {FC} from 'react';
 import { portItemPropsTypes } from '../../types';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from 'next/image';
+import { Pagination } from 'swiper';
 
 
 
@@ -25,6 +26,13 @@ const Part:FC<portItemPropsTypes> = ({
                             </div>
                             <Swiper
                                 className={styles.slider_wr}
+                                modules={[Pagination]}
+                                pagination={{
+                                    bulletClass: styles.pag_item,
+                                    el: `.${styles.pag}`,
+                                    bulletActiveClass: styles.active,
+                                    clickable: true
+                                }}
                                 >
                                 {
                                     images?.map((item,index) => (
@@ -38,6 +46,7 @@ const Part:FC<portItemPropsTypes> = ({
                                         </SwiperSlide>
                                     ))
                                 }
+                                 <div className={styles.pag}></div>
                                 
                             </Swiper>
                         </div>
@@ -73,6 +82,13 @@ const Part:FC<portItemPropsTypes> = ({
                             </div>
                             <Swiper
                                 className={styles.slider_wr}
+                                modules={[Pagination]}
+                                pagination={{
+                                    bulletClass: styles.pag_item,
+                                    el: `.${styles.pag}`,
+                                    bulletActiveClass: styles.active,
+                                    clickable: true
+                                }}
                                 >
                                 {
                                     images?.map((item,index) => (
@@ -86,6 +102,7 @@ const Part:FC<portItemPropsTypes> = ({
                                         </SwiperSlide>
                                     ))
                                 }
+                                <div className={styles.pag}></div>
                                 
                             </Swiper>
                         </div>
