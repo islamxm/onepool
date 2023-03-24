@@ -8,10 +8,11 @@ import {motion} from 'framer-motion';
 import { parentAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import { childAnim } from '@/helpers/animObjects';
-import dynamic from "next/dynamic";
-const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-  ssr: false,
-});
+// import dynamic from "next/dynamic";
+// const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+//   ssr: false,
+// });
+import AnimatedNumbers from '@/helpers/AnimatedNumber';
 
 const About = () => {
 
@@ -74,76 +75,72 @@ const About = () => {
                         </AnimWrap>
                     </div>
                     <div className={styles.ex}>
-                        <AnimWrap className={styles.item}>
-                            <motion.div variants={childAnim('bottom')} className={styles.item}>
-                                <div className={styles.value}>
-                                {/* 22 */}
-                                <AnimatedNumbers
-                                    animateToNumber={22}
-                                    configs={(number, index) => {
-                                    return { mass: 1, tension: 400 * (index + 1), friction: 140 };
-                                    }}
-                                ></AnimatedNumbers>
-                                </div>
-                                <div className={styles.label}>
-                                года 
-                                на рынке
-                                </div>
-                            </motion.div>
-                        </AnimWrap>
-                        <AnimWrap className={styles.item}>
-                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                        <div  className={styles.item}>
+                            <div className={styles.value}>
+                            {/* 22 */}
+                            {/* <AnimatedNumbers
+                                animateToNumber={22}
+                                configs={(number, index) => {
+                                return { mass: 1, tension: 400 * (index + 1), friction: 140 };
+                                }}
+                            ></AnimatedNumbers> */}
+                            <AnimatedNumbers from={0} to={22}/>
+                            </div>
+                            <div className={styles.label}>
+                            года 
+                            на рынке
+                            </div>
+                        </div>
+                        <div  className={styles.item}>
                                 <div className={styles.value}>
                                     +
-                                <AnimatedNumbers
+                                {/* <AnimatedNumbers
                                     animateToNumber={730}
                                     // fontStyle={{ fontSize: 32 }}
                                     configs={(number, index) => {
                                     return { mass: 1, tension: 400 * (index + 1), friction: 140 };
                                     }}
-                                ></AnimatedNumbers>
+                                ></AnimatedNumbers> */}
+                                <AnimatedNumbers from={0} to={730}/>
                                 </div>
                                 <div className={styles.label}>
                                 уникальных 
                                 проектов
                                 </div>
-                            </motion.div>
-                        </AnimWrap>
+                            </div>
                         
-                        <AnimWrap>
-                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                        <div className={styles.item}>
                                 <div className={styles.value}>
                                     +
-                                <AnimatedNumbers
+                                {/* <AnimatedNumbers
                                     animateToNumber={120}
                                     // fontStyle={{ fontSize: 32 }}
                                     configs={(number, index) => {
                                     return { mass: 1, tension: 400 * (index + 1), friction: 140 };
                                     }}
-                                ></AnimatedNumbers>
+                                ></AnimatedNumbers> */}
+                                <AnimatedNumbers from={0} to={120}/>
                                 </div>
                                 <div className={styles.label}>
                                 объектов 
                                 на обслуживании
                                 </div>
-                            </motion.div>
-                        </AnimWrap>
-                        <AnimWrap>
-                            <motion.div variants={childAnim('bottom')} className={styles.item}>
+                            </div>
+                        <div className={styles.item}>
                                 <div className={styles.value}>
-                                <AnimatedNumbers
+                                {/* <AnimatedNumbers
                                     animateToNumber={30}
                                     // fontStyle={{ fontSize: 32 }}
                                     configs={(number, index) => {
                                     return { mass: 1, tension: 400 * (index + 1), friction: 140 };
                                     }}
-                                ></AnimatedNumbers>
+                                ></AnimatedNumbers> */}
+                                <AnimatedNumbers from={0} to={30}/>
                                 </div>
                                 <div className={styles.label}>
                                 брендов оборудования
                                 </div>
-                            </motion.div>
-                        </AnimWrap>
+                            </div>
                     </div>
                 </div>
             </Container>
