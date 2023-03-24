@@ -23,6 +23,7 @@ import { portItemPropsTypes } from "@/components/Portfolio/types";
 import Feedback from "@/components/Feedback/Feedback";
 import Footer from "@/components/Footer/Footer";
 import heroBg from '@/public/assets/spa-hero-bg.png';
+import SmoothScroll from "@/helpers/SmoothScroll";
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -230,7 +231,7 @@ const portList:portItemPropsTypes[] = [
 
 const SpaPage = () => {
     return (
-        <>
+        <SmoothScroll>
             <Header/>
             <Hero
                 title="Строительство современных
@@ -267,7 +268,7 @@ const SpaPage = () => {
                 isLight={false}
                 />
             <Footer/>
-        </>
+        </SmoothScroll>
     )
 }
 
