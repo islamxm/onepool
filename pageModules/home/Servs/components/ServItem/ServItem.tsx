@@ -3,12 +3,15 @@ import { servItemTypes } from '../../types';
 import {FC} from 'react';
 import Container from '@/components/Container/Container';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import { Pagination } from 'swiper';
 import Image from 'next/image';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import { childAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
 import { parentAnim } from '@/helpers/animObjects';
+import {useRef} from 'react';
 import { animWhileInView } from '@/helpers/animObjects';
+import 'swiper/css/pagination';
 
 const ServItem:FC<servItemTypes> = ({
     images,
@@ -16,6 +19,8 @@ const ServItem:FC<servItemTypes> = ({
     descr,
     side = 'left'
 }) => {
+
+    const pagRef = useRef<HTMLDivElement>(null)
 
     if(side === 'left') {
         return (
@@ -31,6 +36,13 @@ const ServItem:FC<servItemTypes> = ({
                             <AnimWrap className={styles.slider}>
                                 <motion.div variants={childAnim('left')}>
                                     <Swiper
+                                        pagination={{
+                                            bulletClass: styles.pag_item,
+                                            el: `.${styles.pag}`,
+                                            bulletActiveClass: styles.active,
+                                            clickable: true
+                                        }}
+                                        modules={[Pagination]}
                                         className={styles.swiper}
                                         >
                                         {
@@ -43,6 +55,7 @@ const ServItem:FC<servItemTypes> = ({
                                                 </SwiperSlide>
                                             ))
                                         }
+                                        <div ref={pagRef} className={styles.pag}></div>
                                     </Swiper>
                                 </motion.div>
                             </AnimWrap>
@@ -76,6 +89,13 @@ const ServItem:FC<servItemTypes> = ({
                             <AnimWrap className={styles.slider}>
                                 <motion.div variants={childAnim('right')}>
                                     <Swiper
+                                        pagination={{
+                                            bulletClass: styles.pag_item,
+                                            el: `.${styles.pag}`,
+                                            bulletActiveClass: styles.active,
+                                            clickable: true
+                                        }}
+                                        modules={[Pagination]}
                                         className={styles.swiper}
                                         >
                                         {
@@ -88,6 +108,7 @@ const ServItem:FC<servItemTypes> = ({
                                                 </SwiperSlide>
                                             ))
                                         }
+                                        <div ref={pagRef} className={styles.pag}></div>
                                     </Swiper>
                                 </motion.div>
                             </AnimWrap>

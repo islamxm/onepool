@@ -24,7 +24,7 @@
                 border: 1px solid var(--gold);
                 font-size: 18px;
                 line-height: 100%;
-                font-weight: 300;
+                font-weight: 600;
             }
         }
 
@@ -38,8 +38,9 @@
                 width: 48%;
                 margin: 0 15px;
                 
-                .swiper {
 
+                .swiper {
+                    padding-bottom: 30px;
                     .slide {
                         border-radius: 8px;
                         height: 510px;
@@ -51,6 +52,31 @@
                             display: flex;
                         }
 
+                    }
+
+                    .pag {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        bottom: 0;
+                        position: absolute;
+
+                        .pag_item {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 100%;
+                            display: block;
+                            margin: 0 4px;
+                            // background-color: red !important;
+                            transition: all .3s ease;
+                            background-color: #fff;
+                            opacity: .5;
+                            cursor: pointer;
+                        }
+
+                        .pag_item.active {
+                            opacity: 1;
+                        }
                     }
                 }
             }
