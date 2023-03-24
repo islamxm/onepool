@@ -15,7 +15,7 @@ export const animWhileInView = {
     initial: "hidden",
     whileInView: 'visible',
     viewport: {
-        once: false
+        once: true
     }
 }
 
