@@ -72,16 +72,18 @@ const Part:FC<portItemPropsTypes> = ({
         return (
             <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
-                    
-                    <div className={styles.side}>
-                        <div className={styles.descr}>
-                            <div className={styles.descr_in}>
-                                {descr}
+                   
+                    <AnimWrap className={styles.side}>
+                        <motion.div variants={childAnim('left')}>
+                            <div className={styles.descr}>
+                                <div className={styles.descr_in}>
+                                    {descr}
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className={styles.side}>
-                        <div className={styles.slider}>
+                        </motion.div>
+                    </AnimWrap>
+                    <AnimWrap className={styles.side}>
+                        <motion.div variants={childAnim('right')} className={styles.slider}>
                             <div className={styles.head}>
                                 {head}
                             </div>
@@ -107,11 +109,12 @@ const Part:FC<portItemPropsTypes> = ({
                                         </SwiperSlide>
                                     ))
                                 }
-                                <div className={styles.pag}></div>
+                                 <div className={styles.pag}></div>
                                 
                             </Swiper>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </AnimWrap>
+                    
                 </div>          
             </motion.div>
         )
