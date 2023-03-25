@@ -5,6 +5,8 @@ import { portItemPropsTypes } from "@/components/Portfolio/types";
 import serv1 from '@/public/assets/spa-serv-1.png';
 import Gal from "@/pageModules/works/Gal/Gal";
 import Feedback from "@/components/Feedback/Feedback";
+import SmoothScroll from "@/helpers/SmoothScroll";
+import PageLayout from "@/components/PageLayout/PageLayout";
 
 const portList:portItemPropsTypes[] = [
     {
@@ -36,7 +38,8 @@ const portList:portItemPropsTypes[] = [
 const WorksPage = () => {
 
     return (
-        <>  
+        <SmoothScroll>  
+            <PageLayout>
             <Header/>
             <div className="top-block">
                 <Portfolio
@@ -49,7 +52,8 @@ const WorksPage = () => {
                 isLight={true}
                 />
             <Footer/>
-        </>
+            </PageLayout>
+        </SmoothScroll>
     )
 }
 

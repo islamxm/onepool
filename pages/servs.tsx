@@ -4,7 +4,8 @@ import Servs from "@/pageModules/home/Servs/Servs";
 import serv1 from '@/public/assets/serv-1.png';
 import { servItemTypes } from "@/pageModules/home/Servs/types";
 import Feedback from "@/components/Feedback/Feedback";
-
+import PageLayout from "@/components/PageLayout/PageLayout";
+import SmoothScroll from "@/helpers/SmoothScroll";
 const servList: servItemTypes[] = [
     {
         title:'Реконструкция и модернизация',
@@ -87,7 +88,8 @@ const servList: servItemTypes[] = [
 const ServsPage = () => {
 
     return (
-        <>
+        <SmoothScroll>
+            <PageLayout>
             <Header/>   
             <div className={'top-block'}>
                 <Servs
@@ -101,7 +103,8 @@ const ServsPage = () => {
                 isLight={false}
                 />
             <Footer/>
-        </>
+            </PageLayout>
+        </SmoothScroll>
     )
 }
 

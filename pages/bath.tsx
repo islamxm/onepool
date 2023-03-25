@@ -31,6 +31,8 @@ import pal3 from '@/public/assets/bath-mat-3.png';
 import pal4 from '@/public/assets/bath-mat-4.png';
 import pal5 from '@/public/assets/bath-mat-5.png';
 import pal6 from '@/public/assets/bath-mat-6.png';
+import PageLayout from "@/components/PageLayout/PageLayout";
+import SmoothScroll from "@/helpers/SmoothScroll";
 
 const whyList: whyItemPropsTypes[] = [
     {
@@ -97,7 +99,9 @@ const portList:portItemPropsTypes[] = [
 const BathPage = () => {
 
     return (
-        <>
+        <SmoothScroll>
+            <PageLayout>
+            
             <Header/>
             <Hero
                 bg={bgImg}
@@ -133,7 +137,8 @@ const BathPage = () => {
                 isLight={false}
                 />
             <Footer/>
-        </>
+        </PageLayout>
+        </SmoothScroll>
     )
 }
 

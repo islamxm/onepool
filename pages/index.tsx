@@ -26,6 +26,7 @@ import serv10 from '@/public/assets/home-serv-3-1.jpg';
 import serv11 from '@/public/assets/home-serv-3-2.jpg';
 import SmoothScroll from "@/helpers/SmoothScroll";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
+import PageLayout from "@/components/PageLayout/PageLayout";
 
 
 const whList: whyItemPropsTypes[] = [
@@ -151,6 +152,7 @@ const HomePage = () => {
 
     return (
         <SmoothScroll>
+           <PageLayout>
            <Hero/> 
            <About/>
            <Prods/>
@@ -170,6 +172,7 @@ const HomePage = () => {
             isLight
             />
            <Footer/>
+           </PageLayout>
            
         </SmoothScroll>
     )

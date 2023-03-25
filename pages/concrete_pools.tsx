@@ -35,7 +35,7 @@ import pool1 from '@/public/assets/conc-pool-type-1.png';
 import pool2 from '@/public/assets/conc-pool-type-2.png';
 import Prods from "@/pageModules/home/Prods/Prods";
 import Coating from "@/pageModules/concrete_pools/Coating/Coating";
-
+import PageLayout from "@/components/PageLayout/PageLayout";
 
 const daysList:daysItemTypes[] = [
     {
@@ -206,6 +206,8 @@ const ConcPage = () => {
 
     return (
         <SmoothScroll>
+            <PageLayout>
+
             <Hero
                 bg={heroBg}
                 title="Бетонный бассейн за 14 ДНЕЙ!
@@ -230,7 +232,9 @@ const ConcPage = () => {
                 list={stepList}
                 />
             <Footer/>
+            </PageLayout>
         </SmoothScroll>
+       
     )
 }
 

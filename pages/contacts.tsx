@@ -2,11 +2,14 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Feedback from "@/components/Feedback/Feedback";
 import Main from "@/pageModules/contacts/Main/Main";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import SmoothScroll from "@/helpers/SmoothScroll";
 
 const ContactsPage = () => {
 
     return (
-        <>
+        <SmoothScroll>
+            <PageLayout>
             <Header/>
             <div className="top-block">
                 <Main/>
@@ -16,7 +19,8 @@ const ContactsPage = () => {
                 />
 
             <Footer/>
-        </>
+        </PageLayout>
+        </SmoothScroll>
     )
 }
 

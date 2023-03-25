@@ -67,6 +67,7 @@ import port35 from '@/public/assets/spa-port-5-7.jpg';
 
 import Steps from "@/pageModules/home/Steps/Steps";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
+import PageLayout from "@/components/PageLayout/PageLayout";
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -330,7 +331,7 @@ const stepsList: stepItemTypes[] = [
 const SpaPage = () => {
     return (
         <SmoothScroll>
-            {/* <Header/> */}
+            <PageLayout>
             <Hero
                 title="Строительство современных
                 банных спа-комплексов 
@@ -370,6 +371,8 @@ const SpaPage = () => {
                 isLight={false}
                 />
             <Footer/>
+            </PageLayout>
+            
         </SmoothScroll>
     )
 }
