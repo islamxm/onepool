@@ -4,6 +4,7 @@ import Container from '../Container/Container';
 import Link from 'next/link';
 import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
 import { useEffect, useState } from 'react';
+import { Dropdown } from 'antd';
 
 
 const Header = () => {
@@ -68,7 +69,18 @@ const Header = () => {
                                 <Link href={'/'} className={styles.nav_link}>главная</Link>
                             </li>
                             <li className={styles.nav_item}>
-                                <Link href={'/'} className={styles.nav_link}>Бассейны</Link>
+                                <Dropdown
+                                    trigger={['hover']}
+                                    placement={'bottomCenter'}
+                                    overlay={<div className={'header-drop'}>
+                                        <div className={'header-drop__item'}><Link href={'/concrete_pools'}>Бетонные Бассейны </Link></div>
+                                        <div className={'header-drop__item'}><Link href={'/concrete_pools'}> Железные Бассейны</Link></div>
+                                        <div className={'header-drop__item'}><Link href={'/concrete_pools'}>Композитные Бассейны</Link></div>
+                                    </div>}
+                                    >
+                                    <Link href={'/concrete_pools'} className={styles.nav_link}>Бассейны</Link>
+                                </Dropdown>
+                                
                             </li>
                             <li className={styles.nav_item}>
                                 <Link href={'/spa'} className={styles.nav_link}>спа</Link>

@@ -1,0 +1,32 @@
+.header-drop {
+    width: 246px;
+    background-color: #1B202C;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 12px 30px;
+
+    &__item {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 12px;line-height: 19px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all .3s ease;
+
+            &:hover {
+                color: var(--gold);
+            }
+        }
+
+        &:last-child {
+            a {
+                border: none
+            }
+        }
+    }
+}
