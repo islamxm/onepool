@@ -14,11 +14,12 @@
             .item {
                 width: calc((100% / 2) - 20px);
                 margin: 0 10px 20px 10px;
-
+                
                 .item_in {
                     height: 100%;
                     overflow: hidden;
-
+                    border-radius: 30px;
+                    
                     img {
                         max-height: 475px;
                         height: 100%;

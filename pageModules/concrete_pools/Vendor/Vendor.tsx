@@ -14,6 +14,7 @@ import { parentAnim, childAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
 import { animWhileInView } from '@/helpers/animObjects';
 
+
 const list = [
     {
         title: 'Подогрев',
@@ -46,6 +47,8 @@ const list = [
         image: img6
     },
 ]
+
+
 
 
 

@@ -1,0 +1,24 @@
+.wrapper {
+    background-color: #F8ECDE;
+
+    .in {
+        padding: 30px 0;
+
+        .head {
+            margin-bottom: 50px;
+        }
+    
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+    
+            .item {
+                width: calc((100% / 2) - 40px);
+                margin: 0 20px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+   
+}

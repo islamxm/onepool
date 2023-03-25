@@ -8,54 +8,61 @@ import img3 from '@/public/assets/hist-3.png';
 import img4 from '@/public/assets/hist-4.png';
 import img5 from '@/public/assets/hist-5.png';
 import img6 from '@/public/assets/hist-6.png';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import {motion} from 'framer-motion'
+import { animWhileInView, childAnim, parentAnim } from '@/helpers/animObjects';
+
 
 const Hist = () => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.head}>
-                        <BlockHead
-                            title={'История одного бассейна'}
-                            />
-                    </div>
+                    <AnimWrap className={styles.head}>
+                        <motion.div variants={childAnim('bottom')}>
+                            <BlockHead
+                                title={'История одного бассейна'}
+                                />
+                        </motion.div>
+                    </AnimWrap>
 
                     <div className={styles.body}>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                        <AnimWrap
+                            className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img1} alt=""/>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img2} alt=""/>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img3} alt=""/>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img4} alt=""/>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img5} alt=""/>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
+                            </motion.div>
+                        </AnimWrap>
+                        <AnimWrap className={styles.item}>
+                            <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                 <Image src={img6} alt=""/>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </AnimWrap>
                     </div>
                 </div>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 

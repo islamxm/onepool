@@ -5,7 +5,6 @@ import heroBg from '@/public/assets/conc-pool-bg.png';
 import { daysItemTypes } from "@/components/Days/types";
 import img from '@/public/assets/days-1.png';
 import Days from "@/components/Days/Days";
-import PoolTypes from "@/pageModules/concrete_pools/PoolTypes/PoolTypes";
 import Adv from "@/components/Adv/Adv";
 import { advItemTypes } from "@/components/Adv/types";
 import advImg1 from '@/public/assets/conc-pool-adv-1.png';
@@ -29,6 +28,14 @@ import why5 from '@/public/assets/conc-pool-why-5.png';
 import why6 from '@/public/assets/conc-pool-why-6.png';
 import Steps from "@/pageModules/home/Steps/Steps";
 import SmoothScroll from "@/helpers/SmoothScroll";
+import PoolTypes from "@/components/PoolTypes/PoolTypes";
+import { stepItemTypes } from "@/pageModules/home/Steps/types";
+import { poolTypeItemType } from "@/components/PoolTypes/types";
+import pool1 from '@/public/assets/conc-pool-type-1.png';
+import pool2 from '@/public/assets/conc-pool-type-2.png';
+import Prods from "@/pageModules/home/Prods/Prods";
+import Coating from "@/pageModules/concrete_pools/Coating/Coating";
+
 
 const daysList:daysItemTypes[] = [
     {
@@ -140,11 +147,65 @@ const whyList: whyItemPropsTypes[] = [
     }
 ]
 
+const stepList: stepItemTypes[] = [
+    {
+        label: 'Разработка и подготовка котлована'
+    },
+    {
+        label: 'Монтаж опалубки и армирование'
+    },
+    {
+        label: 'Бетонирование и оштукатуривание чаши'
+    },
+    {
+        label: 'Установка закладных элементов'
+    },
+    {
+        label: 'Отделочные работы (облицовка)'
+    },
+    {
+        label: 'Монтаж оборудования и пусконаладка'
+    },
+]
+
+
+const poolTypesList: poolTypeItemType[] = [
+    {
+        image: pool1,
+        title: 'Скиммерные',
+        text: <>
+            Уровень воды на 15 см ниже борта, вода переливается через отверстия – скиммеры.<br/>
+            <span>Плюсы:</span>
+            простая конструкция, легкий монтаж;<br/>
+            экономия: на 10-15% дешевле переливного бассейна;<br/>
+            отсутствие необходимости в установке ёмкости ниже уровня воды.<br/>
+            <span>Минусы:</span>
+            вода находится ниже уровня кромки бассейна,
+            из-за чего он зрительно кажется меньше.
+        </>
+    },
+    {
+        image: pool2,
+        title: 'Переливные',
+        text: <>
+            Бассейн заполняется водой вровень с бортом, вода переливается через решетку по периметру бассейна.<br/>
+            <span>Плюсы:</span>
+            высокий уровень очистки воды;<br/>
+            вода заполнена вровень с полом, благодаря этому бассейн зрительно кажется глубже и красивее.<br/>
+          
+            <span>Минусы:</span>
+            высокая стоимость по сравнению со скиммерными системами;<br/>
+            необходимость в установке ёмкости ниже уровня воды;<br/>
+            сложная конструкция и более длительный монтаж.
+        </>
+    },
+    
+]
+
 const ConcPage = () => {
 
     return (
         <SmoothScroll>
-            <Header/>
             <Hero
                 bg={heroBg}
                 title="Бетонный бассейн за 14 ДНЕЙ!
@@ -152,12 +213,22 @@ const ConcPage = () => {
                 subtitle="Строим бассейны с 2001 года по всей России!"
                 />
             <Days list={daysList}/>
-            {/* <PoolTypes/> */}
+            <Prods
+                
+                />
+            <PoolTypes
+                title="Типы бетонных бассейнов"
+                list={poolTypesList}
+                />
             <Adv bg={advBg} list={advList} title="Почему стоит заказать бетонный бассейн у нас?"/>
+            <Coating/>
             <Vendor/>
             <Hist/>
             <Why list={whyList} title="Почему стоит заказать бассейн у нас?" haveLink/>
-            <Steps/>
+            <Steps
+                title="Этапы строительства"
+                list={stepList}
+                />
             <Footer/>
         </SmoothScroll>
     )
