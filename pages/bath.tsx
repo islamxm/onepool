@@ -101,8 +101,6 @@ const BathPage = () => {
     return (
         <SmoothScroll>
             <PageLayout>
-            
-            <Header/>
             <Hero
                 bg={bgImg}
                 title="Строительство современных

@@ -40,7 +40,6 @@ const WorksPage = () => {
     return (
         <SmoothScroll>  
             <PageLayout>
-            <Header/>
             <div className="top-block">
                 <Portfolio
                     head="Портфолио реализованных проектов"

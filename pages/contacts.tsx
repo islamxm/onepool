@@ -10,7 +10,7 @@ const ContactsPage = () => {
     return (
         <SmoothScroll>
             <PageLayout>
-            <Header/>
+         
             <div className="top-block">
                 <Main/>
             </div>

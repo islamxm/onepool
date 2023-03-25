@@ -90,7 +90,7 @@ const ServsPage = () => {
     return (
         <SmoothScroll>
             <PageLayout>
-            <Header/>   
+      
             <div className={'top-block'}>
                 <Servs
                 list={servList}
