@@ -5,6 +5,11 @@ import BlockHead from '../BlockHead/BlockHead';
 import Image from 'next/image';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
+import {motion} from 'framer-motion';
+import { parentAnim, childAnim } from '@/helpers/animObjects';
+import { animWhileInView } from '@/helpers/animObjects';
+import AnimWrap from '../AnimWrap/AnimWrap';
+
 
 const Adv:FC<advPropsTypes> = ({
     title,
@@ -29,46 +34,56 @@ const Adv:FC<advPropsTypes> = ({
                             list?.map((item,index) => {
                                 if(item.side === 'left') {
                                     return (
-                                        <div className={styles.part} key={index}>
-                                            <div className={styles.descr}>
+                                        <motion.div {...animWhileInView} variants={parentAnim} className={styles.part} key={index}>
+                                            <AnimWrap className={styles.descr}>
+                                                <motion.div variants={childAnim('left')}>
                                                 <h3 className={styles.title}>{item.title}</h3>
                                                 <div className={styles.text}>
                                                     <p>
                                                         {item.text}
                                                     </p>
                                                 </div>
-                                            </div>
-                                            <div className={styles.img}>
+                                                </motion.div>
+                                            </AnimWrap>
+
+                                            <AnimWrap className={styles.img}>
+                                                <motion.div variants={childAnim('right')} className={styles.img_in}>
                                                 <div className={styles.img_el}>
                                                     <Image src={item.image} alt=""/>
                                                 </div>
                                                 <div className={styles.icon}>
                                                     <Image src={item.icon} alt=""/>
                                                 </div>
-                                            </div>
-                                        </div>
+                                                </motion.div>
+                                            </AnimWrap>
+                                        </motion.div>
                                     )
                                 }
                                 if(item.side === 'right') {
                                     return (
-                                        <div className={`${styles.part} ${styles.right}`} key={index}>
-                                            <div className={styles.img}>
-                                                <div className={styles.img_el}>
-                                                    <Image src={item.image} alt=""/>
-                                                </div>
-                                                <div className={styles.icon}>
-                                                    <Image src={item.icon} alt=""/>
-                                                </div>
-                                            </div>
-                                            <div className={styles.descr}>
-                                                <h3 className={styles.title}>{item.title}</h3>
-                                                <div className={styles.text}>
-                                                    <p>
-                                                        {item.text}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <motion.div {...animWhileInView} variants={parentAnim} className={`${styles.part} ${styles.right}`} key={index}>
+                                            <AnimWrap className={styles.img}>
+                                                <motion.div className={styles.img_in} variants={childAnim('left')}>
+                                                    <div className={styles.img_el}>
+                                                        <Image src={item.image} alt=""/>
+                                                    </div>
+                                                    <div className={styles.icon}>
+                                                        <Image src={item.icon} alt=""/>
+                                                    </div>
+                                                </motion.div>
+                                                
+                                            </AnimWrap>
+                                            <AnimWrap className={styles.descr}>
+                                                <motion.div variants={childAnim('right')}>
+                                                    <h3 className={styles.title}>{item.title}</h3>
+                                                    <div className={styles.text}>
+                                                        <p>
+                                                            {item.text}
+                                                        </p>
+                                                    </div>
+                                                </motion.div>
+                                            </AnimWrap>
+                                        </motion.div>
                                     )
                                 }
                             })

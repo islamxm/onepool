@@ -76,6 +76,13 @@
                     position: relative;
                     width: 50%;
                     flex: 0 0 auto;
+                    padding-bottom: 50px;
+                    padding-right: 15px;
+                    
+                    .img_in {
+                        width: 100%;
+
+                    }
 
                     .img_el {
                         height: 277px;

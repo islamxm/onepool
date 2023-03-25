@@ -8,83 +8,78 @@ import img4 from '@/public/assets/vendor-4.png';
 import img5 from '@/public/assets/vendor-5.png';
 import img6 from '@/public/assets/vendor-6.png';
 import Image from 'next/image';
+import Item from './components/Item/Item';
+import AnimWrap from '@/components/AnimWrap/AnimWrap';
+import { parentAnim, childAnim } from '@/helpers/animObjects';
+import {motion} from 'framer-motion';
+import { animWhileInView } from '@/helpers/animObjects';
+
+const list = [
+    {
+        title: 'Подогрев',
+        text: 'Плавай в бассейне несмотря на погоду! Вода – один из лучших стимуляторов хорошего настроения!',
+        image: img1
+    },
+    {
+        title: 'Обеззараживание',
+        text: 'Мы обеспечим чистоту воды и безопасность здоровья с помощью обеззараживания воды.',
+        image: img2
+    },
+    {
+        title: 'Фильтрация',
+        text: 'Различные системы фильтрации помогут поддерживать качество воды в вашем бассейне.',
+        image: img3
+    },
+    {
+        title: 'Противоток',
+        text: 'Установим противоточную систему, которая соответствует вашим потребностям.',
+        image: img4
+    },
+    {
+        title: 'Гидромассаж Аэромассаж',
+        text: 'Установка гидромассажной и аэромассажной системы для расслабления и улучшения кровообращения.',
+        image: img5
+    },
+    {
+        title: 'Освещение',
+        text: 'Устанавливаем качественные системы освещения для эстетической привлекательности и безопасности бассейна.',
+        image: img6
+    },
+]
+
 
 
 const Vendor = () => {
+
+    
+
 
     return (
         <div className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.head}>
-                        <BlockHead
+                    <motion.div {...animWhileInView} variants={parentAnim}>
+                        <AnimWrap className={styles.head}>
+                            <motion.div variants={childAnim('bottom')}>
+                            <BlockHead
                             title='Оборудование производства Испании и Германии'
                             isDark
                             />
-                    </div>
-                    <div className={styles.body}>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img1} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Подогрев</div>
-                            </div>
-                            </div>
-                            
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img2} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Обеззараживание</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img3} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Фильтрация</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img4} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Противоток</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img5} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Гидромассаж Аэромассаж</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div className={styles.item}>
-                            <div className={styles.item_in}>
-                            <div className={styles.img}>
-                                <Image src={img6} alt=""/>
-                            </div>
-                            <div className={styles.descr}>
-                                <div className={styles.head}>Освещение</div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+                            </motion.div>
+                        </AnimWrap>
+                        
+                    </motion.div>
+                    <motion.div variants={parentAnim} {...animWhileInView} className={styles.body}>
+
+                        {
+                            list?.map((item,index) => (
+                                <AnimWrap className={styles.item} key={index}>
+                                    <Item {...item}/>
+                                </AnimWrap>
+                            ))
+                        }
+                       
+                    </motion.div>
                 </div>
             </Container>
         </div>

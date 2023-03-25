@@ -9,6 +9,7 @@ import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import {motion} from 'framer-motion';
 
 
+
 const Hero:FC<heroPropsTypes> = ({
     title,
     subtitle,
@@ -20,11 +21,11 @@ const Hero:FC<heroPropsTypes> = ({
             {
                 bg ? (
                     <div className={styles.bg}>
-                        <Image
-                            placeholder={'blur'}
-                            src={bg}
-                            alt={'bg'}
-                            />
+                    <Image
+                        placeholder={'blur'}
+                        src={bg}
+                        alt={'bg'}
+                        />
                     </div>
                 ) : null
             }

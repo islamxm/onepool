@@ -28,6 +28,7 @@ import why4 from '@/public/assets/conc-pool-why-4.png';
 import why5 from '@/public/assets/conc-pool-why-5.png';
 import why6 from '@/public/assets/conc-pool-why-6.png';
 import Steps from "@/pageModules/home/Steps/Steps";
+import SmoothScroll from "@/helpers/SmoothScroll";
 
 const daysList:daysItemTypes[] = [
     {
@@ -142,7 +143,7 @@ const whyList: whyItemPropsTypes[] = [
 const ConcPage = () => {
 
     return (
-        <>
+        <SmoothScroll>
             <Header/>
             <Hero
                 bg={heroBg}
@@ -158,7 +159,7 @@ const ConcPage = () => {
             <Why list={whyList} title="Почему стоит заказать бассейн у нас?" haveLink/>
             <Steps/>
             <Footer/>
-        </>
+        </SmoothScroll>
     )
 }
 

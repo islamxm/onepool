@@ -5,23 +5,30 @@ import {FC} from 'react';
 import { daysPropsTypes } from './types';
 import Image from 'next/image';
 import Button from '../Button/Button';
+import AnimWrap from '../AnimWrap/AnimWrap';
+import { animWhileInView } from '@/helpers/animObjects';
+import { parentAnim, childAnim } from '@/helpers/animObjects';
+import {motion} from 'framer-motion';
 
 const Days:FC<daysPropsTypes> = ({list}) => {
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div {...animWhileInView} variants={parentAnim} className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <div className={styles.head}>
+                    <AnimWrap className={styles.head}>
+                        <motion.div variants={childAnim('bottom')}>
                         <BlockHead
                             title='Считаем дни до заплыва'
                             />
-                    </div>
+                        </motion.div>
+                        
+                    </AnimWrap>
                     <div className={styles.body}>
                         {
                             list?.map((item, index) => (
-                                <div className={styles.item} key={index}>
-                                    <div className={styles.item_in}>
+                                <AnimWrap className={styles.item} key={index}>
+                                    <motion.div variants={childAnim('bottom')} className={styles.item_in}>
                                         <div className={styles.img}>
                                             {
                                                 item?.image ? <Image src={item.image} alt=""/> : null
@@ -36,20 +43,22 @@ const Days:FC<daysPropsTypes> = ({list}) => {
                                         <div className={styles.text}>
                                             {item.text}
                                         </div>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </AnimWrap>
                             ))
                         }
                     </div>
-                    <div className={styles.action}>
+                    <AnimWrap className={styles.action}>
+                        <motion.div variants={childAnim('bottom')}>
                         <Button
                             text='расчитать стоимость'
                             uppercase
                             />
-                    </div>
+                        </motion.div>
+                    </AnimWrap>
                 </div>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 
