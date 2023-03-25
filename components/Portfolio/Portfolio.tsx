@@ -35,7 +35,7 @@ const Portfolio:FC<portPropsTypes> = ({
                             list?.map((item, index) => (
                                 <Part
                                     images={item.images}
-                                    head={head}
+                                    head={item.head}
                                     key={index}
                                     side={item.side}
                                     descr={item.descr}

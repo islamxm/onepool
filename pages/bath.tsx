@@ -16,6 +16,21 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import { portItemPropsTypes } from "@/components/Portfolio/types";
 import serv1 from '@/public/assets/spa-serv-1.png';
 import Feedback from "@/components/Feedback/Feedback";
+import port1 from '@/public/assets/bath-port-1-1.jpg';
+import port2 from '@/public/assets/bath-port-1-2.jpg';
+import port3 from '@/public/assets/bath-port-1-3.jpg';
+import port4 from '@/public/assets/bath-port-1-4.jpg';
+import port5 from '@/public/assets/bath-port-1-5.jpg';
+import port6 from '@/public/assets/bath-port-1-6.jpg';
+import port7 from '@/public/assets/bath-port-1-7.jpg';
+import port8 from '@/public/assets/bath-port-1-8.jpg';
+import port9 from '@/public/assets/bath-port-1-9.jpg';
+import pal1 from '@/public/assets/bath-mat-1.png';
+import pal2 from '@/public/assets/bath-mat-2.png';
+import pal3 from '@/public/assets/bath-mat-3.png';
+import pal4 from '@/public/assets/bath-mat-4.png';
+import pal5 from '@/public/assets/bath-mat-5.png';
+import pal6 from '@/public/assets/bath-mat-6.png';
 
 const whyList: whyItemPropsTypes[] = [
     {
@@ -38,28 +53,28 @@ const whyList: whyItemPropsTypes[] = [
 
 const palList: palItemPropsTypes[] = [
     {
-        image: palImage,
+        image: pal1,
         name: 'Липа'
     },
     {
-        image: palImage,
-        name: 'Липа'
+        image: pal2,
+        name: 'Ольха'
     },
     {
-        image: palImage,
-        name: 'Липа'
+        image: pal3,
+        name: 'Термососна'
     },
     {
-        image: palImage,
-        name: 'Липа'
+        image: pal4,
+        name: 'Алтайский кедр'
     },
     {
-        image: palImage,
-        name: 'Липа'
+        image: pal5,
+        name: 'Канадский кедр'
     },
     {
-        image: palImage,
-        name: 'Липа'
+        image: pal6,
+        name: 'Абаш'
     }
 ]
 
@@ -68,18 +83,7 @@ const portList:portItemPropsTypes[] = [
     {
         side: 'left',
         head: 'Коттеджный поселок "Royal Hills"',
-        images: [serv1, serv1, serv1],
-        descr: <>
-            <h4>Бассейн с джакузи для дома премиум-класса</h4>
-            <p>
-            <span>Материал:</span> бетон<br/>
-            </p>
-        </>
-    },
-    {
-        side: 'right',
-        head: 'Коттеджный поселок "Royal Hills""',
-        images: [serv1, serv1, serv1],
+        images: [port1, port2, port3,port4,port5,port6,port7,port8,port9],
         descr: <>
             <h4>Бассейн с джакузи для дома премиум-класса</h4>
             <p>
