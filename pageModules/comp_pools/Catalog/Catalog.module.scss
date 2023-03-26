@@ -1,0 +1,32 @@
+.wrapper {
+
+    .in {
+        padding: 220px 0 60px;
+
+        .head {
+            margin-bottom: 50px;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .sub {
+                text-align: center;
+
+            }
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -22.5px;
+            margin-right: -22.5px;
+
+            .item {
+                width: calc((100% / 4) - 45px);
+                margin: 0 22.5px;
+                margin-bottom: 45px;
+            }
+        }
+    }
+}
