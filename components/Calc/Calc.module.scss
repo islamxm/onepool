@@ -1,0 +1,133 @@
+.wrapper {
+    
+    .in {
+        padding: 60px 0;
+
+        .head {
+            margin-bottom: 40px;
+        }
+
+        .body {
+            background: #1A2231;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 45px;
+
+            .main {
+                display: flex;
+                margin-left: -20px;
+                margin-right: -20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                .part {
+                    width: calc((100% / 3) - 40px);
+                    margin: 0 20px;
+
+                    .row {
+                        margin-bottom: 30px;
+
+                        .field {
+                            display: flex;
+                            align-items: center;
+
+                            .input {
+
+                            }
+                            .label {
+                                margin-left: 20px;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .checkbox {
+
+                            input {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: -1;
+                                visibility: hidden;
+                                touch-action: none;
+                                pointer-events: none;
+                            }
+
+                            .label {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                user-select: none;
+                                .icon {
+                                    background: #1F2430;
+                                    border: 1px solid rgba(255, 255, 255, 0.1);
+                                    border-radius: 8px;
+                                    flex: 0 0 auto;
+                                    margin-right: 20px;
+                                    width: 44px;
+                                    height: 44px;
+                                    transition: all .3s ease;
+                                    position: relative;
+
+                                    &:after {
+                                        position: absolute;
+                                        width: 34px;
+                                        height: 34px;
+                                        background-image: url('../../public/assets/checkmark.svg');
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 34px;
+                                        content: '';
+                                        top: calc(50% - 17px);
+                                        left: calc(50% - 17px);
+                                        transition: all .3s ease;
+                                        transform: scale(0);
+                                    }
+                                }
+                                .text {
+                                    font-weight: 700;
+
+                                    span {
+                                        font-weight: 400;    
+                                    }
+                                }
+                            }
+
+                            input:checked ~ .label {
+                                .icon {
+                                    border-color: var(--gold);
+                                    &:after {
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ex {
+                padding-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .text {
+                    width: 50%;
+                }
+
+                .action {
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .s {
+                        display: block;
+                        text-align: center;
+                        margin-top: 10px;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}

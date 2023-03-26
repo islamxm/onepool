@@ -1,0 +1,20 @@
+.wrapper {
+    .in {
+        padding: 60px 0;
+        
+        .head {
+            margin-bottom: 40px;
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+                width: calc((100% / 3) - 40px);
+                margin: 0 20px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

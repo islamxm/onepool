@@ -36,6 +36,7 @@ import pool2 from '@/public/assets/conc-pool-type-2.png';
 import Prods from "@/pageModules/home/Prods/Prods";
 import Coating from "@/pageModules/concrete_pools/Coating/Coating";
 import PageLayout from "@/components/PageLayout/PageLayout";
+import Calc from "@/components/Calc/Calc";
 
 const daysList:daysItemTypes[] = [
     {
@@ -231,7 +232,9 @@ const ConcPage = () => {
                 title="Этапы строительства"
                 list={stepList}
                 />
+            <Calc/>
             <Footer/>
+            
             </PageLayout>
         </SmoothScroll>
        

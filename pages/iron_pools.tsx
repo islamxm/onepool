@@ -36,6 +36,7 @@ import why6 from '@/public/assets/iron-why-6.svg';
 import Steps from "@/pageModules/home/Steps/Steps";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import Footer from "@/components/Footer/Footer";
+import Calc from "@/components/Calc/Calc";
 
 const daysList:daysItemTypes[] = [
     {
@@ -198,6 +199,7 @@ const IronPage = () => {
                 <Hist/>
                 <Why title="Почему стоит заказать бассейн у нас?" list={whyList}/>
                 <Steps title="Этапы строительства" list={stepsList}/>
+                <Calc/>
                 <Footer/>
             </PageLayout>
         </SmoothScroll>

@@ -1,0 +1,23 @@
+.wrapper {
+    height: 100%;
+    background: #1A2231;
+    border: 1px solid #32415E;
+    border-radius: 15px;
+    
+    .img {
+        margin-bottom: 15px;
+
+        img {
+            max-width: 280px;
+            max-height: 280px;
+            object-fit: contain;
+            display: flex;
+        }
+    }   
+
+    .name {
+        text-align: center;
+        font-weight: 600;
+        color: #fff;
+    }
+}

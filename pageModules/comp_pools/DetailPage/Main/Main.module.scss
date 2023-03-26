@@ -1,0 +1,110 @@
+.wrapper {
+
+    .in {
+        padding: 220px 0 50px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .main {
+            width: 50%;
+
+            .slider_main {
+                margin-bottom: 8px;
+
+                .slider_main_swiper {
+
+                    .slider_main_slide {
+                        height: 465px;
+                        overflow: hidden;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            .slider_thumbs {
+                .slider_thumbs_swiper {
+                    .slider_thumbs_slide {
+                        height: 80px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            width: 48%;
+
+            .name {
+                font-size: 27px;
+                line-height: 140%;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 40px;
+            }
+
+            .descr {
+                line-height: 200%;
+                margin-bottom: 40px;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .prices {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                .panel {
+                    max-width: 315px;
+                    width: 100%;
+                    background: #1A2231;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    padding: 14px 10px;
+
+                    .item {
+                        line-height: 22px;
+                        font-size: 14px;
+                        margin-bottom: 14px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .item_name {
+                            font-weight: 700;
+                        }
+                        .item_value {
+
+                        }
+                    }
+                }
+            }
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    max-width: 260px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
