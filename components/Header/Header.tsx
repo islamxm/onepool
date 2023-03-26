@@ -74,7 +74,7 @@ const Header = () => {
                                     placement={'bottomCenter'}
                                     overlay={<div className={'header-drop'}>
                                         <div className={'header-drop__item'}><Link href={'/concrete_pools'}>Бетонные Бассейны </Link></div>
-                                        <div className={'header-drop__item'}><Link href={'/concrete_pools'}> Железные Бассейны</Link></div>
+                                        <div className={'header-drop__item'}><Link href={'/iron_pools'}> Железные Бассейны</Link></div>
                                         <div className={'header-drop__item'}><Link href={'/concrete_pools'}>Композитные Бассейны</Link></div>
                                     </div>}
                                     >
