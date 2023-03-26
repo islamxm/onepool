@@ -68,6 +68,7 @@ import port35 from '@/public/assets/spa-port-5-7.jpg';
 import Steps from "@/pageModules/home/Steps/Steps";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import PageLayout from "@/components/PageLayout/PageLayout";
+import Faq from "@/components/Faq/Faq";
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -370,6 +371,7 @@ const SpaPage = () => {
             <Feedback
                 isLight={false}
                 />
+            <Faq/>
             <Footer/>
             </PageLayout>
             

@@ -1,0 +1,20 @@
+.wrapper {
+
+    .in {
+        padding: 60px 0;
+
+        .head {
+            margin-bottom: 40px;
+        }
+
+        .body {
+            .item {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

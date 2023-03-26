@@ -37,6 +37,7 @@ import Prods from "@/pageModules/home/Prods/Prods";
 import Coating from "@/pageModules/concrete_pools/Coating/Coating";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Calc from "@/components/Calc/Calc";
+import Faq from "@/components/Faq/Faq";
 
 const daysList:daysItemTypes[] = [
     {
@@ -233,6 +234,7 @@ const ConcPage = () => {
                 list={stepList}
                 />
             <Calc/>
+            <Faq/>
             <Footer/>
             
             </PageLayout>

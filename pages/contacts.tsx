@@ -4,7 +4,7 @@ import Feedback from "@/components/Feedback/Feedback";
 import Main from "@/pageModules/contacts/Main/Main";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import SmoothScroll from "@/helpers/SmoothScroll";
-
+import Faq from "@/components/Faq/Faq";
 const ContactsPage = () => {
 
     return (
@@ -17,7 +17,7 @@ const ContactsPage = () => {
             <Feedback
                 isLight={false}
                 />
-
+            <Faq/>
             <Footer/>
         </PageLayout>
         </SmoothScroll>

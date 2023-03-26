@@ -7,6 +7,7 @@ import Gal from "@/pageModules/works/Gal/Gal";
 import Feedback from "@/components/Feedback/Feedback";
 import SmoothScroll from "@/helpers/SmoothScroll";
 import PageLayout from "@/components/PageLayout/PageLayout";
+import Faq from "@/components/Faq/Faq";
 
 const portList:portItemPropsTypes[] = [
     {
@@ -50,6 +51,7 @@ const WorksPage = () => {
             <Feedback
                 isLight={true}
                 />
+            <Faq/>
             <Footer/>
             </PageLayout>
         </SmoothScroll>

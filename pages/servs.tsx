@@ -16,6 +16,7 @@ import serv8 from '@/public/assets/home-serv-2-2.jpg';
 import serv9 from '@/public/assets/home-serv-2-3.jpg';
 import serv10 from '@/public/assets/home-serv-3-1.jpg';
 import serv11 from '@/public/assets/home-serv-3-2.jpg';
+import Faq from "@/components/Faq/Faq";
 const servList: servItemTypes[] = [
     {
         title:'Реконструкция и модернизация',
@@ -112,6 +113,7 @@ const ServsPage = () => {
             <Feedback
                 isLight={false}
                 />
+            <Faq/>
             <Footer/>
             </PageLayout>
         </SmoothScroll>

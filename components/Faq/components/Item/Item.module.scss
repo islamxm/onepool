@@ -1,0 +1,55 @@
+.wrapper {
+    padding: 25px 35px;
+    background: #1A2231;
+    border: 1px solid #32415E;
+    border-radius: 15px;
+
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        cursor: pointer;
+
+        .label {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            width: 15px;
+            height: 15px;
+            transition: all .3s ease;
+            background-image: url('../../../../public/assets/plus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    .body {
+        overflow: hidden;
+        will-change: height;
+        transition: all .3s ease;
+
+        .in {
+            padding-bottom: 25px;
+            padding-top: 33px;
+            font-size: 21px;
+            line-height: 29px;
+        }
+    }
+
+}
+
+.wrapper.active {
+
+    .head {
+        .icon {
+            transform: rotate(45deg);
+        }
+    }
+}

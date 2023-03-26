@@ -33,6 +33,7 @@ import pal5 from '@/public/assets/bath-mat-5.png';
 import pal6 from '@/public/assets/bath-mat-6.png';
 import PageLayout from "@/components/PageLayout/PageLayout";
 import SmoothScroll from "@/helpers/SmoothScroll";
+import Faq from "@/components/Faq/Faq";
 
 const whyList: whyItemPropsTypes[] = [
     {
@@ -134,6 +135,7 @@ const BathPage = () => {
             <Feedback
                 isLight={false}
                 />
+            <Faq/>
             <Footer/>
         </PageLayout>
         </SmoothScroll>
