@@ -53,3 +53,44 @@
         }
     }
 }
+
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+
+        .in {
+            padding: 30px 0;
+
+            .part {
+                .head {
+                    margin-bottom: 25px;
+                }
+                .sub {
+                    margin-bottom: 25px;
+                }
+                .body {
+                    flex-wrap: wrap;
+
+                    .descr {
+                        width: 100%;
+                        order: -1;
+                        margin-bottom: 20px;
+                    }
+
+                    .images {
+                        width: 100%;
+
+                        .img {
+
+                            img {
+                                max-width: unset;
+                                max-height: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

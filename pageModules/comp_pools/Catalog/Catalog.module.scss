@@ -30,3 +30,65 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+
+    .wrapper {
+
+        .in {
+            padding-bottom: 30px;
+
+            .head {
+                margin-bottom: 25px;
+            }
+
+            .body {
+                margin-left: -15px;
+                margin-right: -15px;
+
+                .item {
+                    width: calc((100% / 3) - 30px);
+                    margin: 0 15px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+            padding-top: 130px;
+
+            .body {
+
+                .item {
+                    width: calc((100% / 2) - 30px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+
+    .wrapper {
+
+        .in {
+
+            .body {
+                margin-left: 0;
+                margin-right: 0;
+                
+                .item {
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

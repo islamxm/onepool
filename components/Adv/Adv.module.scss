@@ -166,3 +166,25 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+
+            .body {
+
+                .part {
+
+                    .descr {
+                        .text {
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
