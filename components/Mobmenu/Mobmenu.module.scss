@@ -6,10 +6,18 @@
     height: 100%;
     transition: all .3s ease;
     transform: translateX(-100%);
-    background-color: var(--blue_bg_dark);
+    background-color: var(--black);
     display: flex;
     flex-direction: column;
-    padding: 120px 0 30px;
+   
+
+    .main {
+        transform: translate(-100%);
+        transition: all 1s ease;
+        height: 100%;
+        background-color: var(--blue_bg_dark);
+        padding: 120px 0 30px;
+    }
 
     .nav {
         
@@ -64,4 +72,8 @@
 
 .wrapper.active {
     transform: translateX(0);
+
+    .main {
+        transform: translateX(0);
+    }
 }

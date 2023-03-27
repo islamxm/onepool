@@ -17,6 +17,7 @@ const Mobmenu = () => {
 
     return (
         <div className={`${styles.wrapper} ${isMenuOpen ? styles.active : ''}`}>
+            <div className={styles.main}>
             <ul className={styles.nav}>
                 <li className={`${styles.item} ${pathname === '/' ? styles.active : ''}`}><Link href={'/'}> <span>главная</span> </Link></li>
                 <li className={`${styles.item} ${pathname === '/concrete_pools' ? styles.active : ''}`}><Link href={'/concrete_pools'}> <span>Бетонные Бассейны</span> </Link></li>
@@ -32,6 +33,7 @@ const Mobmenu = () => {
                 <div className={styles.item}><a href="">г. Сочи, ул. Горького, 87</a></div>
                 <div className={styles.item}><a href="tel:+78007009038">+7 (800) 700-90-38</a></div>
                 {/* <div className={styles.item}></div> */}
+            </div>
             </div>
         </div>
     )
