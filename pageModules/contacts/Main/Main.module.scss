@@ -81,3 +81,50 @@
         }
     }
 }
+
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+
+        .head {
+            margin-bottom: 25px;
+        }
+
+        .body {
+            flex-wrap: wrap;
+
+            .part {
+                width: calc(100% - 16px);
+                margin-bottom: 20px;
+            }
+
+            .main {
+
+                .top {
+                    padding-left: 0;
+                    .phone {
+                        a {
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+
+                        span {
+                            font-size: 18px;
+                            line-height: 24px;
+                            display: block;
+                        }
+                    }
+                }
+                
+            }
+
+            .ex {
+                span {
+                    padding: 0;
+                }
+            }
+            
+        }
+    }
+}
