@@ -5,11 +5,14 @@ import Link from 'next/link';
 import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { Dropdown } from 'antd';
+import { useAppDispatch, useAppSelector } from '@/hooks/useTypesRedux';
+import { toggleMenu } from '@/store/actions';
 
 
 const Header = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
-
+    const {isMenuOpen} = useAppSelector(s => s)
+    const dispatch = useAppDispatch();
 
     const checkScroll = () => {
         if(document.documentElement.scrollTop > 10) {
@@ -28,7 +31,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={`${styles.wrapper} ${scrolled ? styles.active : ''}`}> 
+        <header className={`${styles.wrapper} ${scrolled && !isMenuOpen ? styles.active : ''}`}> 
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.top}>
@@ -62,6 +65,13 @@ const Header = () => {
                                 text='Обратный звонок'
                                 />
                         </div>
+                        <button 
+                            onClick={() => dispatch(toggleMenu(!isMenuOpen))}
+                            className={`${styles.burger} ${isMenuOpen ? styles.active : ''}`}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                     <div className={styles.main}>
                         <ul className={styles.nav}>

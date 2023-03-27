@@ -26,6 +26,10 @@
             justify-content: space-between;
             padding: 30px 0 15px 0;
 
+            .burger {
+                display: none;
+            }
+
             .logo {
                 width: 225px;
                 flex: 0 0 auto;
@@ -98,5 +102,98 @@
     
     &:after {
         height: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+
+        .inner {
+
+            .top {
+
+                .label {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+
+        .inner {
+
+            .top {
+                .info {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+
+        .inner {
+            .top {
+
+                .action {
+                    display: none;
+                }
+    
+                .burger {
+                    display: block;
+                    width: 60px;
+                    height: 40px;
+                    position: relative;
+                    
+                    span {
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        height: 4px;
+                        border-radius: 10px;
+                        background-color: var(--gold);
+                        left: 0;
+                        transition: all .3s ease;
+    
+                        &:nth-child(1) {
+                            top: 0;
+                        }
+                        &:nth-child(2) {
+                            top: calc(50% - 2px);
+                        }   
+                        &:nth-child(3) {
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                .burger.active {
+
+                    span {
+                        &:nth-child(1) {
+                            transform: translateY(18px) rotate(45deg);
+                        }
+
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        &:nth-child(3) {
+                            transform: translateY(-18px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+    
+            .main {
+                display: none;
+            }
+        }
     }
 }
