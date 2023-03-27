@@ -105,3 +105,32 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .part {
+
+        .in {
+            flex-wrap: wrap;
+            padding: 30px 0;
+
+            .side {
+                width: 100%;
+            }
+
+            .slider_side {
+                order: -1 ;
+                margin-bottom: 30px;
+            }
+
+            .slider {
+
+                .slider_wr {
+                    .slide {
+                        height: 340px;
+                    }
+                }
+            }
+        }
+    }
+}

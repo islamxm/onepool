@@ -21,7 +21,7 @@ const Part:FC<portItemPropsTypes> = ({
         return (
             <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
-                    <AnimWrap className={styles.side}>
+                    <AnimWrap className={`${styles.side} ${styles.slider_side}`}>
                         <motion.div variants={childAnim('left')} className={styles.slider}>
                             <div className={styles.head}>
                                 {head}
@@ -53,7 +53,7 @@ const Part:FC<portItemPropsTypes> = ({
                             </Swiper>
                         </motion.div>
                     </AnimWrap>
-                    <AnimWrap className={styles.side}>
+                    <AnimWrap className={`${styles.side} ${styles.descr_side}`}>
                         <motion.div variants={childAnim('right')}>
                             <div className={styles.descr}>
                                 <div className={styles.descr_in}>
@@ -73,7 +73,7 @@ const Part:FC<portItemPropsTypes> = ({
             <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
                    
-                    <AnimWrap className={styles.side}>
+                    <AnimWrap className={`${styles.side} ${styles.descr_side}`}>
                         <motion.div variants={childAnim('left')}>
                             <div className={styles.descr}>
                                 <div className={styles.descr_in}>
@@ -82,7 +82,7 @@ const Part:FC<portItemPropsTypes> = ({
                             </div>
                         </motion.div>
                     </AnimWrap>
-                    <AnimWrap className={styles.side}>
+                    <AnimWrap className={`${styles.side} ${styles.slider_side}`}>
                         <motion.div variants={childAnim('right')} className={styles.slider}>
                             <div className={styles.head}>
                                 {head}
