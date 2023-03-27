@@ -8,16 +8,24 @@ import {motion} from 'framer-motion';
 import { parentAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import { childAnim } from '@/helpers/animObjects';
-// import dynamic from "next/dynamic";
-// const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-//   ssr: false,
-// });
+import AboutModal from '@/components/AboutModal/AboutModal';
+import { useState } from 'react';
+
+
 import AnimatedNumbers from '@/helpers/AnimatedNumber';
 
 const About = () => {
+    const [modal, setModal] = useState(false);
+
+
+    
 
     return (
         <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+            <AboutModal
+                open={modal}
+                onCancel={() => setModal(false)}
+                />
             <motion.div
                 className={styles.bg}
                 variants={childAnim('top')}
@@ -71,6 +79,7 @@ const About = () => {
                             <br/>
                             Построим бассейн любой формы и любого размера для частного и общественного пользования. Реализуем ваш проект на всех этапах - от создания технического задания и индивидуального дизайн-проекта до запуска бассейна.
                             </p>
+                            <button onClick={() => setModal(true)}>Подробнее</button>
                             </motion.div>
                         </AnimWrap>
                     </div>

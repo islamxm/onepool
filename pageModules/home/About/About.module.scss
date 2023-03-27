@@ -73,6 +73,16 @@
 
             .descr {
                 padding-left: 40px;
+
+                button {
+                    color: var(--gold);
+                    font-weight: 600;
+                    margin-top: 10px;
+                    text-decoration: underline;
+                    text-decoration-style: dashed;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
             }
         }
 

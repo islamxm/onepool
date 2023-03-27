@@ -99,3 +99,30 @@ body {
         padding-top: 135px;
     }
 }
+
+
+.ant-modal {
+    color: #fff;
+    
+    .ant-modal-content {
+        padding: 30px 70px;
+        background-color: #1A2231;
+        border-radius: 20px;
+    }
+    .ant-modal-footer {
+        display: none;
+    }
+
+    .ant-modal-close-x {
+        color:#fff;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ant-modal {
+        .ant-modal-content {
+            padding: 20px;
+        }
+    }
+}
