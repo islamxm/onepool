@@ -25,3 +25,10 @@
         background-color: #161D2A;
     }
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 26px;
+        line-height: 35px;
+    }
+}

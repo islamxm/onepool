@@ -72,3 +72,29 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+
+            .main {
+                flex-wrap: wrap;
+
+                .nav {
+                    display: none;
+                }
+                .logo {
+                    margin-bottom: 20px;
+                }
+
+                .cn {
+                    width: 100%;
+                    order: 2;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

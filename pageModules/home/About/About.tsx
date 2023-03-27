@@ -44,7 +44,7 @@ const About = () => {
                     
                     <div className={styles.main}>
                         <AnimWrap className={styles.img}>
-                            <motion.div variants={childAnim('left')}>
+                            <motion.div className={styles.img} variants={childAnim('left')}>
                             <Image
                                 src={aboutimg}
                                 width={577}

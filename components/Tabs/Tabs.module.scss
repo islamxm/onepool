@@ -45,3 +45,23 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .list {
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0;
+            .item {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 10px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}

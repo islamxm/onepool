@@ -105,3 +105,43 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+
+        .slider {
+
+        }
+
+        .main {
+
+            .body {
+                .title {
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin-bottom: 25px;
+                }
+                .text {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+
+        .main {
+            .body {
+                .action {
+                    flex-direction: column;
+
+                    .item {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

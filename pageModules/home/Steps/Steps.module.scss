@@ -125,3 +125,102 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+
+        .in {
+
+            .body { 
+                flex-direction: column;
+
+                // .item {
+                //     width: calc(100% - 8px);
+                //     margin: 0;
+                //     margin-bottom: 30px;
+                //     display: flex;
+                //     justify-content: center;
+                    
+                //     .line {
+                //         display: none;
+                //     }
+
+                //     .num {
+                //         position: absolute;
+                //         top: 0;
+                //         left: 0;
+                //     }
+                //     &:after {
+                //         display: none;
+                //     }
+
+                //     .label {
+                //         position: static;
+                //     }
+                // }
+
+
+                .item {
+                    margin: 20px 170px;
+
+                    // .line {
+                    //     display: none;
+                    // }
+
+                    .line {
+                        transform: rotate(90deg);
+                        bottom: unset !important;
+                        top: -55px !important;
+                    }
+
+                    .label {
+                        top: 0 !important;
+                        font-size: 16px;
+                        line-height: 19px;
+                        height: 100%;
+                        // border: 1px solid red;
+                    }
+
+                    &:after {
+                        top: calc(50% - 12.5px) !important;
+                    }
+
+                    &:nth-child(odd) {
+                        &:after {
+                            left: -12.5px;
+                        }
+    
+                        .line {
+                            left: -51%;
+                        }   
+                        // &:before {
+                        //     // top: -170px;
+                        //     bottom: 60px;
+                        //     // background-color: red;
+                        // }
+                        .label {
+                            left: -250px;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        &:after {
+                            left: unset;
+                            right: -12.5px;
+                        }
+
+                        .label {
+                            right: -250px;
+                        }
+
+                        .line {
+                            right: -51% !important;
+                            left: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

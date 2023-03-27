@@ -80,7 +80,7 @@ const Hero = () => {
                                 Собственное производство. Строим бассейны с 2001 года по всей России!
                             </motion.div>
                         </AnimWrap>
-                        <AnimWrap>
+                        <AnimWrap className={styles.action}>
                             <motion.div variants={childAnim('bottom')} className={styles.action}>
                                 <div className={styles.item}>
                                     <Button 

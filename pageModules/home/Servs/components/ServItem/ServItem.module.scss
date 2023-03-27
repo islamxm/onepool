@@ -125,3 +125,63 @@
 .wrapper.left {
     
 }
+
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+            padding: 20px 0;
+
+            .head {
+                margin-bottom: 25px;
+
+                .title {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+
+            .body {
+                flex-wrap: wrap;
+
+                .descr {
+                    width: 100%;
+
+                    .in {
+                        padding: 20px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                    ul {
+
+                        li {
+                            padding-left: 20px;
+
+                            &:after {
+                                left: 0;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+
+                .slider {
+                    order: -1 !important;
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                    .swiper {
+
+                        .slide {
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

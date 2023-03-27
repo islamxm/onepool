@@ -136,3 +136,39 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 30px 0; 
+        .in {
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            .part {
+                width: 100%;
+
+                
+                
+            }
+            .descr {
+                margin-bottom: 20px;
+
+                .title {
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+            }
+
+            .form {
+                .body {
+                    flex-wrap: wrap;
+                    .field {
+                        width: 100% !important;
+                        margin: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
