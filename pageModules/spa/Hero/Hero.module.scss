@@ -56,7 +56,41 @@
         }
 
         .form {
+            flex: 0 0 auto;
+        }
+    }
+}
 
+
+@media (max-width: 1024px) {
+    .wrapper {
+        // padding-top: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .wrapper {
+        min-height: unset;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        .in {
+            flex-wrap: wrap;
+            .main {
+                margin-bottom: 40px;
+
+                .title {
+                    text-align: center;
+                }
+                .ex {
+                    text-align: center;
+                }
+            }
+            .form {
+                margin: 0 auto;
+            }
         }
     }
 }

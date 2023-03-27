@@ -75,3 +75,61 @@
     }
     
 }
+
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+
+        .in {
+            padding: 30px 0;
+
+            .head {
+                margin-bottom: 25px;    
+            }
+
+            .body {
+                justify-content: center;
+
+                .item {
+                    width: calc((100% / 2) - 14px);
+                    .item_in {
+                        height: 550px;
+
+                        .descr {
+                            justify-content: flex-end;
+                            padding-top: 10px;
+                            background: linear-gradient(180deg, rgba(27, 32, 44, 0) 0%, rgba(57, 62, 75, 0.21) 5.88%, #3C414E 38.03%, #1B202C 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+            .body {
+
+                .item {
+                    width: calc(100% - 14px);
+
+                    .item_in {
+                        height: 500px;
+
+                        .descr {
+                            .text {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

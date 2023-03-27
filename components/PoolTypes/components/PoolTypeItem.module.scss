@@ -71,3 +71,19 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        height: 650px;
+        .descr {
+            background: linear-gradient(180deg, rgba(27, 32, 44, 0) 0%, rgba(57, 62, 75, 0.21) 5.9%, #3C414E 51.04%, #1B202C 100%);
+            
+            .text {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+}

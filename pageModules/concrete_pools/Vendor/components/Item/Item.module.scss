@@ -76,3 +76,33 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .mask {
+            opacity: .5 !important;
+        }
+
+        .img {
+
+        }
+
+        .descr {
+            .text {
+                white-space: unset !important;
+                height: unset !important;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 620px) {
+
+    .wrapper {
+
+        
+    }
+}

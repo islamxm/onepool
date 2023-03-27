@@ -22,3 +22,45 @@
 
    
 }
+
+@media (max-width: 1000px) {
+
+    .wrapper {
+
+        .in {
+            padding: 30px 0;
+
+            .head {
+                margin-bottom: 25px;
+            }
+
+            .body {
+
+                .item {
+                    margin: 0 10px;
+                    margin-bottom: 20px;
+                    width: calc((100% / 2) - 20px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+
+            .head {
+
+            }
+
+            .body {
+                .item {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
