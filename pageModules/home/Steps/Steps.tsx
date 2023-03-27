@@ -3,13 +3,24 @@ import Container from '@/components/Container/Container';
 import BlockHead from '@/components/BlockHead/BlockHead';
 import { useInView } from 'framer-motion';
 import {useRef, useEffect} from 'react';
-import { childAnim, parentAnim } from '@/helpers/animObjects';
+import { childAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import { stepLineAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import {FC} from 'react';
 import { stepPropsTypes } from './types';
+
+const parentAnim = {
+    hidden: {opacity: 0},
+    visible: {
+        opacity: 1,
+        transition: {
+            delayChildren: .5,
+            staggerChildren: .1,
+        }
+    },
+}
 
 const Steps:FC<stepPropsTypes> = ({
     list,
