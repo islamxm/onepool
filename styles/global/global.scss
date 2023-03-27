@@ -93,3 +93,9 @@ body {
 .top-block {
     padding-top: 220px;
 }
+
+@media (max-width: 768px) {
+    .top-block {
+        padding-top: 135px;
+    }
+}
