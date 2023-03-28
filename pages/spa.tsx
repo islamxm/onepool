@@ -69,6 +69,7 @@ import Steps from "@/pageModules/home/Steps/Steps";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Faq from "@/components/Faq/Faq";
+import StepsMob from "@/components/StepsMob/StepsMob";
 
 const whList:whyItemPropsTypes[] = [
     {
@@ -361,6 +362,10 @@ const SpaPage = () => {
                 title="Решения для вашего банного спа-комплекса"
                 />
             <Steps
+                list={stepsList}
+                title="Этапы строительства"
+                />
+            <StepsMob
                 list={stepsList}
                 title="Этапы строительства"
                 />

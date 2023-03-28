@@ -28,6 +28,7 @@ import SmoothScroll from "@/helpers/SmoothScroll";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Faq from "@/components/Faq/Faq";
+import StepsMob from "@/components/StepsMob/StepsMob";
 
 
 const whList: whyItemPropsTypes[] = [
@@ -172,6 +173,7 @@ const HomePage = () => {
             haveLink
             />
            <Steps list={stepsList} title="Простые шаги реализации Вашего проекта"/>
+           <StepsMob list={stepsList} title="Простые шаги реализации Вашего проекта"/>
            <Feedback
             isLight
             />

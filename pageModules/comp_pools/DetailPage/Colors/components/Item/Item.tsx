@@ -11,7 +11,7 @@ const Item:FC<colorItemTypes> = ({
     return (
         <div className={styles.wrapper}>
             <div className={styles.img}>
-
+                <Image src={image} alt=""/>
             </div>
             <div className={styles.name}>{label}</div>
         </div>

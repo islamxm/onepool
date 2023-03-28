@@ -1,7 +1,8 @@
 import { StaticImageData } from "next/image"
 
 export type colorPropsTypes = {
-    list?: colorItemTypes[]
+    list?: colorItemTypes[],
+    ex?: React.ReactNode
 }
 
 export type colorItemTypes = {

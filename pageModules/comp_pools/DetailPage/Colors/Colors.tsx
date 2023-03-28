@@ -10,7 +10,8 @@ import Item from './components/Item/Item';
 
 
 const Colors:FC<colorPropsTypes> = ({
-    list
+    list,
+    ex
 }) => {
 
     return (
@@ -30,6 +31,9 @@ const Colors:FC<colorPropsTypes> = ({
                                 </div>
                             ))
                         }
+                    </div>
+                    <div className={styles.ex}>
+                        {ex}
                     </div>
                 </div>
             </Container>

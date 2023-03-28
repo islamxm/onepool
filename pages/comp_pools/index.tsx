@@ -23,6 +23,7 @@ import Steps from "@/pageModules/home/Steps/Steps";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import Footer from "@/components/Footer/Footer";
 import Calc from "@/components/Calc/Calc";
+import StepsMob from "@/components/StepsMob/StepsMob";
 const whyList:whyItemPropsTypes[] = [
     {
         icon: why1,
@@ -111,6 +112,7 @@ const CompPage = () => {
                 <Content/>
                 <Why title="Почему стоит заказать бассейн у нас?" list={whyList}/>
                 <Steps title="Этапы строительства" list={stepsList}/>
+                <StepsMob title="Этапы строительства" list={stepsList}/>
                 {/* <Calc/> */}
                 <Footer/>
             </PageLayout>

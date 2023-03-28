@@ -38,6 +38,7 @@ import Coating from "@/pageModules/concrete_pools/Coating/Coating";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Calc from "@/components/Calc/Calc";
 import Faq from "@/components/Faq/Faq";
+import StepsMob from "@/components/StepsMob/StepsMob";
 
 const daysList:daysItemTypes[] = [
     {
@@ -230,6 +231,10 @@ const ConcPage = () => {
             <Hist/>
             <Why list={whyList} title="Почему стоит заказать бассейн у нас?" haveLink/>
             <Steps
+                title="Этапы строительства"
+                list={stepList}
+                />
+            <StepsMob
                 title="Этапы строительства"
                 list={stepList}
                 />

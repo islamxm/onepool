@@ -24,7 +24,14 @@ const StepsMob:FC<stepPropsTypes> = ({
                             list?.map((item,index) => (
                                 <div className={styles.item} key={index}>
                                     <div className={styles.in}>
-                                        
+                                        <div className={styles.badge}>
+                                            <div className={styles.num}>{index + 1}</div>
+                                        </div>
+                                        <div className={styles.label}>
+                                            {
+                                                item.label
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             ))
@@ -35,3 +42,5 @@ const StepsMob:FC<stepPropsTypes> = ({
         </div>
     )
 }
+
+export default StepsMob;

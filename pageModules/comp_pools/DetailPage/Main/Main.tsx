@@ -29,7 +29,7 @@ const Main:FC<mainTypes> = ({
                                 {
                                     images?.map((item,index) => (
                                         <SwiperSlide className={styles.slider_main_slide} key={index}>
-                                            <Image src={item} alt=""/>
+                                            <Image placeholder='blur' src={item} alt=""/>
                                         </SwiperSlide>
                                     ))
                                 }
@@ -62,19 +62,19 @@ const Main:FC<mainTypes> = ({
                         <div className={styles.prices}>
                             <div className={styles.panel}>
                                 <div className={styles.item}>
-                                    <span className={styles.item_name}>Цена чаши BASE:</span>
+                                    <span className={styles.item_name}>Цена чаши BASE: </span>
                                     <span className={styles.item_value}>
                                         {base} ₽
                                     </span>
                                 </div>
                                 <div className={styles.item}>
-                                    <span className={styles.item_name}>Цена чаши STANDART:</span>
+                                    <span className={styles.item_name}>Цена чаши STANDART: </span>
                                     <span className={styles.item_value}>
                                         {standart} ₽
                                     </span>
                                 </div>
                                 <div className={styles.item}>
-                                    <span className={styles.item_name}>Цена чаши PREMIUM:</span>
+                                    <span className={styles.item_name}>Цена чаши PREMIUM: </span>
                                     <span className={styles.item_value}>
                                         {premium} ₽
                                     </span>
