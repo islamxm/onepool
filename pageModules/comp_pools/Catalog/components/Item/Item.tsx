@@ -3,22 +3,26 @@ import { catalogItemTypes } from '../../types';
 import {FC} from 'react';
 import Image from 'next/image';
 import Button from '@/components/Button/Button';
+import Link from 'next/link';
+import Router from 'next/router';
+
 
 const Item:FC<catalogItemTypes> = ({
     image,
     name,
     prices,
-    descr
+    descr,
+    link
 }) => {
     const {oldPrice, price} = prices || {};
     
     return (
         <div className={styles.wrapper}>
-            <div className={styles.image}>
+            <Link href={link} className={styles.image}>
                 <Image width={170} height={150} placeholder={'blur'} src={image} alt=""/>
-            </div>
+            </Link>
             <div className={styles.body}>
-                <div className={styles.name}>{name}</div>
+                <Link href={link} className={styles.name}>{name}</Link>
                 <div className={styles.descr}>
                     {descr}
                 </div>
@@ -28,6 +32,7 @@ const Item:FC<catalogItemTypes> = ({
                 </div>
                 <div className={styles.action}>
                     <Button
+                        onClick={() => Router.push(link)}
                         text='купить'
                         variant='fill'
                         />

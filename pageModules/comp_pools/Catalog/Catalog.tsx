@@ -36,7 +36,8 @@ const list:catalogItemTypes[] = [
         prices: {
             oldPrice: 154440,
             price: 146718
-        }
+        },
+        link: '/comp_pools/1'
     },
     {
         image: img2,
@@ -50,7 +51,8 @@ const list:catalogItemTypes[] = [
         prices: {
             oldPrice: 185400,
             price: 176130
-        }
+        },
+        link: '/comp_pools/2'
     },
     {
         image: img3,
@@ -64,7 +66,8 @@ const list:catalogItemTypes[] = [
         prices: {
             oldPrice: 256500,
             price: 270000
-        }
+        },
+        link: '/comp_pools/3'
     },
     {
         image: img4,
@@ -78,7 +81,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 296685,
             oldPrice: 312300,
-        }
+        },
+        link: '/comp_pools/4'
     },
     {
         image: img5,
@@ -92,7 +96,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 293550,
             oldPrice: 309000,
-        }
+        },
+        link: '/comp_pools/5'
     },
     {
         image: img6,
@@ -106,7 +111,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 299250,
             oldPrice: 315000,
-        }
+        },
+        link: '/comp_pools/6'
     },
     {
         image: img7,
@@ -120,7 +126,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 370500,
             oldPrice: 390000,
-        }
+        },
+        link: '/comp_pools/7'
     },
     {
         image: img8,
@@ -134,7 +141,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 438900,
             oldPrice: 462000,
-        }
+        },
+        link: '/comp_pools/8'
     },
     {
         image: img9,
@@ -148,7 +156,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 513000,
             oldPrice: 540000,
-        }
+        },
+        link: '/comp_pools/9'
     },
     {
         image: img10,
@@ -162,7 +171,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 586245,
             oldPrice: 617100,
-        }
+        },
+        link: '/comp_pools/10'
     },
     {
         image: img11,
@@ -176,7 +186,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 1152900,
             oldPrice: 1281000,
-        }
+        },
+        link: '/comp_pools/11'
     },
     {
         image: img12,
@@ -190,7 +201,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 843600,
             oldPrice: 888000,
-        }
+        },
+        link: '/comp_pools/12'
     },
     {
         image: img13,
@@ -204,7 +216,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 855000,
             oldPrice: 900000,
-        }
+        },
+        link: '/comp_pools/13'
     },
     {
         image: img14,
@@ -218,7 +231,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 1206000,
             oldPrice: 1340000,
-        }
+        },
+        link: '/comp_pools/14'
     },
     {
         image: img15,
@@ -232,7 +246,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 877800,
             oldPrice: 924000,
-        }
+        },
+        link: '/comp_pools/15'
     },
     {
         image: img16,
@@ -246,7 +261,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 1458000,
             oldPrice: 1620000,
-        }
+        },
+        link: '/comp_pools/16'
     },
     {
         image: img17,
@@ -260,7 +276,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 1054500,
             oldPrice: 1110000,
-        }
+        },
+        link: '/comp_pools/17'
     },
     {
         image: img18,
@@ -274,7 +291,8 @@ const list:catalogItemTypes[] = [
         prices: {
             price: 1088700,
             oldPrice: 1146000,
-        }
+        },
+        link: '/comp_pools/18'
     }
 ] 
 
