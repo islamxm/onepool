@@ -54,7 +54,7 @@ const Main:FC<mainTypes> = ({
                                 {
                                     images?.map((item,index) => (
                                         <SwiperSlide className={styles.slider_thumbs_slide} key={index}>    
-                                            <Image src={item} alt=""/>
+                                            <Image placeholder={'blur'} src={item} alt=""/>
                                         </SwiperSlide>
                                     ))
                                 }
