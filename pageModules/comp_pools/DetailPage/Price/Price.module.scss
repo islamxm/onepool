@@ -1,0 +1,21 @@
+.wrapper {
+
+    .in {
+        padding: 35px 0;
+
+        .head {
+            margin-bottom: 30px;
+        }
+
+        .body {
+
+            ul {
+                padding-left: 40px;
+                li {
+                    margin-bottom: 10px;
+                    list-style: disc;
+                }
+            }
+        }
+    }
+}

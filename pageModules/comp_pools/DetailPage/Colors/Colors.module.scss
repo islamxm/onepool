@@ -1,6 +1,6 @@
 .wrapper {
     .in {
-        padding: 60px 0;
+        padding: 40px 0;
         
         .head {
             margin-bottom: 40px;
@@ -24,6 +24,34 @@
             line-height: 33px;
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+            padding: 30px 0;
+
+            .head {
+                margin-bottom: 25px;
+            }
+
+            .body {
+                margin-left: -10px;
+                margin-right: -10px;
+                .item {
+                    width: calc(((100% / 2) - 20px));
+                    margin: 0 10px 20px;
+                }
+            }
+
+            .ex {
+                font-size: 16px;
+                line-height: 140%;
+            }
         }
     }
 }

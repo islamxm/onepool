@@ -13,36 +13,43 @@ const Main:FC<mainTypes> = ({
     prices,
     descr,
 }) => {
-    const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>();
+    const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
     const {base, standart, premium} = prices || {}
+
 
     return (
         <div className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
                     <div className={styles.main}>
-                        <div className={styles.slider_main}>
-                            <SwiperWrap 
-                                modules={[Thumbs]}
-                                // thumbs={{swiper: thumbsSwiper}}
-                                className={styles.slider_main_swiper}>
-                                {
-                                    images?.map((item,index) => (
-                                        <SwiperSlide className={styles.slider_main_slide} key={index}>
-                                            <Image placeholder='blur' src={item} alt=""/>
-                                        </SwiperSlide>
-                                    ))
-                                }
-                            </SwiperWrap>
-                           
-                        </div>
-                        {/* <div className={styles.slider_thumbs}>
+                        {
+                            thumbsSwiper ? (
+                                <div className={styles.slider_main}>
+                                    <SwiperWrap 
+                                        modules={[Thumbs]}
+                                        thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
+                                        className={styles.slider_main_swiper}>
+                                        {
+                                            images?.map((item,index) => (
+                                                <SwiperSlide className={styles.slider_main_slide} key={index}>
+                                                    <Image placeholder='blur' src={item} alt=""/>
+                                                </SwiperSlide>
+                                            ))
+                                        }
+                                    </SwiperWrap>
+                                
+                                </div>
+                            ) : null
+                        }
+                        
+                        <div className={styles.slider_thumbs}>
                             <SwiperWrap
                                 modules={[Thumbs]}
                                 className={styles.slider_thumbs_swiper}
                                 slidesPerView={6}
                                 watchSlidesProgress
                                 onSwiper={setThumbsSwiper}
+                                spaceBetween={10}
                                 >
                                 {
                                     images?.map((item,index) => (
@@ -52,7 +59,7 @@ const Main:FC<mainTypes> = ({
                                     ))
                                 }
                             </SwiperWrap>
-                        </div> */}
+                        </div>
                     </div>
                     <div className={styles.body}>
                         <h2 className={styles.name}>{name}</h2>

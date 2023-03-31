@@ -29,3 +29,15 @@
         line-height: 22px;
     }
 }
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        padding: 15px;
+
+        .name {
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+}
