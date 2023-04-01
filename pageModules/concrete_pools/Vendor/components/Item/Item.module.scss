@@ -90,9 +90,15 @@
         }
 
         .descr {
+            .head {
+                font-size: 20px;
+                line-height: 25px;
+            }
             .text {
                 white-space: unset !important;
                 height: unset !important;
+                font-size: 14px;
+                line-height: 19px;
             }
             
         }

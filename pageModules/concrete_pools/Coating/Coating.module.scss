@@ -2,7 +2,7 @@
     background-color: #F8ECDE;
 
     .in {
-        padding: 50px 0;
+        padding: 40px 0;
 
         .head {
             margin-bottom: 40px;
@@ -23,7 +23,7 @@
                     border-radius: 30px;
                     overflow: hidden;
                     position: relative;
-                    height: 848px;
+                    height: 400px;
 
                     .mask {
                         opacity: 0;
@@ -64,9 +64,10 @@
                         }
 
                         .text {
-                            font-size: 22px;
-                            line-height: 140%;
+                            font-size: 17px;
+                            line-height: 25px;
                             color: #fff;
+                            height: 70%;
                         }
                     }
                 }
@@ -94,7 +95,7 @@
                 .item {
                     width: calc((100% / 2) - 14px);
                     .item_in {
-                        height: 550px;
+                        // height: 550px;
 
                         .descr {
                             justify-content: flex-end;
@@ -119,12 +120,18 @@
                     width: calc(100% - 14px);
 
                     .item_in {
-                        height: 500px;
+                        // height: 500px;
+                        height: 300px;
 
                         .descr {
+                            .title {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
                             .text {
-                                font-size: 16px;
-                                line-height: 19px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: unset;
                             }
                         }
                     }

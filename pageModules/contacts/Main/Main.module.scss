@@ -128,3 +128,40 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+
+
+        .body {
+            margin-bottom: 30px;
+            .main {
+                .top {
+                    .phone {
+                        margin-bottom: 20px;
+                        a {
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+                    .tm {
+                        margin-bottom: 20px;
+                    }
+                }
+                .bottom {
+                    padding-left: 0;
+
+                    .mail {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+
+            .ex {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}

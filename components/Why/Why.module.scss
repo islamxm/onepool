@@ -5,15 +5,15 @@
    
 
     .in {
-        padding: 70px 0 50px 0;
+        padding: 40px 0 40px 0;
         position: relative;
         z-index: 10;
         .head {
-            margin-bottom: 100px;
+            margin-bottom: 30px;
         }
 
         .sub {
-            margin-bottom: 100px;
+            margin-bottom: 30px;
             text-align: center;
             font-size: 24px;
             line-height: 33px;
@@ -27,7 +27,7 @@
             display: flex;
             // align-items: flex-start;
             justify-content: space-between;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             margin-left: -10px;
             margin-right: -10px;
             flex-wrap: wrap;
