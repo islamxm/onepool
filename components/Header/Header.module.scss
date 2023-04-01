@@ -105,7 +105,13 @@
     }
 }
 
+.wrapper.hidden {
+    transform: translateY(-100%);
+}
+
+
 @media (max-width: 1200px) {
+
     .wrapper {
 
         .inner {
@@ -119,6 +125,8 @@
         }
 
     }
+
+    
 }
 
 @media (max-width: 1024px) {
@@ -136,6 +144,10 @@
 }
 
 @media (max-width: 768px) {
+    .wrapper.hidden {
+        transform: translateY(0);
+    }
+
     .wrapper {
 
         .inner {

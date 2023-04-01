@@ -7,14 +7,25 @@ import { useEffect, useState } from 'react';
 import { Dropdown } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/hooks/useTypesRedux';
 import { toggleMenu } from '@/store/actions';
+import {useScrollDirection} from "use-scroll-direction";
 
 
 const Header = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
+    const [scrollDown, setScrollDown] = useState(false)
     const {isMenuOpen} = useAppSelector(s => s)
     const dispatch = useAppDispatch();
+    const {
+        scrollDirection,
+        isScrolling,
+        isScrollingUp,
+        isScrollingDown,
+        isScrollingLeft,
+        isScrollingRight
+    } = useScrollDirection();
 
-    const checkScroll = () => {
+
+    const checkScroll = (e: any) => {
         if(document.documentElement.scrollTop > 10) {
             setScrolled(true)
         } else {
@@ -23,15 +34,26 @@ const Header = () => {
     }
 
     useEffect(() => {
-        document.addEventListener('scroll', checkScroll)
+        if(isScrollingDown) {
+            setScrollDown(true)
+        }
+        if(isScrollingUp) {
+            setScrollDown(false)
+        }
+    }, [isScrollingDown, isScrollingUp])
+  
 
+    useEffect(() => {
+        document.addEventListener('scroll', checkScroll)
+     
         return () => {
             document.removeEventListener('scroll', checkScroll)
+  
         }
     }, [])
 
     return (
-        <header className={`${styles.wrapper} ${scrolled && !isMenuOpen ? styles.active : ''}`}> 
+        <header className={`${styles.wrapper} ${scrolled && !isMenuOpen ? styles.active : ''} ${scrollDown ? styles.hidden : ''}`}> 
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.top}>
