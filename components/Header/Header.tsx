@@ -8,13 +8,14 @@ import { Dropdown } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/hooks/useTypesRedux';
 import { toggleMenu } from '@/store/actions';
 import {useScrollDirection} from "use-scroll-direction";
-
+import { useRouter } from 'next/router';
 
 const Header = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
     const [scrollDown, setScrollDown] = useState(false)
     const {isMenuOpen} = useAppSelector(s => s)
     const dispatch = useAppDispatch();
+    const {pathname} = useRouter()
     const {
         scrollDirection,
         isScrolling,

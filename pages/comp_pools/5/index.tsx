@@ -4,7 +4,7 @@ import SmoothScroll from "@/helpers/SmoothScroll";
 import Main from "@/pageModules/comp_pools/DetailPage/Main/Main";
 import Colors from "@/pageModules/comp_pools/DetailPage/Colors/Colors";
 import img1 from '@/public/assets/comp-5-1.jpeg';
-import img2 from '@/public/assets/comp-5-2.jpeg';
+import img2 from '@/public/assets/comp-5-2.png';
 import img3 from '@/public/assets/comp-5-3.jpeg';
 import img4 from '@/public/assets/comp-5-4.jpeg';
 import img5 from '@/public/assets/comp-5-5.jpeg';
