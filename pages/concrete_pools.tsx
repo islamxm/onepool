@@ -33,7 +33,7 @@ import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import { poolTypeItemType } from "@/components/PoolTypes/types";
 import pool1 from '@/public/assets/conc-pool-type-1.png';
 import pool2 from '@/public/assets/conc-pool-type-2.png';
-import Prods from "@/pageModules/home/Prods/Prods";
+import Prods from "@/pageModules/concrete_pools/Prods/Prods";
 import Coating from "@/pageModules/concrete_pools/Coating/Coating";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Calc from "@/components/Calc/Calc";

@@ -109,6 +109,7 @@ const BathPage = () => {
                 subtitle="Строим бани с 2001 года по всей России!"
                 />
             <Why
+                fr
                 list={whyList}
                 title={'Бани и сауны'}
                 sub={

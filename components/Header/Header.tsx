@@ -9,6 +9,8 @@ import { useAppDispatch, useAppSelector } from '@/hooks/useTypesRedux';
 import { toggleMenu } from '@/store/actions';
 import {useScrollDirection} from "use-scroll-direction";
 import { useRouter } from 'next/router';
+import logo from '@/public/assets/logo-main.svg';
+import Image from 'next/image';
 
 const Header = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
@@ -59,7 +61,7 @@ const Header = () => {
                 <div className={styles.inner}>
                     <div className={styles.top}>
                         <Link href={'/'} className={styles.logo}>
-                            
+                            <Image src={logo} alt='Pool form'/>
                         </Link>
                         <div className={styles.label}>
                             Собственное производство <br/> 
@@ -98,10 +100,10 @@ const Header = () => {
                     </div>
                     <div className={styles.main}>
                         <ul className={styles.nav}>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/' ? styles.active : ''}`}>
                                 <Link href={'/'} className={styles.nav_link}>главная</Link>
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/concrete_pools' || pathname === '/iron_pools' || pathname === '/comp_pools' ? styles.active : ''}`}>
                                 <Dropdown
                                     trigger={['hover']}
                                     placement={'bottomCenter'}
@@ -115,19 +117,19 @@ const Header = () => {
                                 </Dropdown>
                                 
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/spa' ? styles.active : ''}`}>
                                 <Link href={'/spa'} className={styles.nav_link}>спа</Link>
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/bath' ? styles.active : ''}`}>
                                 <Link href={'/bath'} className={styles.nav_link}>бани и сауны</Link>
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/works' ? styles.active : ''}`}>
                                 <Link href={'/works'} className={styles.nav_link}>наши работы</Link>
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/servs' ? styles.active : ''}`}>
                                 <Link href={'/servs'} className={styles.nav_link}>услуги</Link>
                             </li>
-                            <li className={styles.nav_item}>
+                            <li className={`${styles.nav_item} ${pathname === '/contacts'}`}>
                                 <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
                             </li>
                         </ul>

@@ -31,62 +31,31 @@ const Adv:FC<advPropsTypes> = ({
                     </div>
                     <div className={styles.body}>
                         {
-                            list?.map((item,index) => {
-                                if(item.side === 'left') {
-                                    return (
-                                        <motion.div {...animWhileInView} variants={parentAnim} className={styles.part} key={index}>
-                                            <AnimWrap className={styles.descr}>
-                                                <motion.div variants={childAnim('left')}>
-                                                <h3 className={styles.title}>{item.title}</h3>
-                                                <div className={styles.text}>
-                                                    <p>
-                                                        {item.text}
-                                                    </p>
-                                                </div>
-                                                </motion.div>
-                                            </AnimWrap>
-
-                                            <AnimWrap className={styles.img}>
-                                                <motion.div variants={childAnim('right')} className={styles.img_in}>
-                                                <div className={styles.img_el}>
-                                                    <Image src={item.image} alt=""/>
-                                                </div>
-                                                <div className={styles.icon}>
-                                                    <Image src={item.icon} alt=""/>
-                                                </div>
-                                                </motion.div>
-                                            </AnimWrap>
+                            list?.map((item,index) => (
+                                <motion.div {...animWhileInView} variants={parentAnim} className={`${styles.part} ${styles.right}`} key={index}>
+                                    <AnimWrap className={styles.img}>
+                                        <motion.div className={styles.img_in} variants={childAnim('left')}>
+                                            <div className={styles.img_el}>
+                                                <Image src={item.image} alt=""/>
+                                            </div>
+                                            <div className={styles.icon}>
+                                                <Image src={item.icon} alt=""/>
+                                            </div>
                                         </motion.div>
-                                    )
-                                }
-                                if(item.side === 'right') {
-                                    return (
-                                        <motion.div {...animWhileInView} variants={parentAnim} className={`${styles.part} ${styles.right}`} key={index}>
-                                            <AnimWrap className={styles.img}>
-                                                <motion.div className={styles.img_in} variants={childAnim('left')}>
-                                                    <div className={styles.img_el}>
-                                                        <Image src={item.image} alt=""/>
-                                                    </div>
-                                                    <div className={styles.icon}>
-                                                        <Image src={item.icon} alt=""/>
-                                                    </div>
-                                                </motion.div>
-                                                
-                                            </AnimWrap>
-                                            <AnimWrap className={styles.descr}>
-                                                <motion.div variants={childAnim('right')}>
-                                                    <h3 className={styles.title}>{item.title}</h3>
-                                                    <div className={styles.text}>
-                                                        <p>
-                                                            {item.text}
-                                                        </p>
-                                                    </div>
-                                                </motion.div>
-                                            </AnimWrap>
+                                        
+                                    </AnimWrap>
+                                    <AnimWrap className={styles.descr}>
+                                        <motion.div variants={childAnim('right')}>
+                                            <h3 className={styles.title}>{item.title}</h3>
+                                            <div className={styles.text}>
+                                                <p>
+                                                    {item.text}
+                                                </p>
+                                            </div>
                                         </motion.div>
-                                    )
-                                }
-                            })
+                                    </AnimWrap>
+                                </motion.div>
+                            ))
                         }
                     </div>
                     <div className={styles.action}>

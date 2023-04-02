@@ -1,11 +1,14 @@
 import SmoothScroll from "@/helpers/SmoothScroll";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Catalog from "@/pageModules/comp_pools/Catalog/Catalog";
-import Prods from "@/pageModules/home/Prods/Prods";
+import Prods from "@/pageModules/comp_pools/Prods/Prods";
 import advbg from '@/public/assets/comp-adv-bg.png';
 import Adv from "@/components/Adv/Adv";
 import { advItemTypes } from "@/components/Adv/types";
-import advimg from '@/public/assets/comp-adv.png';
+import adv1 from '@/public/assets/comp-adv-1.png';
+import adv2 from '@/public/assets/comp-adv-2.png';
+import adv3 from '@/public/assets/comp-adv-3.png';
+import adv4 from '@/public/assets/comp-adv-4.png';
 import advicon1 from '@/public/assets/comp-adv-icon-1.svg';
 import advicon2 from '@/public/assets/comp-adv-icon-2.svg';
 import advicon3 from '@/public/assets/comp-adv-icon-3.svg';
@@ -59,28 +62,28 @@ const whyList:whyItemPropsTypes[] = [
 const advList: advItemTypes[] = [
     {
         title: 'Практичность',
-        image:advimg,
+        image:adv1,
         icon: advicon1,
         text: 'Композитные бассейны не нуждаются в каком-либо специальном уходе. Глянцевая поверхность чаши не дает возможности образовываться налету на поверхности. Поверхность достаточно протереть влажной губкой с добавлением обычного жидкого моющего средства и ополоснуть водой.',
         side: 'left'
     },
     {
         title: 'Травмобезопасность',
-        image: advimg,
+        image: adv2,
         icon: advicon2,
         text: 'Композитные чаши не имеют острых углов, все формы ступеней и сидений имеют плавные формы. Модели чаш разрабатываются с учетом эргономики человека, что в свою очередь дает Вам расслабиться и порелаксировать в воде.',
         side: 'right'
     },
     {
         title: 'Прочность',
-        image: advimg,
+        image: adv3,
         icon: advicon3,
         text: 'При изготовлении стеклопластиковых чаш бассейнов для создания "скелета" бассейна мы используем армированные стекловолоконные материалы, которые как раз отвечают за прочность наших бассейнов. По эксплуатационным характеристикам они не уступают бетонным, в то же время сохраняя эластичность, необходимую при зимнем давлении грунта.',
         side: 'left'
     },
     {
         title: 'Долговечность',
-        image: advimg,
+        image: adv4,
         icon: advicon4,
         text: 'Если сравнивать бетонные и полипропиленовые бассейны с композитными - обратите внимание на гарантии, которые дает производитель. Со временем в бетонных чашах может отлетать мозаика и плитка, в полипропиленовых образуется нестираемая ватер-линия. Подвижки грунта могут повредить бетонную чашу. На композитные же бассейны мы даем гарантию 25 лет, а срок службы 40 лет.',
         side: 'right'

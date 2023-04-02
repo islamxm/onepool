@@ -17,7 +17,7 @@ const Content = () => {
                         <div className={styles.head}>
                             <BlockHead
                                 title='Наше производство бассейнов из стеклопластика'
-                                isDark
+                                
                                 />
                         </div>
                         <div className={styles.sub}>
@@ -46,7 +46,6 @@ const Content = () => {
                         <div className={styles.head}>
                             <BlockHead
                                 title='Жизнь композитной чаши после производства'
-                                isDark
                                 />
                         </div>
                         <div className={styles.body}>

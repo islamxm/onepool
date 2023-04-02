@@ -19,24 +19,11 @@ const Hist = () => {
                             />
                     </div>
                     <div className={styles.body}>
-                        <div className={styles.imgs}>
-                            <div className={styles.img}>
-                                <Image placeholder='blur' width={590} height={475} src={img1} alt=""/>
-                            </div>
-                            <div className={styles.img}>
-                                <Image placeholder='blur' width={590} height={475} src={img2} alt=""/>
-                            </div>
-                            <div className={styles.img}>
-                                <Image placeholder='blur' width={590} height={475} src={img3} alt=""/>
-                            </div>
-                            <div className={styles.img}>
-                                <Image placeholder='blur' width={590} height={475} src={img4} alt=""/>
-                            </div>
-                        </div>
+                        
                         <div className={styles.descr}>
                             <p>
-                                <span>Регион: Ленинградская область</span>
-                                <span>Заказчик: Гольф клуб премиум класса</span>
+                                <b>Регион: Ленинградская область</b>
+                                <b>Заказчик: Гольф клуб премиум класса</b>
                                 Год возведения бассейнов: 2019<br/>
                                 <b>Бассейны:</b><br/>
                                 взрослый: длина 20м, ширина 10м, глубина 1,55м<br/>
@@ -51,7 +38,7 @@ const Hist = () => {
                                 Наш заказчик - амбициозный молодой мужчина, который не допускал компромиссов и полутонов. Бассейны 
                                 для детей и взрослых должны были соответствовать премиум-уровню клуба 
                                 и быть эстетичными, функциональными 
-                                и надежными в эксплуатации. Как вы понимаете, у нас не было права на ошибку!<br/>
+                                и надежными в эксплуатации. Как вы понимаете, у нас не было права на ошибку!<br/><br/>
                                 Наличие озера осложняло подготовительные работы: грунтовые воды подступали слишком близко к поверхности. Для решения проблемы было построено железобетонное основание, что заказчик решил взять на себя. Для исключения каких-либо ошибок на этом важном этапе, общестроительные работы велись под жестким контролем нашей опытной команды (услуга шеф-монтаж).<br/>
                                 К монтажу самих бассейнов приступили 
                                 в начале апреля. Наш заказчик планировал в конце апреля открыть для посещения своими клиентами оба бассейна, 
@@ -62,6 +49,20 @@ const Hist = () => {
                                 а их посетители могут не беспокоиться 
                                 о чистоте воды и своей безопасности.
                             </p>
+                        </div>
+                        <div className={styles.imgs}>
+                            {/* <div className={styles.img}>
+                                <Image placeholder='blur' width={590} height={475} src={img1} alt=""/>
+                            </div> */}
+                            <div className={styles.img}>
+                                <Image placeholder='blur' width={590} height={475} src={img2} alt=""/>
+                            </div>
+                            <div className={styles.img}>
+                                <Image placeholder='blur' width={590} height={475} src={img3} alt=""/>
+                            </div>
+                            <div className={styles.img}>
+                                <Image placeholder='blur' width={590} height={475} src={img4} alt=""/>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -4,11 +4,13 @@ export type whyPropsTypes = {
     title?: string,
     haveLink?: boolean,
     list: whyItemPropsTypes[],
-    sub?: React.ReactNode
+    sub?: React.ReactNode,
+    fr?: boolean
 }
 
 export type whyItemPropsTypes = {
     icon?: StaticImageData,
     head?: string,
-    text?: string
+    text?: string,
+   
 }

@@ -5,9 +5,10 @@
    
 
     .in {
-        padding: 40px 0 40px 0;
+        padding: 40px 0;
         position: relative;
         z-index: 10;
+        
         .head {
             margin-bottom: 30px;
         }
@@ -15,17 +16,20 @@
         .sub {
             margin-bottom: 30px;
             text-align: center;
-            font-size: 24px;
-            line-height: 33px;
 
             span {
                 font-weight: 700;
             }
         }
 
+        .body.fr {
+            .item {
+                width: calc((100% / 4) - 20px);
+            }
+        }
+
         .body {
             display: flex;
-            // align-items: flex-start;
             justify-content: space-between;
             margin-bottom: 30px;
             margin-left: -10px;
@@ -82,14 +86,13 @@
                     text-transform: uppercase;
                     font-weight: 600;
                     margin-bottom: 18px;
-                    line-height: 140%;
+                    font-size: 18px;
+                    line-height: 27px;
                 }
 
                 .text {
                     color: #788090;
-                    font-size: 14px;
-                    line-height: 140%;
-
+                    text-align: center;
                 }
             }
         }

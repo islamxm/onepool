@@ -22,7 +22,7 @@
                 text-transform: uppercase;
                 color: var(--gold);
                 border: 1px solid var(--gold);
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 100%;
                 font-weight: 600;
             }
@@ -35,15 +35,15 @@
             margin-right: -15px;
 
             .slider {
-                width: 48%;
+                width: 350px;
                 margin: 0 15px;
-                
+                flex: 0 0 auto;
 
                 .swiper {
                     padding-bottom: 30px;
                     .slide {
                         border-radius: 8px;
-                        height: 510px;
+                        height: 330px;
                         overflow: hidden;
                         img {
                             width: 100%;
@@ -83,8 +83,8 @@
 
             .descr {
                 margin: 0 15px;
-                width: 52%;
-                
+                // width: 52%;
+                width: 100%;
                 
 
                 .in {
@@ -93,7 +93,7 @@
                     color: #fff;
                     border: 1px solid #32415E;
                     width: 100%;
-                    padding: 30px;
+                    padding: 20px;
                 }
 
                 ul {
@@ -172,6 +172,7 @@
                     order: -1 !important;
                     width: 100%;
                     margin-bottom: 25px;
+                    flex: unset;
 
                     .swiper {
 

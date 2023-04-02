@@ -2,7 +2,9 @@ import styles from './Footer.module.scss';
 import Container from '../Container/Container';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import logo from '@/public/assets/logo-main.svg';
+import onepool from '@/public/assets/logo-onepool.png';
+import manawell from '@/public/assets/logo-manawell.png';
 
 const Footer = () => {
 
@@ -29,7 +31,17 @@ const Footer = () => {
                             </div>
                         </div>
                         <Link className={styles.logo} href={'/'}>
-
+                            <div className={styles.logo_main}>
+                                <Image src={logo} alt='Pool form'/>
+                            </div>
+                            <div className={styles.logo_ex}>
+                                <div className={styles.logo_manawell}>
+                                    <Image src={manawell} alt='Manawell'/>
+                                </div>
+                                <div className={styles.logo_onepool}>
+                                    <Image src={onepool} alt='Onepool'/>
+                                </div>
+                            </div>
                         </Link>
                     </div>
                     <div className={styles.ex}>

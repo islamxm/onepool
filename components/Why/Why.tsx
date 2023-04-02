@@ -20,7 +20,9 @@ const Why:FC<whyPropsTypes> = ({
     haveLink,
     title,
     list,
-    sub
+    sub,
+    fr
+    
 }) => {
 
     return (
@@ -45,7 +47,7 @@ const Why:FC<whyPropsTypes> = ({
                         )  : null
                     }
                     
-                    <div className={styles.body}>
+                    <div className={`${styles.body} ${fr ? styles.fr : ''}`}>
                         {
                             list?.map((item,index) => (
                                 <AnimWrap className={styles.item} key={index}>

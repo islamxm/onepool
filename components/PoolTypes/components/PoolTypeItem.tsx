@@ -14,12 +14,13 @@ const PoolTypeItem:FC<poolTypeItemType> = ({
 
     return (
         <motion.div variants={childAnim('bottom')} className={styles.wrapper}>
-            <div className={styles.mask}></div>
             <div className={styles.image}>
                 <Image src={image} alt=""/>
             </div>
-            <div className={styles.descr}>
-                <div className={styles.title}>{title}</div>
+            <div className={styles.descr}>  
+                <div className={styles.title}>
+                    <div className={styles.title_el}>{title}</div>
+                </div>
                 <div className={styles.text}>{text}</div>
             </div>
         </motion.div>

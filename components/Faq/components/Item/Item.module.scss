@@ -12,10 +12,6 @@
         user-select: none;
         cursor: pointer;
 
-        .label {
-            font-size: 20px;
-            line-height: 25px;
-        }
 
         .icon {
             flex: 0 0 auto;
@@ -38,8 +34,6 @@
         .in {
             padding-bottom: 25px;
             padding-top: 33px;
-            font-size: 21px;
-            line-height: 29px;
         }
     }
 
@@ -50,27 +44,6 @@
     .head {
         .icon {
             transform: rotate(45deg);
-        }
-    }
-}
-
-@media (max-width: 768px) {
-
-    .wrapper {
-
-        .head {
-            .label {
-                font-size: 14px;
-                line-height: 18px;
-            }
-        }
-
-        .body {
-
-            .in {
-                font-size: 14px;
-                line-height: 18px;
-            }
         }
     }
 }

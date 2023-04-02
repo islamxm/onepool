@@ -20,6 +20,7 @@
     .inner {
         position: relative;
         z-index: 3;
+
         .top {
             display: flex;
             align-items: center;
@@ -31,11 +32,20 @@
             }
 
             .logo {
-                width: 225px;
+                width: 83px;
+                height: 68px;
                 flex: 0 0 auto;
-                background-color: #1B202C;
                 height: 70px;
                 border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: flex;
+                }   
             }
 
             .label {
@@ -90,12 +100,13 @@
                             
                         }
                     }
+                   
+                }
 
-                    .nav_link.active {
+                .nav_item.active {
+                    .nav_link {
                         color: var(--gold)
                     }
-
-                   
                 }
             }
         }
@@ -157,6 +168,12 @@
         .inner {
             .top {
                 padding: 15px 0;
+
+                .logo {
+                    height: 50px;
+                    width: auto;
+                }
+
                 .action {
                     display: none;
                 }
@@ -220,8 +237,8 @@
         .inner {
             .top {
                 .logo {
-                    width: 100px;
-                    height: 30px;
+                    // width: 100px;
+                    // height: 30px;
                 }
                 .burger {
                     width: 40px;

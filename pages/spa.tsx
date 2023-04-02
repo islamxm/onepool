@@ -342,6 +342,7 @@ const SpaPage = () => {
                 bg={heroBg}
                 />
             <Why
+                fr
                 title="Банные спа-комплексы"
                 list={whList}
                 sub={

@@ -5,7 +5,7 @@ export const parentAnim: Variants = {
     visible: {
         opacity: 1,
         transition: {
-            delayChildren: .5,
+            delayChildren: .1,
             staggerChildren: .3,
         }
     },
