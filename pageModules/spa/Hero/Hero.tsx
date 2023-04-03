@@ -2,7 +2,7 @@ import styles from './Hero.module.scss';
 import Container from '@/components/Container/Container';
 import FeedbackSm from '@/components/FeedbackSm/FeedbackSm';
 import { heroPropsTypes } from './types';
-import {FC} from 'react';
+import {FC, useRef} from 'react';
 import Image from 'next/image';
 import { parentAnim, childAnim, animWhileInView } from '@/helpers/animObjects';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
@@ -15,9 +15,16 @@ const Hero:FC<heroPropsTypes> = ({
     subtitle,
     bg
 }) => {
+    const bodyRef = useRef<HTMLDivElement>(null)
+
+    const scrollDown = () => {
+        if(bodyRef?.current) {
+            window.scrollTo(0, bodyRef?.current?.scrollHeight - 200)
+        }
+    }
 
     return (
-        <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+        <motion.div ref={bodyRef} variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             {
                 bg ? (
                     <div className={styles.bg}>
@@ -49,7 +56,9 @@ const Hero:FC<heroPropsTypes> = ({
                         <FeedbackSm/>
                         </motion.div>
                     </AnimWrap>
+                    
                 </div>
+                <button onClick={scrollDown} className={styles.godown}></button>
             </Container>
         </motion.div>
     )

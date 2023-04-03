@@ -5,10 +5,12 @@
         .head {
             margin-bottom: 20px;
             text-align: center;
-            font-size: 33px;
+            // font-size: 33px;
+            font-size: 22px;
             line-height: 140%;
             font-weight: 300;
             color: var(--black);
+            font-weight: 700;
         }
 
         .body {
@@ -19,8 +21,15 @@
                 margin: 7px;
                 overflow: hidden;
                 
+                // img {
+                //     max-height: 670px;
+                //     width: 100%;
+                //     height: 100%;
+                //     object-fit: cover;
+                //     display: flex;
+                // }
+                
                 img {
-                    max-height: 670px;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -38,12 +47,18 @@
                     width: calc((100% / 3) - 14px);
                 }
                 &:nth-child(4) {
-                    width: calc((100% / 2) - 14px);
+                    width: calc((100% / 4) - 14px);
                 }
                 &:nth-child(5) {
-                    width: calc((100% / 2) - 14px);
+                    width: calc((100% / 4) - 14px);
                 }
                 &:nth-child(6) {
+                    width: calc((100% / 4) - 14px);
+                }
+                &:nth-child(7) {
+                    width: calc((100% / 4) - 14px);
+                }
+                &:nth-child(8) {
                     width: calc(100% - 14px);
                 }
             }

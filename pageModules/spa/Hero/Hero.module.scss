@@ -9,6 +9,28 @@
     position: relative;
     padding-top: 290px;
 
+    .godown {
+        position: absolute;
+        bottom: 6vh;
+        right: calc(50% - 40px);
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: 
+        #212838;
+        border-radius: 100%;
+        transition: all .3s ease;
+        background-image: url('../../../public/assets/down.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        z-index: 20;
+
+        &:hover {
+            background-color: var(--blue_bg);
+        }
+    }
+
     .bg {
         position: absolute;
         top: 0;
@@ -58,6 +80,8 @@
         .form {
             flex: 0 0 auto;
         }
+
+        
     }
 }
 
