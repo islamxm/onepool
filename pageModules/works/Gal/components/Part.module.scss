@@ -1,6 +1,6 @@
 .wrapper {
     .part { 
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         .head {
             margin-bottom: 20px;
@@ -60,6 +60,27 @@
                 }
                 &:nth-child(8) {
                     width: calc(100% - 14px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .part {
+
+            .head {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            .body {
+
+
+                .item {
+
                 }
             }
         }
