@@ -1,0 +1,28 @@
+.wrapper {
+
+    .in {
+        padding: 220px 0 40px;
+
+        .head {
+            margin-bottom: 30px;
+        }
+
+        .body {
+
+            .item {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+
+        .in {
+            padding-top: 100px;
+        }
+    }
+}

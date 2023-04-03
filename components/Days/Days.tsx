@@ -1,7 +1,7 @@
 import styles from './Days.module.scss';
 import Container from '../Container/Container';
 import BlockHead from '../BlockHead/BlockHead';
-import {FC} from 'react';
+import {FC, useState} from 'react';
 import { daysPropsTypes } from './types';
 import Image from 'next/image';
 import Button from '../Button/Button';
@@ -9,11 +9,15 @@ import AnimWrap from '../AnimWrap/AnimWrap';
 import { animWhileInView } from '@/helpers/animObjects';
 import { parentAnim, childAnim } from '@/helpers/animObjects';
 import {motion} from 'framer-motion';
+import FbModal from '../FbModal/FbModal';
 
 const Days:FC<daysPropsTypes> = ({list}) => {
+    const [fb, setFb] = useState(false)
+
 
     return (
         <motion.div {...animWhileInView} variants={parentAnim} className={styles.wrapper}>
+            <FbModal open={fb} onCancel={() => setFb(false)}/>
             <Container>
                 <div className={styles.in}>
                     <AnimWrap className={styles.head}>
@@ -53,6 +57,7 @@ const Days:FC<daysPropsTypes> = ({list}) => {
                         <Button
                             text='расчитать стоимость'
                             uppercase
+                            onClick={() => setFb(true)}
                             />
                         </motion.div>
                     </AnimWrap>

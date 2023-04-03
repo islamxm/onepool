@@ -1,5 +1,5 @@
 import styles from './Adv.module.scss';
-import {FC} from 'react';
+import {FC, useState} from 'react';
 import { advPropsTypes } from './types';
 import BlockHead from '../BlockHead/BlockHead';
 import Image from 'next/image';
@@ -9,6 +9,7 @@ import {motion} from 'framer-motion';
 import { parentAnim, childAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import AnimWrap from '../AnimWrap/AnimWrap';
+import FbModal from '../FbModal/FbModal';
 
 
 const Adv:FC<advPropsTypes> = ({
@@ -16,9 +17,14 @@ const Adv:FC<advPropsTypes> = ({
     list,
     bg
 }) => {
+    const [fb, setFb] = useState(false)
 
     return (
         <div className={styles.wrapper}>
+            <FbModal
+                open={fb}
+                onCancel={() => setFb(false)}
+                />
             <div className={styles.bg}>
                 <Image src={bg} alt="" placeholder='blur'/>
             </div>
@@ -59,7 +65,7 @@ const Adv:FC<advPropsTypes> = ({
                         }
                     </div>
                     <div className={styles.action}>
-                        <Button text='оставить заявку' uppercase variant={'fill'}/>
+                        <Button onClick={() => setFb(true)} text='оставить заявку' uppercase variant={'fill'}/>
                     </div>
                 </div>
             </Container>

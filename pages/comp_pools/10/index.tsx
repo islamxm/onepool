@@ -127,7 +127,7 @@ const PoolPage = () => {
                         <li>Труба и фитинг для обвязки чаши и подключения оборудования</li>
                         <li>Запуск бассейна, пусконаладочные работы.</li>
                     </ul>
-                    <Container>
+                    {/* <Container>
                         <div style={{display: 'flex', justifyContent: 'center', marginTop: '35px'}}>
                             <Button
                                 variant={'fill'}
@@ -138,7 +138,7 @@ const PoolPage = () => {
                                 }}
                                 />
                         </div>
-                    </Container>
+                    </Container> */}
                 </Price>
             </PageLayout>
         </SmoothScroll>        

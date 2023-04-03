@@ -1,6 +1,9 @@
 import styles from './Price.module.scss';
 import Container from '@/components/Container/Container';
 import BlockHead from '@/components/BlockHead/BlockHead';
+import { mainTypes } from '../types';
+import Button from '@/components/Button/Button';
+
 
 const Price = ({
     children
@@ -19,6 +22,9 @@ const Price = ({
                     </div>
                     <div className={styles.body}>
                         {children}
+                    </div>
+                    <div className={styles.action}>
+                        <Button text='Купить' uppercase variant='fill'/>
                     </div>
                 </div>
             </Container>

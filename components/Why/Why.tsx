@@ -6,14 +6,14 @@ import img1 from '@/public/assets/why-1.svg'
 import img2 from '@/public/assets/why-2.svg'
 import img3 from '@/public/assets/why-3.svg'
 import Button from '@/components/Button/Button';
-import {FC} from 'react';
+import {FC, useState} from 'react';
 import { whyPropsTypes } from './types';
 import {motion} from 'framer-motion';
 import AnimWrap from '../AnimWrap/AnimWrap';
 import { childAnim } from '@/helpers/animObjects';
 import { parentAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
-
+import FbModal from '../FbModal/FbModal';
 
 
 const Why:FC<whyPropsTypes> = ({
@@ -24,9 +24,16 @@ const Why:FC<whyPropsTypes> = ({
     fr
     
 }) => {
+    const [fb, setFb] = useState(false)
+
 
     return (
         <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
+            
+            <FbModal
+                onCancel={() => setFb(false)}
+                open={fb}
+                />
             <Container>
                 <div className={styles.in}>
                     <AnimWrap className={styles.head}>
@@ -87,6 +94,7 @@ const Why:FC<whyPropsTypes> = ({
                                         style={{
                                             padding: '22px 72px'
                                         }}
+                                        onClick={() => setFb(true)}
                                         uppercase
                                         text='Задать вопрос'
                                         variant={'fill'}

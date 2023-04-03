@@ -7,14 +7,16 @@ import img1 from '@/public/assets/hero-1.png';
 import img2 from '@/public/assets/hero-2.png';
 import img3 from '@/public/assets/hero-3.png';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { animWhileInView, childAnim, parentAnim } from '@/helpers/animObjects';
 import AnimWrap from '@/components/AnimWrap/AnimWrap';
 import {motion} from 'framer-motion';
+import Router from 'next/router';
+import FbModal from '@/components/FbModal/FbModal';
 
 const Hero = () => {
     const bodyRef = useRef<HTMLDivElement>(null)
-
+    const [fb, setFb] = useState(false)
     const scrollDown = () => {
         if(bodyRef?.current) {
             
@@ -24,6 +26,7 @@ const Hero = () => {
 
     return (
         <div ref={bodyRef} className={styles.wrapper}>
+            <FbModal open={fb} onCancel={() => setFb(false)}/>
             <div className={styles.slider}>
                 <Swiper
                     className={styles.list}
@@ -87,6 +90,7 @@ const Hero = () => {
                                         text='Рассчитать стоимость'
                                         uppercase
                                         variant='fill'
+                                        onClick={() => setFb(true)}
                                         style={{
                                             padding: '20px 50px'
                                         }}
@@ -96,6 +100,7 @@ const Hero = () => {
                                     <Button
                                         text='Посмотреть проекты'
                                         variant='bordered'
+                                        onClick={() => Router.push('/works')}
                                         uppercase
                                         style={{
                                             padding: '20px 50px'

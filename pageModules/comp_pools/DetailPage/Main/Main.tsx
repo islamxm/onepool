@@ -6,6 +6,7 @@ import Swiper , {Thumbs} from 'swiper';
 import Container from '@/components/Container/Container';
 import Button from '@/components/Button/Button';
 import Image from 'next/image';
+import BuyModal from '@/components/BuyModal/BuyModal';
 
 const Main:FC<mainTypes> = ({
     images,
@@ -15,10 +16,17 @@ const Main:FC<mainTypes> = ({
 }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
     const {base, standart, premium} = prices || {}
-
+    const [buy, setBuy] = useState(false)
 
     return (
         <div className={styles.wrapper}>
+            <BuyModal
+                image={images && images[0]}
+                name={name}
+                price={prices && prices.base}
+                open={buy}
+                onCancel={() => setBuy(false)}
+                />
             <Container>
                 <div className={styles.in}>
                     <div className={styles.main}>
@@ -90,6 +98,7 @@ const Main:FC<mainTypes> = ({
                         </div>
                         <div className={styles.action}>
                             <Button
+                                onClick={() => setBuy(true)}
                                 text='купить'
                                 uppercase
                                 />

@@ -11,13 +11,16 @@ import {useScrollDirection} from "use-scroll-direction";
 import { useRouter } from 'next/router';
 import logo from '@/public/assets/logo-main.svg';
 import Image from 'next/image';
+import FbModal from '../FbModal/FbModal';
 
 const Header = () => {
+    const [fb, setFb] = useState(false)
     const [scrolled, setScrolled] = useState<boolean>(false);
     const [scrollDown, setScrollDown] = useState(false)
     const {isMenuOpen} = useAppSelector(s => s)
     const dispatch = useAppDispatch();
     const {pathname} = useRouter()
+
     const {
         scrollDirection,
         isScrolling,
@@ -57,6 +60,7 @@ const Header = () => {
 
     return (
         <header className={`${styles.wrapper} ${scrolled && !isMenuOpen ? styles.active : ''} ${scrollDown ? styles.hidden : ''}`}> 
+            <FbModal open={fb} onCancel={() => setFb(false)}/>
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.top}>
@@ -87,6 +91,7 @@ const Header = () => {
                         </div>
                         <div className={styles.action}>
                             <Button
+                                onClick={() => setFb(true)}
                                 text='Обратный звонок'
                                 />
                         </div>
@@ -131,6 +136,9 @@ const Header = () => {
                             </li>
                             <li className={`${styles.nav_item} ${pathname === '/contacts'}`}>
                                 <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
+                            </li>
+                            <li className={`${styles.nav_item} ${pathname === '/contacts'}`}>
+                                <Link href={'/blog'} className={styles.nav_link}>БЛОГ</Link>
                             </li>
                         </ul>
                     </div>
