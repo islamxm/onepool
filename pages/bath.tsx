@@ -8,7 +8,7 @@ import why1 from '@/public/assets/why-bath-1.svg';
 import why2 from '@/public/assets/why-bath-2.svg';
 import why3 from '@/public/assets/why-bath-3.svg';
 import why4 from '@/public/assets/why-bath-4.svg';
-import Prods from "@/pageModules/home/Prods/Prods";
+import Prods from "@/pageModules/bath/Prods/Prods";
 import { palItemPropsTypes } from "@/components/Pal/types";
 import palImage from '@/public/assets/material.png';
 import Pal from "@/components/Pal/Pal";

@@ -27,6 +27,10 @@ import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import Footer from "@/components/Footer/Footer";
 import Calc from "@/components/Calc/Calc";
 import StepsMob from "@/components/StepsMob/StepsMob";
+import Hero from "@/pageModules/spa/Hero/Hero";
+import heroBg from '@/public/assets/comp-hero-bg.png';
+
+
 const whyList:whyItemPropsTypes[] = [
     {
         icon: why1,
@@ -105,6 +109,11 @@ const CompPage = () => {
     return (
         <SmoothScroll>
             <PageLayout>
+                <Hero 
+                    title="Композитные бассейны от производителя"
+                    subtitle="Строим качественные бассейны с 2001 года по всей России!
+                    Оставьте заявку прямо сейчас и получите скидку на оборудование!"
+                    bg={heroBg}/>
                 <Catalog/> 
                 <Prods/>
                 <Adv

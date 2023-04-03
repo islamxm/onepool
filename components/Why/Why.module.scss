@@ -152,6 +152,12 @@
                     width: calc((100% / 2) - 20px);
                 }
             }
+
+            .body.fr {
+                .item {
+                    width: calc((100% / 2) - 20px);
+                }
+            }
         }
     }
 }
@@ -166,6 +172,21 @@
 
                 .item {
                     width: calc(100% - 20px);
+
+                    .item_in {
+                        min-height: unset;
+                    }
+                }
+            }
+
+            .body.fr {
+                .item {
+                    width: calc(100% - 20px);
+
+                    .item_in {
+                        min-height: unset;
+                    }
+                    
                 }
             }
         }
