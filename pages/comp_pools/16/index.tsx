@@ -75,7 +75,21 @@ const PoolPage = () => {
                             </li>
                         </ul>
                 </Key>
-                <Price>
+                <Price
+                    images={[img1, img2,img3,img4, img5, img6, img7, img8]}
+                    name="КЛАССИК 1032"
+                    descr={
+                        <>
+                            <span>Размер:</span> 10 х 3,8 x 1,5-2 м<br/>
+                            <span>Объём:</span> 56 м3
+                        </>
+                    }
+                    prices={{
+                        base: 1620000,
+                        standart:  1458000,
+                        premium: 1890000
+                    }}
+                    >
                     <b>Состав работ:</b>
                     <br/>
                     <br/>

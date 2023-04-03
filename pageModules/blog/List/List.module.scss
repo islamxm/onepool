@@ -7,6 +7,17 @@
             margin-bottom: 30px;
         }
 
+        .kw {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            .kw_item {
+                margin: 0 4px;
+                margin-bottom: 10px;
+            }
+        }
+
         .body {
 
             .item {

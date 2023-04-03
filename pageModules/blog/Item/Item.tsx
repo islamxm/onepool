@@ -4,6 +4,7 @@ import logo from '@/public/assets/logo-main.svg';
 import Button from '@/components/Button/Button';
 import {FC} from 'react';
 import Badge from '@/components/Badge/Badge';
+import Router from 'next/router';
 
 const Item:FC<{
     title?: string,
@@ -24,7 +25,7 @@ const Item:FC<{
                 </div>
                 <div className={styles.action}>
                     <div className={styles.date}>12 марта 2023</div>
-                    <div className={styles.btn}><Button uppercase text='побробнее' variant={'fill'}/></div>
+                    <div className={styles.btn}><Button onClick={() => Router.push('/blog/1')} uppercase text='побробнее' variant={'fill'}/></div>
                 </div>
             </div>
             <div className={`${styles.img}`}>

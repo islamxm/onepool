@@ -67,7 +67,21 @@ const PoolPage = () => {
                             </li>
                         </ul>
                 </Key>
-                <Price>
+                <Price
+                    images={[img1, img2, img3]}
+                    name="Композитный бассейн Нео"
+                    descr={
+                        <>
+                            <span>Размер:</span> 1,7 х 1,7 x 1,5 м<br/>
+                            <span>Объём:</span> 3 м3
+                        </>
+                    }
+                    prices={{
+                        base: 154440,
+                        standart: 160380,
+                        premium: 311445
+                    }}
+                    >
                     <b>Состав работ:</b>
                     <br/>
                     <br/>

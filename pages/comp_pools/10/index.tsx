@@ -74,7 +74,21 @@ const PoolPage = () => {
                             </li>
                         </ul>
                 </Key>
-                <Price>
+                <Price
+                    images={[img1, img2,img3,img4, img5, img6, img7]}
+                    name="РИВЬЕРА 65"
+                    descr={
+                        <>
+                            <span>Размер:</span> 6,5 х 3,5 x 1,5 м<br/>
+                            <span>Объём:</span> 28 м3
+                        </>
+                    }
+                    prices={{
+                        base: 617100,
+                        standart:  662310,
+                        premium: 975240
+                    }}
+                    >
                     <b>Состав работ:</b>
                     <br/>
                     <br/>

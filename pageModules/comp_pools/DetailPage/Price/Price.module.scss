@@ -17,5 +17,17 @@
                 }
             }
         }
+
+        .action {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                padding: 20px 100px;
+            }
+        }
     }
 }

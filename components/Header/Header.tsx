@@ -134,10 +134,10 @@ const Header = () => {
                             <li className={`${styles.nav_item} ${pathname === '/servs' ? styles.active : ''}`}>
                                 <Link href={'/servs'} className={styles.nav_link}>услуги</Link>
                             </li>
-                            <li className={`${styles.nav_item} ${pathname === '/contacts'}`}>
+                            <li className={`${styles.nav_item} ${pathname === '/contacts' ? styles.active : ''}`}>
                                 <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
                             </li>
-                            <li className={`${styles.nav_item} ${pathname === '/contacts'}`}>
+                            <li className={`${styles.nav_item} ${pathname === '/blog' || pathname.includes('/blog') ? styles.active : ''}`}>
                                 <Link href={'/blog'} className={styles.nav_link}>БЛОГ</Link>
                             </li>
                         </ul>

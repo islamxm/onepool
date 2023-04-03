@@ -68,7 +68,21 @@ const PoolPage = () => {
                             </li>
                         </ul>
                 </Key>
-                <Price>
+                <Price
+                    images={[img1, img2,img3,img4, img5,img6]}
+                    name="ДИОНА (МИНИ-СПА)"
+                    descr={
+                        <>
+                            <span>Размер:</span> 3,7 х 2,4 x 0,9 м<br/>
+                            <span>Объём:</span> 6 м3
+                        </>
+                    }
+                    prices={{
+                        base: 309000,
+                        standart: 315900,
+                        premium: 432000
+                    }}
+                    >
                     <b>Состав работ:</b>
                     <br/>
                     <br/>

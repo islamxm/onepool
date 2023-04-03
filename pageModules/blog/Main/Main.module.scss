@@ -1,0 +1,43 @@
+.wrapper {
+
+    .in {
+
+        padding: 220px 0 40px;
+
+        .head {
+            margin-bottom: 20px;
+
+            .top {
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .date {
+                    margin-right: 12px;
+
+                }
+
+                .kw {
+
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                line-height: 160%;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+            padding: 100px 0 30px;
+        }
+    }
+}
