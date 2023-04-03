@@ -1,0 +1,114 @@
+.wrapper {
+    background-color: #F8ECDE;
+    color: var(--black);
+
+
+    .in {
+        padding: 40px 0;
+
+        .title {
+            margin-bottom: 30px;
+        }
+
+        .tabs {
+            margin-bottom: 30px;
+        }
+
+        .text {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .body {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5px;
+            margin-right: -5px;
+            
+            .item {
+                margin: 0px 5px 10px;
+                // border-radius: 8px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: flex;
+                }
+
+                // &:nth-child(1) {
+                //     width: calc((100% / 2) - 14px);
+                // }
+                // &:nth-child(2) {
+                //     width: calc((100% / 2) - 14px);
+                // }
+                // &:nth-child(3) {
+                //     width: calc((100% / 3) - 14px);
+                // }
+                // &:nth-child(4) {
+                //     width: calc((100% / 3) - 14px);
+                // }
+                // &:nth-child(5) {
+                //     width: calc((100% / 3) - 14px);
+                // }
+
+                &:nth-child(1n) {
+                    width: calc((100% / 3) - 10px);
+                }
+                &:nth-child(2n) {
+                    width: calc((100% / 3) - 10px);
+                }
+                &:nth-child(3n) {
+                    width: calc((100% / 3) - 10px);
+                }
+                &:nth-child(4n) {
+                    width: calc((100% / 4) - 10px);
+                }
+                &:nth-child(5n) {
+                    width: calc((100% / 4) - 10px);
+                }
+                &:nth-child(6n) {
+                    width: calc((100% / 4) - 10px);
+                }
+                &:nth-child(7n) {
+                    width: calc((100% / 4) - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .in {
+
+            .title {
+                margin-bottom: 25px;
+            }
+
+            .tabs {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+
+    .wrapper {
+
+        .in {
+
+            .body {
+
+                .item {
+                    width: calc(100% - 10px) !important;
+                }
+            }
+        }
+    }
+}

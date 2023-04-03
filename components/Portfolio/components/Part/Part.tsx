@@ -17,9 +17,8 @@ const Part:FC<portItemPropsTypes> = ({
 }) => {
 
 
-    if(side === 'left') {
-        return (
-            <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
+    return (
+        <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
                 <div className={styles.in}>
                     <AnimWrap className={`${styles.side} ${styles.slider_side}`}>
                         <motion.div variants={childAnim('left')} className={styles.slider}>
@@ -66,61 +65,7 @@ const Part:FC<portItemPropsTypes> = ({
                     
                 </div>          
             </motion.div>
-        )
-    }
-    if(side === 'right') {
-        return (
-            <motion.div variants={parentAnim} {...animWhileInView} className={styles.part}>
-                <div className={styles.in}>
-                   
-                    <AnimWrap className={`${styles.side} ${styles.descr_side}`}>
-                        <motion.div variants={childAnim('left')}>
-                            <div className={styles.descr}>
-                                <div className={styles.descr_in}>
-                                    {descr}
-                                </div>
-                            </div>
-                        </motion.div>
-                    </AnimWrap>
-                    <AnimWrap className={`${styles.side} ${styles.slider_side}`}>
-                        <motion.div variants={childAnim('right')} className={styles.slider}>
-                            <div className={styles.head}>
-                                {head}
-                            </div>
-                            <Swiper
-                                className={styles.slider_wr}
-                                modules={[Pagination]}
-                                pagination={{
-                                    bulletClass: styles.pag_item,
-                                    el: `.${styles.pag}`,
-                                    bulletActiveClass: styles.active,
-                                    clickable: true
-                                }}
-                                >
-                                {
-                                    images?.map((item,index) => (
-                                        <SwiperSlide className={styles.slide} key={index}>
-                                            <Image
-                                                src={item}
-                                                alt=""
-                                                width={460}
-                                                height={583}
-                                                />
-                                        </SwiperSlide>
-                                    ))
-                                }
-                                 <div className={styles.pag}></div>
-                                
-                            </Swiper>
-                        </motion.div>
-                    </AnimWrap>
-                    
-                </div>          
-            </motion.div>
-        )
-    }
-
-    return null;
+    )
     
 }
 

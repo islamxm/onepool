@@ -6,7 +6,7 @@ import why1 from '@/public/assets/why-spa-1.svg';
 import why2 from '@/public/assets/why-spa-2.svg';
 import why3 from '@/public/assets/why-spa-3.svg';
 import why4 from '@/public/assets/why-spa-4.svg';
-import Prods from "@/pageModules/home/Prods/Prods";
+import Prods from "@/pageModules/spa/Prods/Prods";
 import { servItemTypes } from "@/pageModules/home/Servs/types";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Servs from "@/pageModules/home/Servs/Servs";
