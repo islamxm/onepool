@@ -3,7 +3,7 @@ import styles from './List.module.scss';
 import Container from "@/components/Container/Container";
 import Item from "../Item/Item";
 import Badge from "@/components/Badge/Badge";
-
+import Pag from "../Pag/Pag";
 const List = () => {
 
     return (
@@ -25,6 +25,9 @@ const List = () => {
                         <div className={styles.item}>
                             <Item/>
                         </div>
+                    </div>
+                    <div className={styles.action}>
+                        <Pag/>
                     </div>
                 </div>
             </Container>

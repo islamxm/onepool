@@ -1,7 +1,7 @@
 import styles from './Main.module.scss';
 import Container from '@/components/Container/Container';
 import Badge from '@/components/Badge/Badge';
-
+import Nav from '../Nav/Nav';
 const Main = ({
     children
 }: {
@@ -24,6 +24,7 @@ const Main = ({
                     <div className={styles.body}>
                         {children}
                     </div>
+                    <Nav/>
                 </div>
             </Container>
         </div>

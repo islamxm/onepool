@@ -1,0 +1,60 @@
+.pag {
+    padding: 20px 0;
+    
+    .next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .current {
+            background: #1A2231;
+            border: 1px solid #32415E;
+            border-radius: 15px;
+            height: 55px;
+            min-width: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 500;
+            margin: 0 3px;
+        }
+
+        .total {
+            margin: 0 3px;
+            opacity: .5;
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+
+            .item {
+                width: 40px;
+                height: 55px;
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 2px;
+                font-size: 25px;
+                line-height: 100%;
+                transition: all .3s ease;
+                color: #8C9098;
+
+                &:hover {
+                    color: #fff;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}
