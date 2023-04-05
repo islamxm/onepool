@@ -5,8 +5,8 @@ export const parentAnim: Variants = {
     visible: {
         opacity: 1,
         transition: {
-            delayChildren: .5,
-            staggerChildren: .15,
+            delayChildren: .25,
+            staggerChildren: .075,
         }
     },
 }
@@ -32,7 +32,7 @@ export const childAnim = (type: directionTypes) => {
                     transition: {
                         //cubic-bezier(.26,.12,.25,.99)
                         ease: [.26,.12,.25,.99],
-                        duration: .5,
+                        duration: .25,
                         // type: 'tween'
                     }
                 }
@@ -46,7 +46,7 @@ export const childAnim = (type: directionTypes) => {
                         transition: {
                             //cubic-bezier(.26,.12,.25,.99)
                             ease: [.26,.12,.25,.99],
-                            duration: .5,
+                            duration: .25,
                             // type: 'tween'
                         }
                     }
@@ -60,7 +60,7 @@ export const childAnim = (type: directionTypes) => {
                         transition: {
                             //cubic-bezier(.26,.12,.25,.99)
                             ease: [.26,.12,.25,.99],
-                            duration: .5,
+                            duration: .25,
                             // type: 'tween'
                         }
                     }
@@ -74,7 +74,7 @@ export const childAnim = (type: directionTypes) => {
                         transition: {
                             //cubic-bezier(.26,.12,.25,.99)
                             ease: [.26,.12,.25,.99],
-                            duration: .5,
+                            duration: .25,
                             // type: 'tween'
                         }
                     }
@@ -107,7 +107,7 @@ export const stepLineAnim = {
         transition: {
             //cubic-bezier(.26,.12,.25,.99)
             ease: [.26,.12,.25,.99],
-            duration: .5,
+            duration: .25,
         }
     }
 }
