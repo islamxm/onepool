@@ -10,6 +10,9 @@ import { useRouter } from 'next/router';
 import {useEffect} from 'react';
 import { toggleMenu } from '@/store/actions';
 import { useAppDispatch } from '@/hooks/useTypesRedux';
+import TopBtn from '@/components/TopBtn/TopBtn';
+
+
 export default function App({ Component, pageProps }: AppProps) {
   
 
@@ -19,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Header/>
         <Component {...pageProps} />
       </div>
+      <TopBtn/>
       <Mobmenu/>
     </Provider>
   )
