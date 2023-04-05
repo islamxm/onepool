@@ -139,6 +139,7 @@ const Header = () => {
                             <li className={`${styles.nav_item} ${pathname === '/' ? styles.active : ''}`}>
                                 <Link href={'/'} className={styles.nav_link}>главная</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/concrete_pools' || pathname === '/iron_pools' || pathname === '/comp_pools' ? styles.active : ''}`}>
                                 <Dropdown
                                     trigger={['hover']}
@@ -153,21 +154,27 @@ const Header = () => {
                                 </Dropdown>
                                 
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/spa' ? styles.active : ''}`}>
                                 <Link href={'/spa'} className={styles.nav_link}>спа</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/bath' ? styles.active : ''}`}>
                                 <Link href={'/bath'} className={styles.nav_link}>бани и сауны</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/works' ? styles.active : ''}`}>
                                 <Link href={'/works'} className={styles.nav_link}>наши работы</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/servs' ? styles.active : ''}`}>
                                 <Link href={'/servs'} className={styles.nav_link}>услуги</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/contacts' ? styles.active : ''}`}>
                                 <Link href={'/contacts'} className={styles.nav_link}>Контакты</Link>
                             </li>
+                            <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/blog' || pathname.includes('/blog') ? styles.active : ''}`}>
                                 <Link href={'/blog'} className={styles.nav_link}>БЛОГ</Link>
                             </li>

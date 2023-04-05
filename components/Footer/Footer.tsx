@@ -2,7 +2,7 @@ import styles from './Footer.module.scss';
 import Container from '../Container/Container';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/public/assets/logo-main.svg';
+import logo from '@/public/assets/logo.svg';
 import onepool from '@/public/assets/logo-onepool.png';
 import manawell from '@/public/assets/logo-manawell.png';
 
