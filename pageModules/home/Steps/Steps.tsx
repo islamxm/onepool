@@ -16,8 +16,8 @@ const parentAnim = {
     visible: {
         opacity: 1,
         transition: {
-            delayChildren: .5,
-            staggerChildren: .1,
+            delayChildren: .25,
+            staggerChildren: .05,
         }
     },
 }
