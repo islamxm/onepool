@@ -45,7 +45,7 @@ const Header = () => {
     const topFunc = useCallback(() => {
         if(window.innerWidth > 768) {
             if(topRef?.current) {
-                if(scrollDown) {
+                if(scrolled) {
                     setTopHeight(0)
                 } else {
                     setTopHeight(topRef?.current?.scrollHeight)
@@ -57,24 +57,16 @@ const Header = () => {
                 setTopHeight(topRef?.current?.scrollHeight)
             }
         }
-    }, [topRef, scrollDown])
+    }, [topRef, scrolled])
 
     useEffect(() => {
-        // if(topRef?.current) {
-        //     if(scrollDown) {
-        //         setTopHeight(0)
-        //     } else {
-        //         setTopHeight(topRef?.current?.scrollHeight)
-
-        //     }
-        // }
         topFunc()
         window.addEventListener('resize', topFunc)
 
         return () => {
             window.removeEventListener('resize', topFunc)
         }
-    }, [topRef, scrollDown])
+    }, [topRef, scrolled])
 
     useEffect(() => {
         if(isScrollingDown) {
