@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 import Container from '../Container/Container';
 import Link from 'next/link';
 import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Dropdown } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/hooks/useTypesRedux';
 import { toggleMenu } from '@/store/actions';
@@ -20,6 +20,9 @@ const Header = () => {
     const {isMenuOpen} = useAppSelector(s => s)
     const dispatch = useAppDispatch();
     const {pathname} = useRouter()
+    const topRef = useRef<HTMLDivElement>(null)
+
+    const [topHeight, setTopHeight] = useState(0);
 
     const {
         scrollDirection,
@@ -38,6 +41,40 @@ const Header = () => {
             setScrolled(false)
         }
     }
+
+    const topFunc = useCallback(() => {
+        if(window.innerWidth > 768) {
+            if(topRef?.current) {
+                if(scrollDown) {
+                    setTopHeight(0)
+                } else {
+                    setTopHeight(topRef?.current?.scrollHeight)
+    
+                }
+            }
+        } else {
+            if(topRef?.current) {
+                setTopHeight(topRef?.current?.scrollHeight)
+            }
+        }
+    }, [topRef, scrollDown])
+
+    useEffect(() => {
+        // if(topRef?.current) {
+        //     if(scrollDown) {
+        //         setTopHeight(0)
+        //     } else {
+        //         setTopHeight(topRef?.current?.scrollHeight)
+
+        //     }
+        // }
+        topFunc()
+        window.addEventListener('resize', topFunc)
+
+        return () => {
+            window.removeEventListener('resize', topFunc)
+        }
+    }, [topRef, scrollDown])
 
     useEffect(() => {
         if(isScrollingDown) {
@@ -63,45 +100,47 @@ const Header = () => {
             <FbModal open={fb} onCancel={() => setFb(false)}/>
             <Container>
                 <div className={styles.inner}>
-                    <div className={styles.top}>
-                        <Link href={'/'} className={styles.logo}>
-                            <Image src={logo} alt='Pool form'/>
-                        </Link>
-                        <div className={styles.label}>
-                            Собственное производство <br/> 
-                            бассейнов с 2001 года
-                        </div>
-                        <div className={styles.info}>
-                            <div className={styles.icon}>
-                                <BsGeoAlt/>
+                    <div ref={topRef} style={{height:topHeight}} className={styles.top}>
+                        <div className={styles.top_in}>
+                            <Link href={'/'} className={styles.logo}>
+                                <Image src={logo} alt='Pool form'/>
+                            </Link>
+                            <div className={styles.label}>
+                                Собственное производство <br/> 
+                                бассейнов с 2001 года
                             </div>
-                            <div className={styles.body}>
-                                <div className={styles.name}>Адрес</div>
-                                <a href='#' className={styles.link}>г. Сочи, ул. Горького, 87</a>
+                            <div className={styles.info}>
+                                <div className={styles.icon}>
+                                    <BsGeoAlt/>
+                                </div>
+                                <div className={styles.body}>
+                                    <div className={styles.name}>Адрес</div>
+                                    <a href='#' className={styles.link}>г. Сочи, ул. Горького, 87</a>
+                                </div>
                             </div>
-                        </div>
-                        <div className={styles.info}>
-                            <div className={styles.icon}>
-                                <BsTelephone/>
+                            <div className={styles.info}>
+                                <div className={styles.icon}>
+                                    <BsTelephone/>
+                                </div>
+                                <div className={styles.body}>
+                                    <div className={styles.name}>Телефон</div>
+                                    <a href='#' className={styles.link}>+7 (800) 700-90-38</a>
+                                </div>
                             </div>
-                            <div className={styles.body}>
-                                <div className={styles.name}>Телефон</div>
-                                <a href='#' className={styles.link}>+7 (800) 700-90-38</a>
+                            <div className={styles.action}>
+                                <Button
+                                    onClick={() => setFb(true)}
+                                    text='Обратный звонок'
+                                    />
                             </div>
+                            <button 
+                                onClick={() => dispatch(toggleMenu(!isMenuOpen))}
+                                className={`${styles.burger} ${isMenuOpen ? styles.active : ''}`}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
-                        <div className={styles.action}>
-                            <Button
-                                onClick={() => setFb(true)}
-                                text='Обратный звонок'
-                                />
-                        </div>
-                        <button 
-                            onClick={() => dispatch(toggleMenu(!isMenuOpen))}
-                            className={`${styles.burger} ${isMenuOpen ? styles.active : ''}`}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
                     </div>
                     <div className={styles.main}>
                         <ul className={styles.nav}>
