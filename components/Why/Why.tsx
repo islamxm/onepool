@@ -58,7 +58,7 @@ const Why:FC<whyPropsTypes> = ({
                         {
                             list?.map((item,index) => (
                                 <AnimWrap className={styles.item} key={index}>
-                                        <motion.div variants={childAnim('bottom')} className={styles.item_in} >
+                                        <motion.div variants={childAnim('bottom')} className={`${styles.item_in} ${!item?.text ? styles.auto : ''}`} >
                                         {
                                             item.icon ? (
                                                 <div className={styles.icon}>

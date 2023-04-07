@@ -1,6 +1,6 @@
 import styles from './ServItem.module.scss';
 import { servItemTypes } from '../../types';
-import {FC} from 'react';
+import {FC, useEffect, useState} from 'react';
 import Container from '@/components/Container/Container';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper';
@@ -13,14 +13,34 @@ import {useRef} from 'react';
 import { animWhileInView } from '@/helpers/animObjects';
 import 'swiper/css/pagination';
 
+
+
 const ServItem:FC<servItemTypes> = ({
     images,
     title,
     descr,
     side = 'left'
 }) => {
-
+    const [slideHeight, setSlideHeight] = useState(0)
     const pagRef = useRef<HTMLDivElement>(null)
+    const descrRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        getSize()
+        window.addEventListener('resize', getSize)
+        return () => {
+            window.removeEventListener('resize', getSize)
+        }
+    }, [descrRef])
+
+
+    const getSize = () => {
+        if(descrRef?.current) {
+            setSlideHeight(descrRef?.current?.scrollHeight)
+        }
+    }
+
+
 
     if(side === 'left') {
         return (
@@ -48,7 +68,7 @@ const ServItem:FC<servItemTypes> = ({
                                         >
                                         {
                                             images?.map((item,index) => (
-                                                <SwiperSlide key={index} className={styles.slide}>
+                                                <SwiperSlide style={{height: slideHeight}} key={index} className={styles.slide}>
                                                     <Image
                                                         src={item}
                                                         alt=""
@@ -66,7 +86,7 @@ const ServItem:FC<servItemTypes> = ({
                                 </motion.div>
                             </AnimWrap>
                             <AnimWrap className={styles.descr}>
-                                <motion.div className={styles.in} variants={childAnim('right')}>
+                                <motion.div className={styles.in} ref={descrRef} variants={childAnim('right')}>
                                     {descr}
                                 </motion.div>
                             </AnimWrap>
@@ -88,7 +108,7 @@ const ServItem:FC<servItemTypes> = ({
                         </AnimWrap>
                         <div className={styles.body}>
                             <AnimWrap className={styles.descr}>
-                                <motion.div className={styles.in} variants={childAnim('left')}>
+                                <motion.div className={styles.in} ref={descrRef} variants={childAnim('left')}>
                                     {descr}
                                 </motion.div>
                             </AnimWrap>
@@ -107,7 +127,7 @@ const ServItem:FC<servItemTypes> = ({
                                         >
                                         {
                                             images?.map((item,index) => (
-                                                <SwiperSlide key={index} className={styles.slide}>
+                                                <SwiperSlide style={{height: slideHeight}}  key={index} className={styles.slide}>
                                                     <Image
                                                         src={item}
                                                         alt=""

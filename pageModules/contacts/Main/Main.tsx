@@ -37,7 +37,7 @@ const Main = () => {
                     </div>
                 </div>
                 <div className={styles.map}>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af38f4490f0097726ce69a1f2fba32d3cbb0ecfda1359318c85764c92ea04ef99&amp;source=constructor" width="818" height="400" frameBorder="0"></iframe>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab603843305da7e26e9e6f4e56f097966e582d504821dcef3791b5dba675bbb42&amp;source=constructor" width="885" height="424" frameBorder="0"></iframe>
                 </div>
             </Container>
         </div>

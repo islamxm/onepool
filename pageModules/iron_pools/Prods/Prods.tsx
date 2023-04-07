@@ -20,6 +20,8 @@ import img5 from '@/public/assets/iron-prods-5.png';
 import img6 from '@/public/assets/iron-prods-6.png';
 import img7 from '@/public/assets/iron-prods-7.png';
 
+
+
 const tabsList = [
     {id: '1', label: 'бассейны'},
     {id: '2', label: 'спа'},

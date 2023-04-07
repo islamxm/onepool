@@ -43,6 +43,9 @@
                 padding-top: 55px;
                 margin: 0 10px 20px 10px;
                 
+                .item_in.auto {
+                    min-height: unset;
+                }
 
                 .item_in {
                     padding: 65px 30px 15px 30px;
@@ -94,6 +97,7 @@
                     color: #788090;
                     text-align: center;
                 }
+                
             }
         }
         .action {
