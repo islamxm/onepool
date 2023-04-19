@@ -3,7 +3,7 @@ import {FC, useRef, useEffect, useState} from 'react';
 import { portItemPropsTypes } from '../../types';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from 'next/image';
-import { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import {motion} from 'framer-motion';
 import { parentAnim,childAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
@@ -45,7 +45,10 @@ const Part:FC<portItemPropsTypes> = ({
                             </div>
                             <Swiper
                                 className={styles.slider_wr}
-                                modules={[Pagination]}
+                                modules={[Pagination, Autoplay]}
+                                autoplay={{
+                                    delay: 3000
+                                }}
                                 pagination={{
                                     bulletClass: styles.pag_item,
                                     el: `.${styles.pag}`,

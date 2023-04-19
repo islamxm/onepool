@@ -19,7 +19,7 @@ const Feedback = ({
 }) => {
 
     return (
-        <motion.div  variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${!isLight ? styles.dark : '' }`}>
+        <motion.div  variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${styles.dark}`}>
             <AnimWrap>
             <Container>
                 <motion.div variants={childAnim('bottom')} className={styles.in}>

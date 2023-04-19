@@ -63,7 +63,7 @@ const ServItem:FC<servItemTypes> = ({
                                             clickable: true
                                         }}
                                         modules={[Pagination, Autoplay]}
-                                        autoplay={{delay: 2000}}
+                                        autoplay={{delay: 3000}}
                                         className={styles.swiper}
                                         >
                                         {

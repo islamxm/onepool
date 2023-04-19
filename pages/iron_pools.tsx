@@ -208,7 +208,7 @@ const IronPage = () => {
                     bg={ironadvbg}
                     />
                 <PoolTypes
-                    title="Типы панельных бассейнов"
+                    title="Типы стальных бассейнов"
                     list={poolList}
                     />
                 <Hist/>
