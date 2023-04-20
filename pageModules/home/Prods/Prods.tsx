@@ -65,18 +65,6 @@ const Prods = () => {
             case '2':
                 return (
                     <div className={styles.body}>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_1} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_2} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_3} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_4} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_5} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_6} alt=""/></div>
-                        <div className={styles.item}><Image placeholder='blur' src={img2_7} alt=""/></div>
-                    </div>
-                )
-            case '1':
-                return (
-                    <div className={styles.body}>
                         <div className={styles.item}><Image placeholder='blur' src={img1_1} alt=""/></div>
                         <div className={styles.item}><Image placeholder='blur' src={img1_2} alt=""/></div>
                         <div className={styles.item}><Image placeholder='blur' src={img1_3} alt=""/></div>
@@ -84,6 +72,19 @@ const Prods = () => {
                         <div className={styles.item}><Image placeholder='blur' src={img1_5} alt=""/></div>
                         <div className={styles.item}><Image placeholder='blur' src={img1_6} alt=""/></div>
                         <div className={styles.item}><Image placeholder='blur' src={img1_7} alt=""/></div>
+                    </div>
+                )
+            case '1':
+                return (
+                    
+                    <div className={styles.body}>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_1} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_2} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_3} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_4} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_5} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_6} alt=""/></div>
+                        <div className={styles.item}><Image placeholder='blur' src={img2_7} alt=""/></div>
                     </div>
                 )
             case '3':

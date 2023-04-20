@@ -12,13 +12,13 @@ import {motion} from 'framer-motion';
 import { parentAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 
-import img1 from '@/public/assets/spa-prods-1.png';
-import img2 from '@/public/assets/spa-prods-2.png';
-import img3 from '@/public/assets/spa-prods-3.png';
-import img4 from '@/public/assets/spa-prods-4.png';
-import img5 from '@/public/assets/spa-prods-5.png';
-import img6 from '@/public/assets/spa-prods-6.png';
-import img7 from '@/public/assets/spa-prods-7.png';
+import img1 from '@/public/assets/prods-1-1.png';
+import img2 from '@/public/assets/prods-1-2.png';
+import img3 from '@/public/assets/prods-1-3.png';
+import img4 from '@/public/assets/prods-1-4.png';
+import img5 from '@/public/assets/prods-1-5.png';
+import img6 from '@/public/assets/prods-1-6.png';
+import img7 from '@/public/assets/prods-1-7.png';
 
 const tabsList = [
     {id: '1', label: 'бассейны'},

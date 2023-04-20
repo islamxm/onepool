@@ -14,13 +14,24 @@ import { animWhileInView } from '@/helpers/animObjects';
 
 
 
-import img1 from '@/public/assets/iron-prods-1.png';
-import img2 from '@/public/assets/iron-prods-2.png';
-import img3 from '@/public/assets/iron-prods-3.png';
-import img4 from '@/public/assets/iron-prods-4.png';
-import img5 from '@/public/assets/iron-prods-5.png';
-import img6 from '@/public/assets/iron-prods-6.png';
-import img7 from '@/public/assets/iron-prods-7.png';
+// import img1 from '@/public/assets/iron-prods-1.png';
+// import img2 from '@/public/assets/iron-prods-2.png';
+// import img3 from '@/public/assets/iron-prods-3.png';
+// import img4 from '@/public/assets/iron-prods-4.png';
+// import img5 from '@/public/assets/iron-prods-5.png';
+// import img6 from '@/public/assets/iron-prods-6.png';
+// import img7 from '@/public/assets/iron-prods-7.png';
+
+import img1 from '@/public/assets/conc-prods-1.png'
+import img2 from '@/public/assets/conc-prods-2.png'
+import img3 from '@/public/assets/conc-prods-3.png'
+import img4 from '@/public/assets/conc-prods-4.png'
+import img5 from '@/public/assets/conc-prods-5.png'
+import img6 from '@/public/assets/conc-prods-6.png'
+import img7 from '@/public/assets/conc-prods-7.png'
+
+
+
 
 const tabsList = [
     {id: '1', label: 'бассейны'},

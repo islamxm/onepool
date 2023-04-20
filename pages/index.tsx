@@ -11,17 +11,15 @@ import why1 from '@/public/assets/why-1.svg'
 import why2 from '@/public/assets/why-2.svg'
 import why3 from '@/public/assets/why-3.svg'
 import { servItemTypes } from "@/pageModules/home/Servs/types";
-import serv1 from '@/public/assets/home-serv-1-1.jpg';
-import serv2 from '@/public/assets/home-serv-1-2.jpg';
-import serv3 from '@/public/assets/home-serv-1-3.jpg';
-import serv4 from '@/public/assets/home-serv-1-4.jpg';
-import serv5 from '@/public/assets/home-serv-1-5.jpg';
-import serv6 from '@/public/assets/home-serv-1-6.jpg';
-import serv7 from '@/public/assets/home-serv-2-1.jpg';
-import serv8 from '@/public/assets/home-serv-2-2.jpg';
-import serv9 from '@/public/assets/home-serv-2-3.jpg';
-import serv10 from '@/public/assets/home-serv-3-1.jpg';
-import serv11 from '@/public/assets/home-serv-3-2.jpg';
+import serv1 from '@/public/assets/home-serv-1-1.png';
+import serv2 from '@/public/assets/home-serv-1-2.png';
+import serv3 from '@/public/assets/home-serv-1-3.png';
+import serv4 from '@/public/assets/home-serv-2-1.png';
+import serv5 from '@/public/assets/home-serv-2-2.png';
+import serv6 from '@/public/assets/home-serv-2-3.png';
+import serv7 from '@/public/assets/home-serv-3-1.png';
+import serv8 from '@/public/assets/home-serv-3-2.png';
+import serv9 from '@/public/assets/home-serv-3-3.png';
 import SmoothScroll from "@/helpers/SmoothScroll";
 import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import PageLayout from "@/components/PageLayout/PageLayout";
@@ -73,7 +71,7 @@ const servList: servItemTypes[] = [
             </p>
         </>,
         side: 'right',
-        images: [serv1,serv2,serv3,serv4,serv5,serv6]
+        images: [serv1,serv2,serv3]
     },
     {
         title:'Дизайн-проект',
@@ -97,7 +95,7 @@ const servList: servItemTypes[] = [
             <p>Сервисное обслуживание может быть разовым или регулярным.</p>
         </>,
         side: 'left',
-        images: [serv7,serv8,serv9]
+        images: [serv4,serv5,serv6]
     },
     {
         title:'Обслуживание',
@@ -124,7 +122,7 @@ const servList: servItemTypes[] = [
             <p>Сервисное обслуживание может быть разовым или регулярным.</p>
         </>,
         side: 'right',
-        images: [serv10,serv11]
+        images: [serv7,serv8, serv9]
     },
 ]
 

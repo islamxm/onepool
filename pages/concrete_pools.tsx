@@ -41,30 +41,35 @@ import Faq from "@/components/Faq/Faq";
 import StepsMob from "@/components/StepsMob/StepsMob";
 import Head from "next/head";
 
+import day1 from '@/public/assets/conc-day-1.png'
+import day2 from '@/public/assets/conc-day-2.png'
+import day3 from '@/public/assets/conc-day-3.png'
+import day4 from '@/public/assets/conc-day-4.png'
+
 const daysList:daysItemTypes[] = [
     {
         day: 1,
         head:'Монтаж опалубки',
         text: 'В первый день мы начинаем работы с выполнения монтажа опалубки.....',
-        image: img,
+        image: day1,
     },
     {
         day: 5,
         head:'Конструкция собрана и залита бетоном',
         text: 'В первый день мы начинаем работы с выполнения монтажа опалубки.....',
-        image: img
+        image: day2
     },
     {
         day: 10,
         head:'Отделка пленкой и монтаж оборудования',
         text: 'В первый день мы начинаем работы с выполнения монтажа опалубки.....',
-        image: img
+        image: day3
     },
     {
         day: 14,
         head:'Можно плавать!',
         text: 'В первый день мы начинаем работы с выполнения монтажа опалубки.....',
-        image: img
+        image: day4
     }
 ]
 
