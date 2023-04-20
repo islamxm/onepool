@@ -15,11 +15,14 @@
         .descr {
             opacity: .5;
             margin-bottom: 12px;
+
         }
         .action {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            justify-content: flex-end;
+            
             margin-bottom: 15px;
             .date {
 

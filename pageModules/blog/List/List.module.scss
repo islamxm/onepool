@@ -12,7 +12,9 @@
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 30px;
+
             .kw_item {
+                cursor: pointer;
                 margin: 0 4px;
                 margin-bottom: 10px;
             }

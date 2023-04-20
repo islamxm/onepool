@@ -11,15 +11,17 @@ const BlogItem = () => {
         <SmoothScroll>
             <PageLayout>
                 <Main
-                    tag={data[0].value}
-                    title={data[0].title}
+                    tag={data[18].value}
+                    title={data[18].title}
                     >
-                    {data[0].body}
+                    {data[18].body}
                 </Main>
                 <Container>
                     <Nav
-                        nextId={data[1].id}
-                        nextTitle={data[1].title}
+                        nextId={data[19].id}
+                        nextTitle={data[19].title}
+                        prevId={data[17].id}
+                        prevTitle={data[17].title}
                         />
                 </Container>
             </PageLayout>

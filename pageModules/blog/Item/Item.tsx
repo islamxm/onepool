@@ -5,27 +5,35 @@ import Button from '@/components/Button/Button';
 import {FC} from 'react';
 import Badge from '@/components/Badge/Badge';
 import Router from 'next/router';
+import switchBlogTag from '@/helpers/switchBlogTag';
+import { values } from '@/data/blogdata';
 
 const Item:FC<{
     title?: string,
-    descr?: string,
+    descr?: React.ReactNode,
     date?: string,
-    id?: string,
-    image?: StaticImageData | string
-}> = () => {
+    id: number,
+    image?: StaticImageData | string,
+    tag: values
+}> = ({
+    title,
+    descr,
+    date,
+    id,
+    image,
+    tag
+}) => {
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.main}>
-                <h3 className={styles.title}>Бетонный или железный бассейн? какой выбрать?</h3>
+                <h3 className={styles.title}>{title}</h3>
                 <div className={styles.descr}>
-                    <p>
-                    Многие домовладельцы желают обустроить бассейн на собственном участке. Однако сделать выбор в пользу...
-                    </p>
+                    {descr}
                 </div>
                 <div className={styles.action}>
-                    <div className={styles.date}>12 марта 2023</div>
-                    <div className={styles.btn}><Button onClick={() => Router.push('/blog/1')} uppercase text='побробнее' variant={'fill'}/></div>
+                    {/* <div className={styles.date}>12 марта 2023</div> */}
+                    <div className={styles.btn}><Button onClick={() => Router.push(`/blog/${id}`)} uppercase text='побробнее' variant={'fill'}/></div>
                 </div>
             </div>
             <div className={`${styles.img}`}>
@@ -33,12 +41,7 @@ const Item:FC<{
                     <Image src={logo} alt=''/>
                 </div>
                 <div className={styles.kw}>
-                    <div className={styles.kw_item}><Badge label='КОМПОЗИТНЫЕ бассейны'/></div>
-                    <div className={styles.kw_item}><Badge bgColor='#1E8CF1' label='ЖЕЛЕЗНЫЕ бассейны'/></div>
-                    <div className={styles.kw_item}><Badge bgColor='#288FAF' label='бетонные бассейны'/></div>
-                    <div className={styles.kw_item}><Badge bgColor='#36C591' label='СПА'/></div>
-                    <div className={styles.kw_item}><Badge bgColor='#ED8B6D' label='БАНИ'/></div>
-                    <div className={styles.kw_item}><Badge bgColor='#DFB072' label='САУНЫ'/></div>
+                    <div className={styles.kw_item}><Badge label={switchBlogTag(tag).label} bgColor={switchBlogTag(tag).bgColor}/></div>
                 </div>
             </div>
         </div>

@@ -15,6 +15,13 @@
         font-size: 12px;
         line-height: 12px;
     }
+
+
+    &:disabled {
+        pointer-events: none;
+        touch-action: none;
+        opacity: .5;
+    }
 }
 
 .button.bordered {
