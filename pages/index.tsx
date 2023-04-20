@@ -27,6 +27,7 @@ import { stepItemTypes } from "@/pageModules/home/Steps/types";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Faq from "@/components/Faq/Faq";
 import StepsMob from "@/components/StepsMob/StepsMob";
+import Head from "next/head";
 
 
 const whList: whyItemPropsTypes[] = [
@@ -155,6 +156,10 @@ const HomePage = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <title>Главная</title>
+                <meta name="description" content="Главная"/>
+            </Head>
            <PageLayout>
            <Hero/> 
            <About/>

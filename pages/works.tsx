@@ -10,6 +10,7 @@ import Faq from "@/components/Faq/Faq";
 
 import port1 from '@/public/assets/spa-port-act-1.png'
 import port2 from '@/public/assets/spa-port-act-2.png'
+import Head from "next/head";
 
 const portList:portItemPropsTypes[] = [
     {
@@ -118,6 +119,10 @@ const WorksPage = () => {
 
     return (
         <SmoothScroll>  
+            <Head>
+                <meta name="description" content="Наши работы"/>
+                <title>Наши работы</title>
+            </Head>
             <PageLayout>
             <div className="top-block">
                 <Portfolio

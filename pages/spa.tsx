@@ -24,6 +24,7 @@ import Feedback from "@/components/Feedback/Feedback";
 import Footer from "@/components/Footer/Footer";
 import heroBg from '@/public/assets/spa-hero-bg.png';
 import SmoothScroll from "@/helpers/SmoothScroll";
+import Head from "next/head";
 // import port1 from '@/public/assets/spa-port-1-1.jpg';
 // import port2 from '@/public/assets/spa-port-1-2.jpg';
 // import port3 from '@/public/assets/spa-port-1-3.jpg';
@@ -354,6 +355,10 @@ const stepsList: stepItemTypes[] = [
 const SpaPage = () => {
     return (
         <SmoothScroll>
+            <Head>
+                <meta name='description' content="Спа"/>
+                <title>Спа</title>
+            </Head>
             <PageLayout>
             <Hero
                 title="Строительство современных

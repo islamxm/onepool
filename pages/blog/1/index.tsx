@@ -4,11 +4,16 @@ import PageLayout from "@/components/PageLayout/PageLayout"
 import data from "@/data/blogdata"
 import Nav from "@/pageModules/blog/Nav/Nav"
 import Container from "@/components/Container/Container"
+import Head from "next/head"
+
 
 const BlogItem = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <title>{data[0].title}</title>
+            </Head>
             <PageLayout>
                 <Main
                     tag={data[0].value}

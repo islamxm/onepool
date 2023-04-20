@@ -39,6 +39,7 @@ import PageLayout from "@/components/PageLayout/PageLayout";
 import Calc from "@/components/Calc/Calc";
 import Faq from "@/components/Faq/Faq";
 import StepsMob from "@/components/StepsMob/StepsMob";
+import Head from "next/head";
 
 const daysList:daysItemTypes[] = [
     {
@@ -209,6 +210,10 @@ const ConcPage = () => {
 
     return (
         <SmoothScroll>
+             <Head>
+                <meta name="description" content="Бетонные бассейны"/>
+                <title>Бетонные бассейны</title>
+            </Head>
             <PageLayout>
 
             <Hero

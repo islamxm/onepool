@@ -29,7 +29,7 @@ import Calc from "@/components/Calc/Calc";
 import StepsMob from "@/components/StepsMob/StepsMob";
 import Hero from "@/pageModules/spa/Hero/Hero";
 import heroBg from '@/public/assets/comp-hero-bg.png';
-
+import Head from "next/head";
 
 const whyList:whyItemPropsTypes[] = [
     {
@@ -108,6 +108,10 @@ const CompPage = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <title>Композитные бассейны</title>
+                <meta name="description" content="Композитные бассейны"/>
+            </Head>
             <PageLayout>
                 <Hero 
                     title="Композитные бассейны от производителя"

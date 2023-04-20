@@ -5,10 +5,15 @@ import Main from "@/pageModules/contacts/Main/Main";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import SmoothScroll from "@/helpers/SmoothScroll";
 import Faq from "@/components/Faq/Faq";
+import Head from "next/head";
 const ContactsPage = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <meta name="description" content="Контакты"/>
+                <title>Контакты</title>
+            </Head>
             <PageLayout>
          
             <div className="top-block">

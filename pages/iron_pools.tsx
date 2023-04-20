@@ -39,6 +39,7 @@ import Footer from "@/components/Footer/Footer";
 import Calc from "@/components/Calc/Calc";
 import Faq from "@/components/Faq/Faq";
 import StepsMob from "@/components/StepsMob/StepsMob";
+import Head from "next/head";
 const daysList:daysItemTypes[] = [
     {
         image: days1,
@@ -192,6 +193,10 @@ const IronPage = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <meta name="description" content="Стальные бассейны"/>
+                <title>Стальные бассейны</title>
+            </Head>
             <PageLayout>
                 <Hero
                     title="Стальной бассейн за 21 ДЕНЬ!"

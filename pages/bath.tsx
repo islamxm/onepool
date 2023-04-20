@@ -29,7 +29,7 @@ import Feedback from "@/components/Feedback/Feedback";
 
 import port1 from '@/public/assets/spa-port-act-1.png'
 import port2 from '@/public/assets/spa-port-act-2.png'
-
+import Head from "next/head";
 
 import pal1 from '@/public/assets/bath-mat-1.png';
 import pal2 from '@/public/assets/bath-mat-2.png';
@@ -181,6 +181,10 @@ const BathPage = () => {
 
     return (
         <SmoothScroll>
+             <Head>
+                <meta name="description" content="Бани и сауны"/>
+                <title>Бани и сауны</title>
+            </Head>
             <PageLayout>
             <Hero
                 bg={bgImg}

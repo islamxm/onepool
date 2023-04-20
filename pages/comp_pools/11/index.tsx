@@ -11,7 +11,7 @@ import Key from "@/pageModules/comp_pools/DetailPage/Key/Key";
 import Pal from "@/pageModules/comp_pools/DetailPage/Pal/Pal";
 import Price from "@/pageModules/comp_pools/DetailPage/Price/Price";
 import Button from "@/components/Button/Button";
-
+import Head from "next/head";
 
 
 
@@ -19,6 +19,10 @@ const PoolPage = () => {
 
     return (
         <SmoothScroll>
+            <Head>
+                <title>РИВЬЕРА 80352</title>
+                <meta name="description" content="РИВЬЕРА 80352"/>
+            </Head>
             <PageLayout>
                 <Main
                     images={[img1]}
