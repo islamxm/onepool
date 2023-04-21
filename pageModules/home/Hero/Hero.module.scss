@@ -131,8 +131,12 @@
 
 @media (max-width: 600px) {
     .wrapper {
-
+        // min-height: 105vh;
+        // height: unset;
+        
         .main {
+
+
             .body {
                 .action {
                     flex-direction: column;
@@ -141,6 +145,14 @@
                         margin-bottom: 20px;
                     }
                 }
+            }
+
+            .godown {
+                bottom: 10px;
+                width: 50px;
+                height: 50px;
+                left: calc(50% - 25px);
+                background-size: 15px;
             }
         }
     }

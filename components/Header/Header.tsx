@@ -88,7 +88,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={`${styles.wrapper} ${scrolled && !isMenuOpen ? styles.active : ''} ${scrollDown ? styles.hidden : ''}`}> 
+        <header className={`${styles.wrapper} ${scrolled ? styles.active : ''} ${scrollDown ? styles.hidden : ''}`}> 
             <FbModal open={fb} onCancel={() => setFb(false)}/>
             <Container>
                 <div className={styles.inner}>
