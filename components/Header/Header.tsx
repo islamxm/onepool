@@ -107,7 +107,7 @@ const Header = () => {
                                 </div>
                                 <div className={styles.body}>
                                     <div className={styles.name}>Адрес</div>
-                                    <a href='#' className={styles.link}>г. Сочи, ул. Горького, 87</a>
+                                    <a href='#' className={styles.link}>Сочи, Ленина, 298Б<br/> помещение 48Н, офис 4</a>
                                 </div>
                             </div>
                             <div className={styles.info}>
@@ -116,7 +116,7 @@ const Header = () => {
                                 </div>
                                 <div className={styles.body}>
                                     <div className={styles.name}>Телефон</div>
-                                    <a href='#' className={styles.link}>+7 (800) 700-90-38</a>
+                                    <a href='tel:+78002220859' className={styles.link}>+7-(800)-222-08-59</a>
                                 </div>
                             </div>
                             <div className={styles.action}>
@@ -132,6 +132,15 @@ const Header = () => {
                                 <span></span>
                                 <span></span>
                             </button>
+                            <div className={styles.mobtel}>
+                                <a href="tel:+78002220859" target='_blank'>
+                                    +7-(800)-222-08-59
+                                    <span className={styles.icon}>
+                                    <BsTelephone/>
+                                    </span>
+                                </a>
+
+                            </div>
                         </div>
                     </div>
                     <div className={styles.main}>

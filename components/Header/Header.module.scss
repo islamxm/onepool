@@ -30,6 +30,11 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 30px 0 15px 0;
+                
+                .mobtel {
+                    display: none;
+                }
+
             }
 
             .burger {
@@ -60,13 +65,15 @@
 
             .info {
                 display: flex;
-                align-items: flex-end;
+                align-items: flex-start;
+
 
                 .icon {
                     color: var(--gold);
                     font-size: 16px;
                     line-height: 100%;
                     margin-right: 5px;
+                    margin-top: 20px;
                 }
 
                 .body {
@@ -182,6 +189,31 @@
             .top {
                 .top_in {
                     padding: 15px 0;
+
+                    .mobtel {
+                        display: block;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            color: var(--gold);
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 20px;
+                            .icon {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 8px;
+                                background-color: var(--gold);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #fff;
+                                margin-left: 10px;font-size: 14px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
                 }
 
                 .logo {

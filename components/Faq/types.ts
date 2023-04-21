@@ -4,5 +4,6 @@ export type faqPropsTypes = {
 
 export type faqItemProps = {
     head?: string,
-    text?: string,
+    text?: React.ReactNode,
+    moreText?: React.ReactNode
 }

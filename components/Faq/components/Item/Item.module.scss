@@ -34,6 +34,27 @@
         .in {
             padding-bottom: 25px;
             padding-top: 33px;
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            span {
+                display: inline-block;
+                color: var(--gold);
+                font-weight: 600;
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border-bottom: 2px dashed var(--gold);
+                    content: '';
+                    width: 100%;
+                }
+            }
         }
     }
 

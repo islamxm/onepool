@@ -13,6 +13,7 @@ const BlogItem = () => {
         <SmoothScroll>
             <Head>
                 <title>{data[0].title}</title>
+                <meta name="description" content={data[0].prevtext}/>
             </Head>
             <PageLayout>
                 <Main

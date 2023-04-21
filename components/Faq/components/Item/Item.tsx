@@ -34,6 +34,7 @@ const Item:FC<faqItemProps> = ({
             <div style={{height}} ref={bodyRef} className={styles.body}>
                 <div className={styles.in}>
                     {text}
+                    <span>Подробнее</span>
                 </div>
             </div>
         </div>
