@@ -10,75 +10,106 @@
         margin-right: -8px;
         margin-bottom: 50px;
         
+        
+
         .part {
-            width: calc((100% / 2) - 16px);
-            margin: 0 8px;
+            width: calc((100% / 2) - 8px);
             background: #1A2231;
+            margin: 0 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px;
+            border-radius: 15px;
+            padding: 35px;
+            cursor: pointer;
 
-            
-        }
+            .tel {
+                display: flex;
+                margin-bottom: 15px;
+                padding-left: 50px;
+                position: relative;
 
-        .main {
-            .top {
-                margin-bottom: 25px;
-                padding-left: 55px;
-
-                .phone {
-                    margin-bottom: 25px;
-
-                    a {
-                        font-size: 35px;
-                        line-height: 45px;
-                        margin-right: 15px;
-                    }
-
-                    span {
-                        text-transform: uppercase;
-                        font-size: 24px;
-                        line-height: 140%;
-                        color: rgba(255, 255, 255, 0.4);
-                    }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 40px;
+                    top: calc(50% - 20px);
+                    left: 0;
+                    height: 40px;
+                    background-image: url('../../../public/assets/phone.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
                 }
 
-                .tm {
-                    font-size: 18px;
-                    line-height: 140%;
-                    /* or 25px */
-
-
-                    color: rgba(255, 255, 255, 0.8);
+                a {
+                    font-size: 31px;
+                    line-height: 27px;
+                    margin-right: 15px;
                 }
-            }
-            .bottom {
-                padding-left: 55px;
-                .mail {
+
+                .city {
+                    color: rgba(255, 255, 255, 0.4);
                     font-size: 24px;
                     line-height: 140%;
                 }
             }
-        }
 
-        .ex {
-            font-size: 24px;
-            line-height: 140%;
-            
-            span {
-                padding-left: 55px;
-                display: block;
+            .tm {
+                font-size: 18px;
+                line-height: 140%;
+                color: rgba(255, 255, 255, 0.8);
                 margin-bottom: 25px;
+            }
+
+            .adress {
+                position: relative;
+                padding-left: 50px;
+                margin-bottom: 15px;
+
+                &:after {
+                    position: absolute;
+                    top: calc(50% - 20px);
+                    width: 40px;
+                    height: 40px;
+                    left: 0;
+                    content: '';
+                    background-image: url('../../../public/assets/geo.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+
+            .mail {
+                position: relative;
+                padding-left: 50px;
+                position: relative;
+                font-size: 24px;
+                line-height: 140%;
+
+                &:after {
+                    position: absolute;
+                    top: calc(50% - 20px);
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-image: url('../../../public/assets/mail.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    content: '';
+                }
             }
         }
     }
 
     .map {
         height: 461px;
+
         iframe {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
+        }   
     }
 }
 
@@ -99,31 +130,7 @@
                 margin-bottom: 20px;
             }
 
-            .main {
-
-                .top {
-                    padding-left: 0;
-                    .phone {
-                        a {
-                            font-size: 18px;
-                            line-height: 24px;
-                        }
-
-                        span {
-                            font-size: 18px;
-                            line-height: 24px;
-                            display: block;
-                        }
-                    }
-                }
-                
-            }
-
-            .ex {
-                span {
-                    padding: 0;
-                }
-            }
+            
             
         }
     }
@@ -132,35 +139,30 @@
 @media (max-width: 768px) {
     .wrapper {
 
-
         .body {
             margin-bottom: 30px;
-            .main {
-                .top {
-                    .phone {
-                        margin-bottom: 20px;
-                        a {
-                            font-size: 14px;
-                            line-height: 19px;
-                        }
+
+            .part {
+                padding: 15px;
+
+                .tel {
+                                        
+                    a {
+                        font-size: 24px;
+
                     }
-                    .tm {
-                        margin-bottom: 20px;
+
+                    .city {
+                        font-size: 18px;
+                        line-height: 24px;
+                        display: none;
                     }
                 }
-                .bottom {
-                    padding-left: 0;
 
-                    .mail {
-                        font-size: 16px;
-                        line-height: 19px;
-                    }
+                .mail {
+                    font-size: 18px;
+                    line-height: 24px;
                 }
-            }
-
-            .ex {
-                font-size: 16px;
-                line-height: 19px;
             }
         }
     }

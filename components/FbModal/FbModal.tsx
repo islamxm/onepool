@@ -11,6 +11,7 @@ const FbModal = (props: ModalFuncProps) => {
             width={450}
             {...props}
             className={styles.wrapper}
+            centered
             >
             <h4 className={styles.head}>Заявка</h4>
             <div className={styles.subtitle}>Оставьте заявку и мы Вам перезвоним</div>
