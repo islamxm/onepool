@@ -45,6 +45,8 @@
             .body {
                 margin-left: -10px;
                 margin-right: -10px;
+                width: unset;
+
                 .item {
                     width: calc(((100% / 2) - 20px));
                     margin: 0 10px 20px;

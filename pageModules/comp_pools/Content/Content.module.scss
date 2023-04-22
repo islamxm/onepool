@@ -72,15 +72,19 @@
                 }
                 .body {
                     flex-wrap: wrap;
+                    margin: 0;
 
                     .descr {
                         width: 100%;
                         order: -1;
+                        margin: 0;
                         margin-bottom: 20px;
                     }
 
                     .images {
+                        margin: 0;
                         width: 100%;
+                        flex: unset;
 
                         .img {
 

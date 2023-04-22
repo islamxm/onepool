@@ -76,6 +76,13 @@ body {
     position: relative;
 }
 
+@media (max-width: 768px) {
+
+    .wrapper {
+        padding-bottom: 70px;
+    }
+}
+
 .page-title {
     color: var(--gold);
     font-weight: 300;

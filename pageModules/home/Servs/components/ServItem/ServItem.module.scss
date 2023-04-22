@@ -101,8 +101,20 @@
                     min-height: 445px;
                 }
 
-                ul {
+                p {
+                    margin-bottom: 25px;
 
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                ul {
+                    margin-bottom: 25px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                     li {
                         padding-left: 20px;
                         position: relative;

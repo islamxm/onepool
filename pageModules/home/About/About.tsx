@@ -10,16 +10,14 @@ import { animWhileInView } from '@/helpers/animObjects';
 import { childAnim } from '@/helpers/animObjects';
 import AboutModal from '@/components/AboutModal/AboutModal';
 import { useState } from 'react';
-
-
 import AnimatedNumbers from '@/helpers/AnimatedNumber';
+
+
+
 
 const About = () => {
     const [modal, setModal] = useState(false);
-
-
     
-
     return (
         <motion.div variants={parentAnim} {...animWhileInView} className={styles.wrapper}>
             <AboutModal
@@ -53,7 +51,6 @@ const About = () => {
 
                         </motion.div>
                     </AnimWrap>
-                    
                     <div className={styles.main}>
                         <AnimWrap className={styles.img}>
                             <motion.div className={styles.img} variants={childAnim('left')}>
@@ -66,11 +63,6 @@ const About = () => {
                                 />
                             </motion.div>
                         </AnimWrap>
-                        {/* <div className={styles.img}>
-                            
-                        </div> */}
-                       
-                        
                         <AnimWrap className={styles.descr}>
                             <motion.div variants={childAnim('right')}>
                             <p>
@@ -98,7 +90,9 @@ const About = () => {
                                 return { mass: 1, tension: 400 * (index + 1), friction: 140 };
                                 }}
                             ></AnimatedNumbers> */}
+                            
                             <AnimatedNumbers from={0} to={22}/>
+
                             </div>
                             <div className={styles.label}>
                             года 

@@ -7,14 +7,16 @@ import { Provider } from 'react-redux';
 import store from '@/store/store';
 import Mobmenu from '@/components/Mobmenu/Mobmenu';
 import { useRouter } from 'next/router';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import { toggleMenu } from '@/store/actions';
 import { useAppDispatch } from '@/hooks/useTypesRedux';
 import TopBtn from '@/components/TopBtn/TopBtn';
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  
+
+
+
 
   return (
     <Provider store={store}>
@@ -24,6 +26,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
       <TopBtn/>
       <Mobmenu/>
+     
+      
+       
     </Provider>
   )
 }

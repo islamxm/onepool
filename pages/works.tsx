@@ -242,7 +242,7 @@ const WorksPage = () => {
             <Feedback
                 isLight={true}
                 />
-            <Faq list={faqList}/>
+            {/* <Faq list={faqList}/> */}
             <Footer/>
             </PageLayout>
         </SmoothScroll>

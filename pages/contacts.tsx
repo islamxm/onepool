@@ -132,7 +132,7 @@ const ContactsPage = () => {
             <Feedback
                 isLight={false}
                 />
-            <Faq list={faqList}/>
+            {/* <Faq list={faqList}/> */}
             <Footer/>
         </PageLayout>
         </SmoothScroll>

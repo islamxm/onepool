@@ -143,8 +143,9 @@
             }
 
             .slider {
-
+                height: auto !important;
                 .slider_wr {
+                    height: unset;
                     .slide {
                         height: 340px !important;
                     }
