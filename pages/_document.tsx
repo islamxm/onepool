@@ -1,19 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-if(process?.browser && window?.innerWidth <= 768) {
-  const f = (w,d,u) => {
-    var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-    var h=d.getElementsByTagName('script')[0];h?.parentNode.insertBefore(s,h);
-  }
-  f(window,document,'https://bitrix24.key-corp.ru/upload/crm/site_button/loader_2_arq710.js')
-}
 
-// if(process?.browser && window.innerWidth > 768) {
-//   (function(w,d,u){
-//     var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-//     var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-//   })(window,document,'https://bitrix24.key-corp.ru/upload/crm/site_button/loader_1_qkdjnf.js');
-// }
 
 export default function Document() {
   return (
