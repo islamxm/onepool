@@ -1,7 +1,8 @@
 export interface buttonPropsTypes extends React.HTMLProps<HTMLButtonElement> {
     text?: string,
     variant?: buttonVariants,
-    uppercase?: boolean
+    uppercase?: boolean,
+    load?: boolean
 }   
 
 

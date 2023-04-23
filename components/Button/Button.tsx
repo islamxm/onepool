@@ -1,13 +1,15 @@
 import styles from './Button.module.scss';
 import { buttonPropsTypes, buttonVariants } from './types';
 import {FC} from 'react';
+import {LoadingOutlined} from '@ant-design/icons';
 
 const Button:FC<buttonPropsTypes> = (props) => {
 
     const {
         text,
         variant = 'bordered',
-        uppercase
+        uppercase,
+        load
     } = props;
 
 
@@ -27,7 +29,12 @@ const Button:FC<buttonPropsTypes> = (props) => {
         <button 
             {...props}
             type={'button'}
-            className={`${styles.button} ${switchVariant(variant)} ${uppercase ? styles.upper : ''}`}>
+            className={`${styles.button} ${switchVariant(variant)} ${uppercase ? styles.upper : ''} ${load ? styles.load : ''}`}>
+            {
+                load ? (
+                    <div className={styles.load}><LoadingOutlined/></div>
+                ) : null
+            }
             <span className={styles.text}>{text}</span>
         </button>
     )

@@ -31,6 +31,7 @@ const Hero:FC<heroPropsTypes> = ({
                     <Image
                         placeholder={'blur'}
                         src={bg}
+                        height={1000}
                         alt={'bg'}
                         />
                     </div>

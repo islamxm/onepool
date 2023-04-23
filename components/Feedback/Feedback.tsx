@@ -9,17 +9,38 @@ import {motion} from 'framer-motion';
 import { childAnim } from '@/helpers/animObjects';
 import { animWhileInView } from '@/helpers/animObjects';
 import AnimWrap from '../AnimWrap/AnimWrap';
-
-
+import { useState } from 'react';
+import SuccessModal from '../SuccessModal/SuccessModal';
 
 const Feedback = ({
     isLight = true
 }: {
     isLight: boolean
 }) => {
+    const [name, setName] = useState('')
+    const [fonenumber, setFonenumber] = useState('')
+    const [comment, setComment] = useState('')
+    const [load, setLoad] = useState(false)
+    const [modal, setModal] = useState(false)
+    
+
+    const onSubmit = async () => {
+        setLoad(true)
+        const res = await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}&comment=${comment}`).then(res => {
+            if(res?.status === 200) {
+                //
+                setModal(true)
+            }
+        }).finally(() => setLoad(false))
+        
+    }
 
     return (
         <motion.div  variants={parentAnim} {...animWhileInView} className={`${styles.wrapper} ${styles.dark}`}>
+            <SuccessModal 
+            open={modal}
+            onCancel={() => setModal(false)}
+            />
             <AnimWrap>
             <Container>
                 <motion.div variants={childAnim('bottom')} className={styles.in}>
@@ -46,18 +67,28 @@ const Feedback = ({
                         <div className={styles.body}>
                         <div className={styles.field}>
                             <Input
+                                value={name}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+                                name='name'
                                 placeholder='Имя'
                                 variant={!isLight ? 'dark' : 'light'}
                                 />
                         </div>
                         <div className={styles.field}>
                             <Input
+                                value={fonenumber}
+                                onChange={(e:React.ChangeEvent<HTMLInputElement>) => setFonenumber(e.target.value)}
+                                name='fonenumber'
                                 placeholder='Телефон'
+                                type='tel'
                                 variant={!isLight ? 'dark' : 'light'}
                                 />
                         </div>
                         <div className={styles.field}>
                             <Text
+                                value={comment}
+                                onChange={(e:React.ChangeEvent<HTMLTextAreaElement>) => setComment(e.target.value)}
+                                name='comment'
                                 height={90}
                                 variant={!isLight ? "dark" : 'light'}
                                 />
@@ -65,6 +96,9 @@ const Feedback = ({
                         </div>
                         <div className={styles.action}>
                             <Button
+                                load={load}
+                                disabled={!(name && fonenumber && comment)}
+                                onClick={onSubmit}
                                 text='отправить'
                                 variant='fill'
                                 style={{

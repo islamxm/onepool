@@ -1,0 +1,41 @@
+.wrapper {
+    .in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--gold);
+            font-size: 50px;
+            line-height: 50px;
+            color: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        .title {
+            text-align: center;
+            color: var(--gold);
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+
+        .text {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            line-height: 40px;
+        }
+
+    }
+
+   
+}
