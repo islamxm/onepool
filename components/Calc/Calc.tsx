@@ -35,8 +35,11 @@ const Calc = () => {
     const onSubmit = async () => {
         setLoad(true)
         await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}&comment=${comment}&widthpool=${widthpool}&lengthpool=${lengthpool}&depthpool=${depthpool}&depthpool2=${depthpool2}&counterflow=${counterflow}&heating=${heating}&hydromassage=${hydromassage}&aeromassage=${aeromassage}&coverage=${coverage}&rollerblind=${rollerblind}&pavilion=${pavilion}&terrace=${terrace}`).then(res => {
+            
+        }).finally(() => {
+            setLoad(false)
             setModal(true)
-        }).finally(() => setLoad(false))
+        })
         
     }
 
