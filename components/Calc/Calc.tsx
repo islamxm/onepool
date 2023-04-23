@@ -45,6 +45,7 @@ const Calc = () => {
 
     return (
         <div className={styles.wrapper}>
+            <SuccessModal open={modal} onCancel={() => setModal(false)}/>
             <Container>
                 <div className={styles.in}>
                     <div className={styles.head}>
