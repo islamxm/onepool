@@ -91,7 +91,7 @@
                                         border-radius: 100%;
                                         background-color: var(--gold);
                                         content: '';
-                                        top: calc(50% - 5px);
+                                        top: 10px;
                                         left: 0;
                                     }
                                 }
@@ -157,6 +157,15 @@
                             .text {
                                 
                                 height: unset;
+
+                                ul {
+                                    li {
+
+                                        &:after {
+                                            top: 5px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

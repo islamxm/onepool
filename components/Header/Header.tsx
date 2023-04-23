@@ -116,7 +116,7 @@ const Header = () => {
                                 </div>
                                 <div className={styles.body}>
                                     <div className={styles.name}>Телефон</div>
-                                    <a href='tel:+78002220859' className={styles.link}>+7-(800)-222-08-59</a>
+                                    <a href='tel:+78002220859' className={styles.link}>+7 (800) 222-08-59</a>
                                 </div>
                             </div>
                             <div className={styles.action}>
@@ -134,7 +134,7 @@ const Header = () => {
                             </button>
                             <div className={styles.mobtel}>
                                 <a href="tel:+78002220859" target='_blank'>
-                                    +7-(800)-222-08-59
+                                    +7 (800) 222-08-59
                                     <span className={styles.icon}>
                                     <BsTelephone/>
                                     </span>
