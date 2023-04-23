@@ -24,10 +24,11 @@ const BuyModal = (props: buyModalPropsType) => {
     const [email, setEmail] = useState('')
     const [fonenumber, setFonenumber] = useState('')
     const [comment, setComment] = useState('')
+    
 
     const onSubmit = async () => {
         setLoad(true)
-        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${sname}&fonenumber=${fonenumber}&comment=${comment}&email=${email}`).then(res => {
+        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${sname}&fonenumber=${fonenumber}&comment=${comment}&email=${email}&namepool=${name}`).then(res => {
             if(res?.status === 200) {
                 setModal(true)
             }
