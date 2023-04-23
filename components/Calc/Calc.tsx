@@ -34,10 +34,8 @@ const Calc = () => {
 
     const onSubmit = async () => {
         setLoad(true)
-        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}&comment=${comment}&widthpool=${widthpool}&lengthpool=${lengthpool}&depthpool=${depthpool}&depthpool2=${depthpool2}&counterflow=${counterflow}&heating=${heating}&hydromassage=${hydromassage}&aeromassage=${aeromassage}&coverage=${coverage}&rollerblind=${rollerblind}&pavilion${pavilion}&terrace=${terrace}`).then(res => {
-            if(res?.status === 200) {
-                setModal(true)
-            }
+        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}&comment=${comment}&widthpool=${widthpool}&lengthpool=${lengthpool}&depthpool=${depthpool}&depthpool2=${depthpool2}&counterflow=${counterflow}&heating=${heating}&hydromassage=${hydromassage}&aeromassage=${aeromassage}&coverage=${coverage}&rollerblind=${rollerblind}&pavilion=${pavilion}&terrace=${terrace}`).then(res => {
+            setModal(true)
         }).finally(() => setLoad(false))
         
     }
@@ -230,13 +228,16 @@ const Calc = () => {
                                 <div className={styles.fields}>
                                     <div className={styles.field}>
                                         <Input
-                                            
+                                            value={name}
+                                            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                                             variant='dark'
                                             placeholder='Имя'
                                             />
                                     </div>
                                     <div className={styles.field}>
                                         <Input
+                                            value={fonenumber}
+                                            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setFonenumber(e.target.value)}
                                         variant='dark'
                                             placeholder='Телефон'
                                             />

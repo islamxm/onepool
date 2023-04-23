@@ -13,10 +13,7 @@ const FeedbackSm = () => {
     const onSubmit = async () => {
         setLoad(true)
         const res = await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}`).then(res => {
-            if(res?.status === 200) {
-                //
-                setModal(true)
-            }
+            setModal(true)
         }).finally(() => setLoad(false))
         
     }
