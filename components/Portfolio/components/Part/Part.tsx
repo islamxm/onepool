@@ -40,9 +40,13 @@ const Part:FC<portItemPropsTypes> = ({
                 <div className={styles.in}>
                     <AnimWrap className={`${styles.side} ${styles.slider_side}`}>
                         <motion.div style={{height: slideHeight}} variants={childAnim('left')} className={styles.slider}>
-                            <div className={styles.head}>
-                                {head}
-                            </div>
+                            {
+                                head ? (
+                                    <div className={styles.head}>
+                                        {head}
+                                    </div>
+                                ) : null
+                            }
                             <Swiper
                                 className={styles.slider_wr}
                                 modules={[Pagination, Autoplay]}

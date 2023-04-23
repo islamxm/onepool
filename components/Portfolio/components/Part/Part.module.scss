@@ -106,7 +106,7 @@
                 border-radius: 15px;
                 color: rgba(#fff, .5);
                 line-height: 200%;
-                h4 {
+                h4, h3 {
                     font-weight: 700;
                     // font-size: 20px;
                     color: #fff;
@@ -115,6 +115,10 @@
 
                 b {
                     color: #fff;
+                }
+
+                p {
+                    margin-bottom: 15px;
                 }
 
                 span {
@@ -163,6 +167,13 @@
 
     .part {
 
-        
+        .in {
+            .descr {
+
+                .descr_in {
+                    min-height: unset;
+                }
+            }
+        }
     }
 }

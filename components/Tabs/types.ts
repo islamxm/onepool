@@ -1,6 +1,7 @@
 export type tabsPropsTypes = {
     list?: tabItemType[]
-    activeTab?: string
+    activeTab?: string,
+    isLight?: boolean,
     onSelect: (...args: any[]) => any
 }
 

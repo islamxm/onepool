@@ -53,3 +53,11 @@
         display: block;
     }
 }
+
+@media (max-width: 400px) {
+    .wrapper {
+        .in {
+            padding: 6px 20px;
+        }
+    }
+}

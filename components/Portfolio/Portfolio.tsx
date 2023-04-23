@@ -20,16 +20,21 @@ const Portfolio:FC<portPropsTypes> = ({
         <div className={styles.wrapper}>
             <Container>
                 <div className={styles.in}>
-                    <motion.div variants={parentAnim} {...animWhileInView} className={styles.top}>
+                    {
+                        head ? (
+                            <motion.div variants={parentAnim} {...animWhileInView} className={styles.top}>
 
-                        <AnimWrap className={styles.head}>
-                            <motion.div variants={childAnim('bottom')}>
-                                <BlockHead
-                                title={head}
-                                />
+                                <AnimWrap className={styles.head}>
+                                    <motion.div variants={childAnim('bottom')}>
+                                        <BlockHead
+                                        title={head}
+                                        />
+                                    </motion.div>
+                                </AnimWrap>
                             </motion.div>
-                        </AnimWrap>
-                    </motion.div>
+                        ) : null
+                    }
+                   
                     <div className={styles.body}>
                         {
                             list?.map((item, index) => (

@@ -7,7 +7,7 @@ import Feedback from "@/components/Feedback/Feedback";
 import SmoothScroll from "@/helpers/SmoothScroll";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Faq from "@/components/Faq/Faq";
-
+import Main from "@/pageModules/works/Main/Main";
 import port1 from '@/public/assets/spa-port-act-1.png'
 import port2 from '@/public/assets/spa-port-act-2.png'
 import Head from "next/head";
@@ -232,16 +232,21 @@ const WorksPage = () => {
                 <title>Наши работы</title>
             </Head>
             <PageLayout>
-            <div className="top-block">
+                <div className="top-block">
+                    <Main/>
+                </div>
+
+
+            {/* <div className="top-block">
                 <Portfolio
                     head="Портфолио реализованных проектов"
                     list={portList}
                     />
-            </div>
-            <Gal/>
-            <Feedback
+            </div> */}
+            {/* <Gal/> */}
+            {/* <Feedback
                 isLight={true}
-                />
+                /> */}
             {/* <Faq list={faqList}/> */}
             <Footer/>
             </PageLayout>

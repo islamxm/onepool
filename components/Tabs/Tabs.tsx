@@ -4,11 +4,12 @@ import { tabsPropsTypes } from './types';
 const Tabs = ({
     list,
     activeTab,
-    onSelect
+    onSelect,
+    isLight
 }: tabsPropsTypes) => {
 
     return (
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} ${isLight ? styles.light : ''}`}>
             <div className={styles.list}>
                 {
                     list?.map((item, index) => (

@@ -46,6 +46,20 @@
     }
 }
 
+.wrapper.light {
+
+    .list {
+
+        .item {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .item.active {
+            color: var(--black);
+        }
+    }
+}
+
 
 @media (max-width: 768px) {
 
