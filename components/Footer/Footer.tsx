@@ -26,7 +26,7 @@ const Footer = () => {
                         </ul>
                         <div className={styles.cn}>
                             <div className={styles.adr}>
-                            Краснодарский край, г.Сочи, Ленина, 298Б помещение 48Н, офис 4
+                            Краснодарский край, г.Сочи <br/> Ленина, 298Б помещение 48Н, офис 4
                             </div>
                             <div className={styles.tel}>
                                 <Link href={'tel:+78002220859'}>+7 (800) 222-08-59</Link>
