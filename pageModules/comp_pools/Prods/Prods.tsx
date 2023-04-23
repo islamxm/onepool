@@ -74,7 +74,7 @@ const Prods = () => {
                     <AnimWrap className={styles.action}>
                         <motion.div variants={childAnim('bottom')} className={styles.action}>
                             <MoreLink
-                                link={'/works'}
+                                link={'/works?tab=2'}
                                 align={'center'}
                                 isDark
                                 />

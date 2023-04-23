@@ -3,7 +3,7 @@ import styles from './Main.module.scss';
 import Container from '@/components/Container/Container';
 import Tabs from '@/components/Tabs/Tabs';
 import { tabItemType } from '@/components/Tabs/types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Portfolio from '@/components/Portfolio/Portfolio';
 import { portItemPropsTypes } from '@/components/Portfolio/types';
 import {FiChevronLeft, FiChevronRight} from 'react-icons/fi'
@@ -59,6 +59,7 @@ import img_4_3_3 from '@/public/assets/works-4-3-3.png';
 import img_4_4_1 from '@/public/assets/works-4-4-1.png';
 import img_4_4_2 from '@/public/assets/works-4-4-2.png';
 import img_4_4_3 from '@/public/assets/works-4-4-3.png';
+import { useRouter } from 'next/router';
 
 
 const tabsList:tabItemType[] = [
@@ -537,6 +538,13 @@ const portList4: portItemPropsTypes[] = [
 
 const Main = () => {
     const [activeTab, setActiveTab] = useState<string | undefined>('1')
+    const router = useRouter()
+
+    useEffect(() => {
+        if(router?.query?.tab && typeof router?.query?.tab === 'string') {
+            setActiveTab(router?.query?.tab)
+        }
+    }, [router])
 
     const switchTab = (tab?: string) => {
         switch(tab) {

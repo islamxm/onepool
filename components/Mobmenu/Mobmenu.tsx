@@ -30,11 +30,7 @@ const Mobmenu = () => {
                 <li className={`${styles.item} ${pathname === '/contacts' ? styles.active : ''}`}><Link href={'/contacts'}> <span>Контакты</span> </Link></li>
                 <li className={`${styles.item} ${pathname?.includes('/blog') ? styles.active : ''}`}><Link href={'/blog'}> <span>Блог</span> </Link></li>
             </ul>
-            <div className={styles.action}>
-                <div className={styles.item}><a href="">г. Сочи, ул. Горького, 87</a></div>
-                <div className={styles.item}><a href="tel:+78007009038">+7 (800) 700-90-38</a></div>
-                {/* <div className={styles.item}></div> */}
-            </div>
+         
             </div>
         </div>
     )
