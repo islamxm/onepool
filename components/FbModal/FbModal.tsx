@@ -8,6 +8,7 @@ import { useState } from "react";
 
 
 const FbModal = (props: ModalFuncProps) => {
+    const {onCancel} = props;
     const [load, setLoad] = useState(false)
     const [modal, setModal] = useState(false)
     const [name, setName] = useState('')
@@ -15,13 +16,8 @@ const FbModal = (props: ModalFuncProps) => {
 
     const onSubmit = async () => {
         setLoad(true)
-        const res = await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}`).then(res => {
-            
-        }).finally(() => {
-            setModal(true)
-            setLoad(false)
-        })
-        
+        const res = await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}`).finally(() => setLoad(false))
+        setModal(true)
     }
 
     return (
@@ -33,7 +29,10 @@ const FbModal = (props: ModalFuncProps) => {
             >
             <SuccessModal
                 open={modal}
-                onCancel={() => setModal(false)}
+                onCancel={() => {
+                    setModal(false)
+                    onCancel && onCancel()
+                }}
                 />
             <h4 className={styles.head}>Заявка</h4>
             <div className={styles.subtitle}>Оставьте заявку и мы Вам перезвоним</div>
