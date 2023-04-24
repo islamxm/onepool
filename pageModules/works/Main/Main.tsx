@@ -551,7 +551,7 @@ const Main = () => {
             case '1':
                 return (
                     <Portfolio
-                        list={portList1}
+                        list={portList3}
                         />
                 )
             case '2':
@@ -563,13 +563,13 @@ const Main = () => {
             case '3':
                 return (
                     <Portfolio
-                        list={portList3}
+                        list={portList4}
                         />
                 )
             case '4':
                 return (
                     <Portfolio
-                        list={portList4}
+                        list={portList1}
                         />
                 )
             default: 

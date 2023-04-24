@@ -73,7 +73,7 @@
                         border-radius: 100%;
                         background-color: var(--gold);
                         content: '';
-                        top: calc(50% - 5px);
+                        top: 10px;
                         left: 0;
                     }
                 }
@@ -104,6 +104,15 @@
                 font-size: 14px;
                 line-height: 20px;
                 height: unset;
+
+                ul {
+
+                    li {
+                        &:after {
+                            top: 5px;
+                        }
+                    }
+                }
             }
         }
     }

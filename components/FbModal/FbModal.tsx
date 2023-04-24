@@ -69,7 +69,7 @@ const FbModal = (props: ModalFuncProps) => {
                 </div>
                 <div className={styles.ex}>
                 Нажимая кнопку, Вы даете согласие на
-                <a href="#">обработку персональных данных</a>
+                обработку персональных данных
                 </div>
             </div>
         </Modal>

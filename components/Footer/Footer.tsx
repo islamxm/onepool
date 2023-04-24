@@ -32,19 +32,19 @@ const Footer = () => {
                                 <Link href={'tel:+78002220859'}>+7 (800) 222-08-59</Link>
                             </div>
                         </div>
-                        <Link className={styles.logo} href={'/'}>
+                        <div className={styles.logo}>
                             <div className={styles.logo_main}>
                                 <Image src={logo} alt='Pool form'/>
                             </div>
                             <div className={styles.logo_ex}>
-                                <div className={styles.logo_manawell}>
+                                <a href='https://www.manawell.ru/' target='_blank' className={styles.logo_manawell}>
                                     <Image src={manawell} alt='Manawell'/>
-                                </div>
-                                <div className={styles.logo_onepool}>
+                                </a>
+                                <a href='https://1pools.ru/about/'  target='_blank' className={styles.logo_onepool}>
                                     <Image src={onepool} alt='Onepool'/>
-                                </div>
+                                </a>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                     <div className={styles.ex}>
                     POOLFORM 2023. Все права защищены.

@@ -10,7 +10,7 @@ import Pal from "@/pageModules/comp_pools/DetailPage/Pal/Pal";
 import Price from "@/pageModules/comp_pools/DetailPage/Price/Price";
 import Button from "@/components/Button/Button";
 import Head from "next/head";
-
+import Footer from "@/components/Footer/Footer";
 const PoolPage = () => {
 
     return (
@@ -136,6 +136,7 @@ const PoolPage = () => {
                         <li>Запуск бассейна, пусконаладочные работы.</li>
                     </ul>
                 </Price>
+                <Footer/>
             </PageLayout>
         </SmoothScroll>        
     )

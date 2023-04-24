@@ -5,6 +5,8 @@ import data from "@/data/blogdata"
 import Nav from "@/pageModules/blog/Nav/Nav"
 import Container from "@/components/Container/Container"
 import Head from "next/head"
+import Footer from "@/components/Footer/Footer"
+
 const BlogItem = () => {
 
     return (
@@ -28,6 +30,7 @@ const BlogItem = () => {
                         prevTitle={data[1].title}
                         />
                 </Container>
+                <Footer/>
             </PageLayout>
         </SmoothScroll>
     )

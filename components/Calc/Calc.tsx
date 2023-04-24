@@ -98,7 +98,7 @@ const Calc = () => {
                                         <label htmlFor="1" className={styles.label}>
                                             <div className={styles.icon}></div>
                                             <div className={styles.text}>
-                                            Перепад глубины бассейна <span>(отменить, если необходимо)</span>
+                                            Перепад глубины бассейна <span>(отметить, если необходимо)</span>
                                             </div>
                                         </label>
                                     </div>
@@ -251,6 +251,7 @@ const Calc = () => {
                             </div>
                             <div className={styles.action}>
                                 <Button 
+                                    disabled={!(name && fonenumber)}
                                     load={load}
                                     onClick={onSubmit}
                                     uppercase text='расчитать стоимость' variant={'bordered'}/>

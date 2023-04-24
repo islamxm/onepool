@@ -277,7 +277,7 @@ const HomePage = () => {
            <Steps list={stepsList} title="Простые шаги реализации Вашего проекта"/>
            <StepsMob list={stepsList} title="Простые шаги реализации Вашего проекта"/>
            <Feedback
-            isLight
+            isLight={false}
             />
             <Faq list={faqList}/>
            <Footer/>

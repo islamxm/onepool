@@ -5,6 +5,7 @@ import { values } from "@/data/blogdata";
 import data from "@/data/blogdata";
 import { IData } from "@/data/blogdata";
 import Head from "next/head";
+import Footer from "@/components/Footer/Footer";
 
 const BlogPage = () => {
 
@@ -20,6 +21,7 @@ const BlogPage = () => {
                 <List
                     list={data}
                     />
+                <Footer/>
             </PageLayout>
         </SmoothScroll>
     )

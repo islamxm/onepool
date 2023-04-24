@@ -81,6 +81,7 @@ const Feedback = ({
                         </div>
                         <div className={styles.field}>
                             <Text
+                                placeholder='Ваши пожелания'
                                 value={comment}
                                 onChange={(e:React.ChangeEvent<HTMLTextAreaElement>) => setComment(e.target.value)}
                                 name='comment'

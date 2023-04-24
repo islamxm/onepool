@@ -155,7 +155,7 @@ const Header = () => {
                                     placement={'bottomCenter'}
                                     overlay={<div className={'header-drop'}>
                                         <div className={'header-drop__item'}><Link href={'/concrete_pools'}>Бетонные Бассейны </Link></div>
-                                        <div className={'header-drop__item'}><Link href={'/iron_pools'}> Железные Бассейны</Link></div>
+                                        <div className={'header-drop__item'}><Link href={'/iron_pools'}>Стальные Бассейны</Link></div>
                                         <div className={'header-drop__item'}><Link href={'/comp_pools'}>Композитные Бассейны</Link></div>
                                     </div>}
                                     >
@@ -165,7 +165,7 @@ const Header = () => {
                             </li>
                             <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/spa' ? styles.active : ''}`}>
-                                <Link href={'/spa'} className={styles.nav_link}>спа</Link>
+                                <Link href={'/spa'} className={styles.nav_link}>спа комплексы</Link>
                             </li>
                             <li className={styles.cr}></li>
                             <li className={`${styles.nav_item} ${pathname === '/bath' ? styles.active : ''}`}>

@@ -5,7 +5,7 @@ import data from "@/data/blogdata"
 import Nav from "@/pageModules/blog/Nav/Nav"
 import Container from "@/components/Container/Container"
 import Head from "next/head"
-
+import Footer from "@/components/Footer/Footer"
 
 const BlogItem = () => {
 
@@ -28,6 +28,7 @@ const BlogItem = () => {
                         nextTitle={data[1].title}
                         />
                 </Container>
+                <Footer/>
             </PageLayout>
         </SmoothScroll>
     )
