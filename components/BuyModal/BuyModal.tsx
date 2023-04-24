@@ -17,7 +17,7 @@ interface buyModalPropsType extends ModalFuncProps {
 
 const BuyModal = (props: buyModalPropsType) => {
 
-    const {image, price, name} = props;
+    const {image, price, name, onCancel} = props;
     const [load, setLoad] = useState(false)
     const [modal,setModal] = useState(false)
     const [sname, setName] = useState('')
@@ -28,9 +28,9 @@ const BuyModal = (props: buyModalPropsType) => {
 
     const onSubmit = async () => {
         setLoad(true)
-        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${sname}&fonenumber=${fonenumber}&comment=${comment}&email=${email}&namepool=${name}`).then(res => {
-            setModal(true)
-        }).finally(() => setLoad(false))
+        await fetch(`https://goldensoft.tech/sendpoolform.php?name=${sname}&fonenumber=${fonenumber}&comment=${comment}&email=${email}&namepool=${name}`).finally(() => setLoad(false))
+        setModal(true)
+        onCancel && onCancel()
         
     }
 
