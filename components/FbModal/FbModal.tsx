@@ -17,23 +17,26 @@ const FbModal = (props: ModalFuncProps) => {
     const onSubmit = async () => {
         setLoad(true)
         const res = await fetch(`https://goldensoft.tech/sendpoolform.php?name=${name}&fonenumber=${fonenumber}`).finally(() => setLoad(false))
+        onCancel && onCancel();
         setModal(true)
     }
 
     return (
-        <Modal
-            width={450}
-            {...props}
-            className={styles.wrapper}
-            centered
-            >
-            <SuccessModal
+        <>
+        <SuccessModal
                 open={modal}
                 onCancel={() => {
                     setModal(false)
                     onCancel && onCancel()
                 }}
                 />
+            <Modal
+            width={450}
+            {...props}
+            className={styles.wrapper}
+            centered
+            >
+            
             <h4 className={styles.head}>Заявка</h4>
             <div className={styles.subtitle}>Оставьте заявку и мы Вам перезвоним</div>
             <div className={styles.body}>
@@ -73,6 +76,9 @@ const FbModal = (props: ModalFuncProps) => {
                 </div>
             </div>
         </Modal>
+        
+        </>
+        
     )
 }
 
