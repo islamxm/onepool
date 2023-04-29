@@ -11,6 +11,8 @@ import serv3 from '@/public/assets/spa-serv-1.png';
 import Faq from "@/components/Faq/Faq";
 import Head from "next/head";
 import { faqItemProps } from "@/components/Faq/types";
+import {useEffect} from 'react'
+import ym from "react-yandex-metrika";
 
 
 const servList: servItemTypes[] = [
@@ -290,7 +292,9 @@ const faqList: faqItemProps[] = [
 ]
 
 const ServsPage = () => {
-
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
     return (
         <SmoothScroll>
             <Head>
@@ -315,7 +319,7 @@ const ServsPage = () => {
             <Footer/>
             </PageLayout>
 
-            <script
+            {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -333,7 +337,7 @@ const ServsPage = () => {
          
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
     )

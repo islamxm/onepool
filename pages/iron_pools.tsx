@@ -41,6 +41,8 @@ import Faq from "@/components/Faq/Faq";
 import StepsMob from "@/components/StepsMob/StepsMob";
 import Head from "next/head";
 import { faqItemProps } from "@/components/Faq/types";
+import {useEffect} from 'react';
+import ym from "react-yandex-metrika";
 const daysList:daysItemTypes[] = [
     {
         image: days1,
@@ -365,7 +367,9 @@ const faqList: faqItemProps[] = [
 ]
 
 const IronPage = () => {
-
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
     return (
         <SmoothScroll>
             <Head>
@@ -399,7 +403,7 @@ const IronPage = () => {
                 <Faq list={faqList}/>
                 <Footer/>
             </PageLayout>
-
+{/* 
             <script
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -439,7 +443,7 @@ const IronPage = () => {
          
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
     )

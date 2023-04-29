@@ -41,6 +41,8 @@ import PageLayout from "@/components/PageLayout/PageLayout";
 import SmoothScroll from "@/helpers/SmoothScroll";
 import Faq from "@/components/Faq/Faq";
 import { faqItemProps } from "@/components/Faq/types";
+import {useEffect} from 'react';
+import ym from "react-yandex-metrika";
 
 const whyList: whyItemPropsTypes[] = [
     {
@@ -275,6 +277,9 @@ const faqList: faqItemProps[] = [
 
 
 const BathPage = () => {
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
 
     return (
         <SmoothScroll>
@@ -320,7 +325,7 @@ const BathPage = () => {
             <Faq list={faqList}/>
             <Footer/>
         </PageLayout>
-        <script 
+        {/* <script 
             dangerouslySetInnerHTML={{
                 __html: `
                 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -359,7 +364,7 @@ const BathPage = () => {
          
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
     )

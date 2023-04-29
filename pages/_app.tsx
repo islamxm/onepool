@@ -11,7 +11,7 @@ import {useEffect, useState} from 'react';
 import { toggleMenu } from '@/store/actions';
 import { useAppDispatch } from '@/hooks/useTypesRedux';
 import TopBtn from '@/components/TopBtn/TopBtn';
-
+import { YMInitializer } from 'react-yandex-metrika';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -20,6 +20,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store}>
+      <YMInitializer
+        accounts={[93342244,93342115]}
+        options={{
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+        }}
+        />
       <div className='wrapper'>
         <Header/>
         <Component {...pageProps} />

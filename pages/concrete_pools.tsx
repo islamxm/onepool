@@ -46,6 +46,8 @@ import day2 from '@/public/assets/conc-day-2.png'
 import day3 from '@/public/assets/conc-day-3.png'
 import day4 from '@/public/assets/conc-day-4.png'
 import { faqItemProps } from "@/components/Faq/types";
+import {useEffect} from 'react'
+import ym from "react-yandex-metrika";
 
 
 const daysList:daysItemTypes[] = [
@@ -373,6 +375,12 @@ const faqList: faqItemProps[] = [
 
 const ConcPage = () => {
 
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
+
+
+
     return (
         <SmoothScroll>
              <Head>
@@ -414,7 +422,7 @@ const ConcPage = () => {
             
             </PageLayout>
 
-            <script
+            {/* <script
                 dangerouslySetInnerHTML={{
                     __html: `
                         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -452,7 +460,7 @@ const ConcPage = () => {
          
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
        

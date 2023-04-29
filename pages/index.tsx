@@ -7,6 +7,7 @@ import Steps from "@/pageModules/home/Steps/Steps";
 import Footer from "@/components/Footer/Footer";
 import Feedback from "@/components/Feedback/Feedback";
 import { whyItemPropsTypes } from "@/components/Why/types";
+import {useEffect} from 'react';
 import why1 from '@/public/assets/why-1.svg'
 import why2 from '@/public/assets/why-2.svg'
 import why3 from '@/public/assets/why-3.svg'
@@ -28,6 +29,7 @@ import StepsMob from "@/components/StepsMob/StepsMob";
 import Head from "next/head";
 import { faqItemProps } from "@/components/Faq/types";
 import Navbar from "@/components/Navbar/Navbar";
+import ym from "react-yandex-metrika";
 
 const whList: whyItemPropsTypes[] = [
     {
@@ -253,6 +255,11 @@ const faqList:faqItemProps[] = [
 
 const HomePage = () => {
 
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
+    
+
     return (
         <SmoothScroll>
             <Head>
@@ -283,6 +290,7 @@ const HomePage = () => {
            <Footer/>
            
            </PageLayout>
+{/* 
            <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -298,10 +306,9 @@ const HomePage = () => {
                  accurateTrackBounce:true,
                  webvisor:true
             });
-         
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
     )

@@ -6,6 +6,8 @@ import PageLayout from "@/components/PageLayout/PageLayout";
 import SmoothScroll from "@/helpers/SmoothScroll";
 import Faq from "@/components/Faq/Faq";
 import Head from "next/head";
+import {useEffect} from 'react';
+import ym from "react-yandex-metrika";
 import { faqItemProps } from "@/components/Faq/types";
 const faqList:faqItemProps[] = [
     {

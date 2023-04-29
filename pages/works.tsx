@@ -12,6 +12,9 @@ import port1 from '@/public/assets/spa-port-act-1.png'
 import port2 from '@/public/assets/spa-port-act-2.png'
 import Head from "next/head";
 import { faqItemProps } from "@/components/Faq/types";
+import ym from "react-yandex-metrika";
+import {useEffect} from 'react';
+
 const portList:portItemPropsTypes[] = [
     {
         side: 'left',
@@ -224,7 +227,9 @@ const faqList:faqItemProps[] = [
 
 
 const WorksPage = () => {
-
+    useEffect(() => {
+        ym && ym('init')
+    }, [])
     return (
         <SmoothScroll>  
             <Head>
@@ -251,7 +256,7 @@ const WorksPage = () => {
             <Footer/>
             </PageLayout>
 
-            <script
+            {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -269,7 +274,7 @@ const WorksPage = () => {
          
             `
           }}
-          />
+          /> */}
         <noscript><div><img src="https://mc.yandex.ru/watch/93342244" style={{position: 'absolute', left: '-9999px'}} alt="" /></div></noscript>
         </SmoothScroll>
     )

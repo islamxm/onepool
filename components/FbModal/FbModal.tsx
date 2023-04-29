@@ -3,8 +3,8 @@ import styles from './FbModal.module.scss';
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import SuccessModal from "../SuccessModal/SuccessModal";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import ym from 'react-yandex-metrika';
 
 
 const FbModal = (props: ModalFuncProps) => {
@@ -13,6 +13,7 @@ const FbModal = (props: ModalFuncProps) => {
     const [modal, setModal] = useState(false)
     const [name, setName] = useState('')
     const [fonenumber, setFonenumber] = useState('')
+
 
     const onSubmit = async () => {
         setLoad(true)
