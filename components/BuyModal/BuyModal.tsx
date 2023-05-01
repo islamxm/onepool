@@ -30,10 +30,11 @@ const BuyModal = (props: buyModalPropsType) => {
         setLoad(true)
         await fetch(`https://goldensoft.tech/sendpoolform.php?name=${sname}&fonenumber=${fonenumber}&comment=${comment}&email=${email}&namepool=${name}`).finally(() => setLoad(false))
         setModal(true)
+        onCancel && onCancel()
     }
 
     return (
-        <Modal {...props} width={600} className={styles.wrapper}>
+        <>
             <SuccessModal
                 open={modal}
                 onCancel={() => {
@@ -41,6 +42,9 @@ const BuyModal = (props: buyModalPropsType) => {
                     onCancel && onCancel()
                 }}
                 />
+
+<Modal {...props} width={600} className={styles.wrapper}>
+            
             <div className={styles.head}>
                 <span>Оформление заявки</span>
                 {name}
@@ -88,6 +92,8 @@ const BuyModal = (props: buyModalPropsType) => {
                 </div>
             </div>
         </Modal>
+        </>
+     
     )
 }
 
