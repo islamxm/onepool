@@ -12,7 +12,7 @@ import { toggleMenu } from '@/store/actions';
 import { useAppDispatch } from '@/hooks/useTypesRedux';
 import TopBtn from '@/components/TopBtn/TopBtn';
 import { YMInitializer } from 'react-yandex-metrika';
-
+import ContactWidget from '@/components/ContactWidget/ContactWidget';
 export default function App({ Component, pageProps }: AppProps) {
 
 
@@ -34,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </div>
       <TopBtn/>
+      <ContactWidget/>
       <Mobmenu/>
      
       
